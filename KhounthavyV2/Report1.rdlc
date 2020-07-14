@@ -369,7 +369,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>020 76667788, 77717268, 59918222</Value>
+                <Value>020 76667788, 77717268, 76666006</Value>
                 <Style>
                   <FontFamily>times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -867,8 +867,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>11.01828cm</Top>
-        <Left>0.89287cm</Left>
+        <Top>11.67233cm</Top>
+        <Left>0.79524cm</Left>
         <Height>0.65405cm</Height>
         <Width>7.22085cm</Width>
         <ZIndex>27</ZIndex>
@@ -901,8 +901,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>12.32638cm</Top>
-        <Left>0.90066cm</Left>
+        <Top>12.98043cm</Top>
+        <Left>0.80303cm</Left>
         <Height>0.65405cm</Height>
         <Width>7.39414cm</Width>
         <ZIndex>28</ZIndex>
@@ -1123,8 +1123,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>11.67233cm</Top>
-        <Left>0.89287cm</Left>
+        <Top>12.32638cm</Top>
+        <Left>0.79524cm</Left>
         <Height>0.65405cm</Height>
         <Width>10.47528cm</Width>
         <ZIndex>35</ZIndex>
@@ -1138,8 +1138,8 @@
       </Textbox>
       <Rectangle Name="Rectangle4">
         <KeepTogether>true</KeepTogether>
-        <Top>10.70803cm</Top>
-        <Left>12.75004cm</Left>
+        <Top>11.36208cm</Top>
+        <Left>12.65241cm</Left>
         <Height>3.17339cm</Height>
         <Width>7.20537cm</Width>
         <ZIndex>36</ZIndex>
@@ -1235,8 +1235,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>10.70803cm</Top>
-        <Left>13.89364cm</Left>
+        <Top>11.36208cm</Top>
+        <Left>13.79601cm</Left>
         <Height>0.65405cm</Height>
         <Width>5.08473cm</Width>
         <ZIndex>39</ZIndex>
@@ -1249,8 +1249,8 @@
         </Style>
       </Textbox>
       <Line Name="Line3">
-        <Top>10.37499cm</Top>
-        <Left>0.84159cm</Left>
+        <Top>11.02904cm</Top>
+        <Left>0.74396cm</Left>
         <Height>0cm</Height>
         <Width>19.06914cm</Width>
         <ZIndex>40</ZIndex>
@@ -1314,6 +1314,192 @@
         <Height>0.65405cm</Height>
         <Width>4.97109cm</Width>
         <ZIndex>42</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ເພີ່ມເງິນຄັ້ງທີ 1 :</Value>
+                <Style>
+                  <FontFamily>Saysettha OT</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>8.72426cm</Top>
+        <Left>12.04449cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>3.21111cm</Width>
+        <ZIndex>43</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ເພີ່ມເງິນຄັ້ງທີ 2 :</Value>
+                <Style>
+                  <FontFamily>Saysettha OT</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>9.41359cm</Top>
+        <Left>12.04449cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>3.21111cm</Width>
+        <ZIndex>44</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ເພີ່ມເງິນຄັ້ງທີ 3 :</Value>
+                <Style>
+                  <FontFamily>Saysettha OT</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>10.10291cm</Top>
+        <Left>12.04449cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>3.21111cm</Width>
+        <ZIndex>45</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>....................................</Value>
+                <Style>
+                  <FontFamily>Saysettha OT</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>8.72426cm</Top>
+        <Left>15.432cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>4.3811cm</Width>
+        <ZIndex>46</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>....................................</Value>
+                <Style>
+                  <FontFamily>Saysettha OT</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>9.41359cm</Top>
+        <Left>15.432cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>4.3811cm</Width>
+        <ZIndex>47</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>....................................</Value>
+                <Style>
+                  <FontFamily>Saysettha OT</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>10.10291cm</Top>
+        <Left>15.432cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>4.3811cm</Width>
+        <ZIndex>48</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
