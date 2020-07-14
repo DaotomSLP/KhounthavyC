@@ -123,10 +123,10 @@ namespace KhounthavyV2
         {
             API api = new API();
 
-            CustDgvShow.DataSource = api.LoadData("Customer");
+            //CustDgvShow.DataSource = api.LoadData("Customer");
 
-            txtPawnId.Text = api.GetNewId("Pawn");
-            txtCustId.Text = api.GetNewId("Customer");
+            //txtPawnId.Text = api.GetNewId("Pawn");
+            //txtCustId.Text = api.GetNewId("Customer");
 
             
 
@@ -141,7 +141,7 @@ namespace KhounthavyV2
 
         private void AddPawnFrm_Load(object sender, EventArgs e)
         {
-            LoadForm();
+            //LoadForm();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -188,5 +188,6 @@ namespace KhounthavyV2
 
             print.Show();
         }
+
     }
 }

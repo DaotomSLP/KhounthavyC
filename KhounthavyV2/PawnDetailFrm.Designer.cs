@@ -31,21 +31,12 @@
             this.PawnDgvShow = new System.Windows.Forms.DataGridView();
             this.PanPawnDgv = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.panCustFrmHerder = new System.Windows.Forms.Panel();
             this.lblCustFrmHeader = new System.Windows.Forms.Label();
-            this.panCustFrm = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtImgNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtProv = new System.Windows.Forms.TextBox();
-            this.txtDist = new System.Windows.Forms.TextBox();
-            this.txtVill = new System.Windows.Forms.TextBox();
             this.txtCustLastName = new System.Windows.Forms.TextBox();
             this.txtCustName = new System.Windows.Forms.TextBox();
             this.txtCustId = new System.Windows.Forms.TextBox();
@@ -57,11 +48,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtPawnSearch = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtImgNo = new System.Windows.Forms.TextBox();
+            this.txtProv = new System.Windows.Forms.TextBox();
+            this.txtDist = new System.Windows.Forms.TextBox();
+            this.txtVill = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PawnDgvShow)).BeginInit();
             this.PanPawnDgv.SuspendLayout();
             this.panCustFrmHerder.SuspendLayout();
-            this.panCustFrm.SuspendLayout();
             this.panPawnSearchHeader.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PawnDgvShow
@@ -83,7 +87,7 @@
             this.PawnDgvShow.ReadOnly = true;
             this.PawnDgvShow.RowHeadersWidth = 5;
             this.PawnDgvShow.RowTemplate.Height = 40;
-            this.PawnDgvShow.Size = new System.Drawing.Size(1260, 713);
+            this.PawnDgvShow.Size = new System.Drawing.Size(1272, 713);
             this.PawnDgvShow.TabIndex = 0;
             this.PawnDgvShow.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PawnDgvShow_CellMouseClick);
             // 
@@ -99,42 +103,20 @@
             this.PanPawnDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
             this.PanPawnDgv.Location = new System.Drawing.Point(28, 531);
             this.PanPawnDgv.Name = "PanPawnDgv";
-            this.PanPawnDgv.Size = new System.Drawing.Size(1266, 726);
+            this.PanPawnDgv.Size = new System.Drawing.Size(1278, 726);
             this.PanPawnDgv.TabIndex = 38;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(29, 241);
+            this.label2.Location = new System.Drawing.Point(26, 240);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(521, 26);
+            this.label2.Size = new System.Drawing.Size(592, 26);
             this.label2.TabIndex = 25;
             this.label2.Text = "ເບີໂທ :";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(587, 241);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(632, 26);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "ເລກທີຮູບ";
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(589, 166);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(632, 26);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "ແຂວງ :";
             // 
             // panCustFrmHerder
             // 
@@ -144,7 +126,7 @@
             this.panCustFrmHerder.Controls.Add(this.lblCustFrmHeader);
             this.panCustFrmHerder.Location = new System.Drawing.Point(28, 22);
             this.panCustFrmHerder.Name = "panCustFrmHerder";
-            this.panCustFrmHerder.Size = new System.Drawing.Size(1266, 61);
+            this.panCustFrmHerder.Size = new System.Drawing.Size(1278, 61);
             this.panCustFrmHerder.TabIndex = 40;
             // 
             // lblCustFrmHeader
@@ -157,181 +139,93 @@
             this.lblCustFrmHeader.TabIndex = 14;
             this.lblCustFrmHeader.Text = "ຂໍ້ມູນການຈຳ :";
             // 
-            // panCustFrm
-            // 
-            this.panCustFrm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panCustFrm.BackColor = System.Drawing.Color.White;
-            this.panCustFrm.Controls.Add(this.label2);
-            this.panCustFrm.Controls.Add(this.label3);
-            this.panCustFrm.Controls.Add(this.label22);
-            this.panCustFrm.Controls.Add(this.label6);
-            this.panCustFrm.Controls.Add(this.label18);
-            this.panCustFrm.Controls.Add(this.label9);
-            this.panCustFrm.Controls.Add(this.txtTel);
-            this.panCustFrm.Controls.Add(this.label17);
-            this.panCustFrm.Controls.Add(this.txtImgNo);
-            this.panCustFrm.Controls.Add(this.label10);
-            this.panCustFrm.Controls.Add(this.txtProv);
-            this.panCustFrm.Controls.Add(this.txtDist);
-            this.panCustFrm.Controls.Add(this.txtVill);
-            this.panCustFrm.Controls.Add(this.txtCustLastName);
-            this.panCustFrm.Controls.Add(this.txtCustName);
-            this.panCustFrm.Controls.Add(this.txtCustId);
-            this.panCustFrm.Location = new System.Drawing.Point(28, 83);
-            this.panCustFrm.Name = "panCustFrm";
-            this.panCustFrm.Size = new System.Drawing.Size(1266, 320);
-            this.panCustFrm.TabIndex = 39;
-            // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(27, 166);
+            this.label6.Location = new System.Drawing.Point(24, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(521, 26);
+            this.label6.Size = new System.Drawing.Size(592, 26);
             this.label6.TabIndex = 26;
             this.label6.Text = "ນາມສະກຸນ :";
             // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(589, 91);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(632, 26);
-            this.label18.TabIndex = 27;
-            this.label18.Text = "ເມືອງ :";
-            // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(27, 91);
+            this.label9.Location = new System.Drawing.Point(24, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(521, 26);
+            this.label9.Size = new System.Drawing.Size(592, 26);
             this.label9.TabIndex = 27;
             this.label9.Text = "ຊື່ :";
             // 
             // txtTel
             // 
+            this.txtTel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTel.BackColor = System.Drawing.Color.White;
             this.txtTel.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
             this.txtTel.ForeColor = System.Drawing.Color.Green;
-            this.txtTel.Location = new System.Drawing.Point(29, 270);
+            this.txtTel.Location = new System.Drawing.Point(26, 269);
             this.txtTel.Margin = new System.Windows.Forms.Padding(0);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(519, 31);
+            this.txtTel.Size = new System.Drawing.Size(590, 33);
             this.txtTel.TabIndex = 21;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(589, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(632, 26);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "ບ້ານ :";
-            // 
-            // txtImgNo
-            // 
-            this.txtImgNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImgNo.BackColor = System.Drawing.Color.White;
-            this.txtImgNo.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
-            this.txtImgNo.ForeColor = System.Drawing.Color.Green;
-            this.txtImgNo.Location = new System.Drawing.Point(589, 270);
-            this.txtImgNo.Margin = new System.Windows.Forms.Padding(0);
-            this.txtImgNo.Name = "txtImgNo";
-            this.txtImgNo.Size = new System.Drawing.Size(630, 31);
-            this.txtImgNo.TabIndex = 24;
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(27, 16);
+            this.label10.Location = new System.Drawing.Point(24, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(521, 26);
+            this.label10.Size = new System.Drawing.Size(592, 26);
             this.label10.TabIndex = 28;
             this.label10.Text = "ລະຫັດລູກຄ້າ :";
             // 
-            // txtProv
-            // 
-            this.txtProv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProv.BackColor = System.Drawing.Color.White;
-            this.txtProv.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
-            this.txtProv.ForeColor = System.Drawing.Color.Green;
-            this.txtProv.Location = new System.Drawing.Point(591, 195);
-            this.txtProv.Margin = new System.Windows.Forms.Padding(0);
-            this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(630, 31);
-            this.txtProv.TabIndex = 24;
-            // 
-            // txtDist
-            // 
-            this.txtDist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDist.BackColor = System.Drawing.Color.White;
-            this.txtDist.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
-            this.txtDist.ForeColor = System.Drawing.Color.Green;
-            this.txtDist.Location = new System.Drawing.Point(591, 123);
-            this.txtDist.Margin = new System.Windows.Forms.Padding(0);
-            this.txtDist.Name = "txtDist";
-            this.txtDist.Size = new System.Drawing.Size(630, 31);
-            this.txtDist.TabIndex = 24;
-            // 
-            // txtVill
-            // 
-            this.txtVill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVill.BackColor = System.Drawing.Color.White;
-            this.txtVill.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVill.ForeColor = System.Drawing.Color.Green;
-            this.txtVill.Location = new System.Drawing.Point(591, 45);
-            this.txtVill.Margin = new System.Windows.Forms.Padding(0);
-            this.txtVill.Name = "txtVill";
-            this.txtVill.Size = new System.Drawing.Size(630, 31);
-            this.txtVill.TabIndex = 24;
-            // 
             // txtCustLastName
             // 
+            this.txtCustLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustLastName.BackColor = System.Drawing.Color.White;
             this.txtCustLastName.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
             this.txtCustLastName.ForeColor = System.Drawing.Color.Green;
-            this.txtCustLastName.Location = new System.Drawing.Point(29, 195);
+            this.txtCustLastName.Location = new System.Drawing.Point(26, 194);
             this.txtCustLastName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustLastName.Name = "txtCustLastName";
-            this.txtCustLastName.Size = new System.Drawing.Size(519, 31);
+            this.txtCustLastName.Size = new System.Drawing.Size(590, 33);
             this.txtCustLastName.TabIndex = 22;
             // 
             // txtCustName
             // 
+            this.txtCustName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustName.BackColor = System.Drawing.Color.White;
             this.txtCustName.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
             this.txtCustName.ForeColor = System.Drawing.Color.Green;
-            this.txtCustName.Location = new System.Drawing.Point(29, 123);
+            this.txtCustName.Location = new System.Drawing.Point(26, 122);
             this.txtCustName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustName.Name = "txtCustName";
-            this.txtCustName.Size = new System.Drawing.Size(519, 31);
+            this.txtCustName.Size = new System.Drawing.Size(590, 33);
             this.txtCustName.TabIndex = 24;
             // 
             // txtCustId
             // 
+            this.txtCustId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustId.BackColor = System.Drawing.Color.White;
             this.txtCustId.Enabled = false;
             this.txtCustId.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
             this.txtCustId.ForeColor = System.Drawing.Color.Green;
-            this.txtCustId.Location = new System.Drawing.Point(29, 45);
+            this.txtCustId.Location = new System.Drawing.Point(26, 44);
             this.txtCustId.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustId.Name = "txtCustId";
-            this.txtCustId.Size = new System.Drawing.Size(519, 31);
+            this.txtCustId.Size = new System.Drawing.Size(590, 33);
             this.txtCustId.TabIndex = 24;
             // 
             // btnPawnSearch
@@ -370,7 +264,7 @@
             this.panPawnSearchHeader.Controls.Add(this.txtPawnSearch);
             this.panPawnSearchHeader.Location = new System.Drawing.Point(28, 427);
             this.panPawnSearchHeader.Name = "panPawnSearchHeader";
-            this.panPawnSearchHeader.Size = new System.Drawing.Size(1266, 104);
+            this.panPawnSearchHeader.Size = new System.Drawing.Size(1278, 104);
             this.panPawnSearchHeader.TabIndex = 42;
             // 
             // dtpEnd
@@ -379,7 +273,7 @@
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEnd.Location = new System.Drawing.Point(377, 56);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(135, 31);
+            this.dtpEnd.Size = new System.Drawing.Size(135, 33);
             this.dtpEnd.TabIndex = 31;
             this.dtpEnd.ValueChanged += new System.EventHandler(this.dtpEnd_ValueChanged);
             // 
@@ -389,7 +283,7 @@
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStart.Location = new System.Drawing.Point(197, 56);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(134, 31);
+            this.dtpStart.Size = new System.Drawing.Size(134, 33);
             this.dtpStart.TabIndex = 31;
             this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
@@ -420,8 +314,161 @@
             this.txtPawnSearch.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPawnSearch.Location = new System.Drawing.Point(197, 15);
             this.txtPawnSearch.Name = "txtPawnSearch";
-            this.txtPawnSearch.Size = new System.Drawing.Size(315, 31);
+            this.txtPawnSearch.Size = new System.Drawing.Size(315, 33);
             this.txtPawnSearch.TabIndex = 3;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 81);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1278, 325);
+            this.tableLayoutPanel1.TabIndex = 43;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtCustId);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtCustName);
+            this.panel1.Controls.Add(this.txtTel);
+            this.panel1.Controls.Add(this.txtCustLastName);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(633, 319);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.txtImgNo);
+            this.panel2.Controls.Add(this.txtProv);
+            this.panel2.Controls.Add(this.txtDist);
+            this.panel2.Controls.Add(this.txtVill);
+            this.panel2.Location = new System.Drawing.Point(642, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(633, 319);
+            this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(11, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(600, 26);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "ເລກທີຮູບ";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label22.Location = new System.Drawing.Point(13, 165);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(600, 26);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "ແຂວງ :";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(13, 90);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(600, 26);
+            this.label18.TabIndex = 35;
+            this.label18.Text = "ເມືອງ :";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(13, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(600, 26);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "ບ້ານ :";
+            // 
+            // txtImgNo
+            // 
+            this.txtImgNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtImgNo.BackColor = System.Drawing.Color.White;
+            this.txtImgNo.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
+            this.txtImgNo.ForeColor = System.Drawing.Color.Green;
+            this.txtImgNo.Location = new System.Drawing.Point(13, 269);
+            this.txtImgNo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtImgNo.Name = "txtImgNo";
+            this.txtImgNo.Size = new System.Drawing.Size(598, 33);
+            this.txtImgNo.TabIndex = 29;
+            // 
+            // txtProv
+            // 
+            this.txtProv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProv.BackColor = System.Drawing.Color.White;
+            this.txtProv.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
+            this.txtProv.ForeColor = System.Drawing.Color.Green;
+            this.txtProv.Location = new System.Drawing.Point(15, 194);
+            this.txtProv.Margin = new System.Windows.Forms.Padding(0);
+            this.txtProv.Name = "txtProv";
+            this.txtProv.Size = new System.Drawing.Size(598, 33);
+            this.txtProv.TabIndex = 30;
+            // 
+            // txtDist
+            // 
+            this.txtDist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDist.BackColor = System.Drawing.Color.White;
+            this.txtDist.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDist.ForeColor = System.Drawing.Color.Green;
+            this.txtDist.Location = new System.Drawing.Point(15, 122);
+            this.txtDist.Margin = new System.Windows.Forms.Padding(0);
+            this.txtDist.Name = "txtDist";
+            this.txtDist.Size = new System.Drawing.Size(598, 33);
+            this.txtDist.TabIndex = 31;
+            // 
+            // txtVill
+            // 
+            this.txtVill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtVill.BackColor = System.Drawing.Color.White;
+            this.txtVill.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
+            this.txtVill.ForeColor = System.Drawing.Color.Green;
+            this.txtVill.Location = new System.Drawing.Point(15, 44);
+            this.txtVill.Margin = new System.Windows.Forms.Padding(0);
+            this.txtVill.Name = "txtVill";
+            this.txtVill.Size = new System.Drawing.Size(598, 33);
+            this.txtVill.TabIndex = 32;
             // 
             // PawnDetailFrm
             // 
@@ -430,9 +477,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1350, 717);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.PanPawnDgv);
             this.Controls.Add(this.panCustFrmHerder);
-            this.Controls.Add(this.panCustFrm);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panPawnSearchHeader);
             this.Name = "PawnDetailFrm";
@@ -443,10 +490,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PawnDgvShow)).EndInit();
             this.PanPawnDgv.ResumeLayout(false);
             this.panCustFrmHerder.ResumeLayout(false);
-            this.panCustFrm.ResumeLayout(false);
-            this.panCustFrm.PerformLayout();
             this.panPawnSearchHeader.ResumeLayout(false);
             this.panPawnSearchHeader.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -456,21 +506,12 @@
         internal System.Windows.Forms.DataGridView PawnDgvShow;
         internal System.Windows.Forms.Panel PanPawnDgv;
         internal System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panCustFrmHerder;
         internal System.Windows.Forms.Label lblCustFrmHeader;
-        private System.Windows.Forms.Panel panCustFrm;
         internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.TextBox txtTel;
-        internal System.Windows.Forms.Label label17;
-        internal System.Windows.Forms.TextBox txtImgNo;
         internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.TextBox txtProv;
-        internal System.Windows.Forms.TextBox txtDist;
-        internal System.Windows.Forms.TextBox txtVill;
         internal System.Windows.Forms.TextBox txtCustLastName;
         internal System.Windows.Forms.TextBox txtCustName;
         internal System.Windows.Forms.TextBox txtCustId;
@@ -482,5 +523,16 @@
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label Label1;
         private System.Windows.Forms.TextBox txtPawnSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.Label label18;
+        internal System.Windows.Forms.Label label17;
+        internal System.Windows.Forms.TextBox txtImgNo;
+        internal System.Windows.Forms.TextBox txtProv;
+        internal System.Windows.Forms.TextBox txtDist;
+        internal System.Windows.Forms.TextBox txtVill;
     }
 }

@@ -54,25 +54,25 @@ namespace KhounthavyV2
 
         private void PawnDgvShow_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            API api = new API();
-            DataTable dt;
-            dt = api.LoadCustomerFromPawn(PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString());
-            foreach (DataRow row in dt.Rows)
-            {
-                txtCustId.Text = row[0].ToString();
-                txtCustName.Text = row[1].ToString();
-                txtCustLastName.Text = row[2].ToString();
-                txtTel.Text = row[3].ToString();
-                txtVill.Text = row[4].ToString();
-                txtDist.Text = row[5].ToString();
-                txtProv.Text = row[6].ToString();
-                txtImgNo.Text = row[7].ToString();
-            }
+            //API api = new API();
+            //DataTable dt;
+            //dt = api.LoadCustomerFromPawn(PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString());
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    txtCustId.Text = row[0].ToString();
+            //    txtCustName.Text = row[1].ToString();
+            //    txtCustLastName.Text = row[2].ToString();
+            //    txtTel.Text = row[3].ToString();
+            //    txtVill.Text = row[4].ToString();
+            //    txtDist.Text = row[5].ToString();
+            //    txtProv.Text = row[6].ToString();
+            //    txtImgNo.Text = row[7].ToString();
+            //}
         }
 
         private void PawnDetailFrm_Load(object sender, EventArgs e)
         {
-            LoadForm();
+            //LoadForm();
         }
 
         private void PawnDetailFrm_Resize(object sender, EventArgs e)

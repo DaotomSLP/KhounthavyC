@@ -22,9 +22,9 @@ namespace KhounthavyV2
             {
                 API api = new API();
 
-                CustDgvShow.DataSource = api.LoadData("Customer");
+                //CustDgvShow.DataSource = api.LoadData("Customer");
 
-                txtCustId.Text = api.GetNewId("Customer");
+                //txtCustId.Text = api.GetNewId("Customer");
 
                 btnEdit.Enabled = false;
 
@@ -40,7 +40,7 @@ namespace KhounthavyV2
 
         private void AddCustomerFrm_Load(object sender, EventArgs e)
         {
-            LoadForm();
+            //LoadForm();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
