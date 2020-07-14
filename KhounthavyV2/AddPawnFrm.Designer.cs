@@ -101,7 +101,7 @@
             this.Pan_CustDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
             this.Pan_CustDgv.Location = new System.Drawing.Point(360, 490);
             this.Pan_CustDgv.Name = "Pan_CustDgv";
-            this.Pan_CustDgv.Size = new System.Drawing.Size(946, 726);
+            this.Pan_CustDgv.Size = new System.Drawing.Size(895, 726);
             this.Pan_CustDgv.TabIndex = 23;
             // 
             // CustDgvShow
@@ -124,7 +124,7 @@
             this.CustDgvShow.ReadOnly = true;
             this.CustDgvShow.RowHeadersWidth = 40;
             this.CustDgvShow.RowTemplate.Height = 40;
-            this.CustDgvShow.Size = new System.Drawing.Size(940, 713);
+            this.CustDgvShow.Size = new System.Drawing.Size(889, 713);
             this.CustDgvShow.TabIndex = 0;
             this.CustDgvShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDgvShow_CellClick);
             // 
@@ -427,7 +427,7 @@
             this.panPawnFrm.Controls.Add(this.txtPawnId);
             this.panPawnFrm.Location = new System.Drawing.Point(25, 85);
             this.panPawnFrm.Name = "panPawnFrm";
-            this.panPawnFrm.Size = new System.Drawing.Size(1281, 320);
+            this.panPawnFrm.Size = new System.Drawing.Size(1230, 320);
             this.panPawnFrm.TabIndex = 26;
             // 
             // dtpDate
@@ -448,7 +448,7 @@
             this.dtpExp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpExp.Location = new System.Drawing.Point(860, 120);
             this.dtpExp.Name = "dtpExp";
-            this.dtpExp.Size = new System.Drawing.Size(392, 31);
+            this.dtpExp.Size = new System.Drawing.Size(341, 31);
             this.dtpExp.TabIndex = 30;
             // 
             // cboDeviceType
@@ -462,7 +462,7 @@
             "ຄອມພິວເຕີ"});
             this.cboDeviceType.Location = new System.Drawing.Point(860, 195);
             this.cboDeviceType.Name = "cboDeviceType";
-            this.cboDeviceType.Size = new System.Drawing.Size(392, 30);
+            this.cboDeviceType.Size = new System.Drawing.Size(341, 30);
             this.cboDeviceType.TabIndex = 29;
             // 
             // label2
@@ -483,7 +483,7 @@
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Location = new System.Drawing.Point(856, 166);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(396, 26);
+            this.label22.Size = new System.Drawing.Size(345, 26);
             this.label22.TabIndex = 26;
             this.label22.Text = "ປະເພດເຄື່ອງ :";
             // 
@@ -515,7 +515,7 @@
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Location = new System.Drawing.Point(856, 91);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(396, 26);
+            this.label18.Size = new System.Drawing.Size(345, 26);
             this.label18.TabIndex = 27;
             this.label18.Text = "ມື້ໝົດກຳນົດ :";
             // 
@@ -558,7 +558,7 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(856, 16);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(396, 26);
+            this.label17.Size = new System.Drawing.Size(345, 26);
             this.label17.TabIndex = 28;
             this.label17.Text = "ລະຫັດປົດລ໋ອກ :";
             // 
@@ -614,7 +614,7 @@
             this.txtDevicePassword.Location = new System.Drawing.Point(858, 45);
             this.txtDevicePassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtDevicePassword.Name = "txtDevicePassword";
-            this.txtDevicePassword.Size = new System.Drawing.Size(394, 31);
+            this.txtDevicePassword.Size = new System.Drawing.Size(343, 31);
             this.txtDevicePassword.TabIndex = 24;
             // 
             // txtDeviceName
@@ -659,7 +659,7 @@
             this.panPawnFrmHerder.Controls.Add(this.lblPawnFrmHeader);
             this.panPawnFrmHerder.Location = new System.Drawing.Point(25, 24);
             this.panPawnFrmHerder.Name = "panPawnFrmHerder";
-            this.panPawnFrmHerder.Size = new System.Drawing.Size(1281, 61);
+            this.panPawnFrmHerder.Size = new System.Drawing.Size(1230, 61);
             this.panPawnFrmHerder.TabIndex = 27;
             // 
             // lblPawnFrmHeader
@@ -689,7 +689,7 @@
             this.panCustSearchHeader.Controls.Add(this.txtCustSearch);
             this.panCustSearchHeader.Location = new System.Drawing.Point(360, 429);
             this.panCustSearchHeader.Name = "panCustSearchHeader";
-            this.panCustSearchHeader.Size = new System.Drawing.Size(946, 61);
+            this.panCustSearchHeader.Size = new System.Drawing.Size(895, 61);
             this.panCustSearchHeader.TabIndex = 29;
             // 
             // btnCustSearch

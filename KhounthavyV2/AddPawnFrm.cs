@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -156,8 +157,6 @@ namespace KhounthavyV2
                     );
                 }
 
-
-
                 api.InsertPawn(
                     txtPawnId.Text, dtpDate, txtDeviceNo.Text, txtDeviceName.Text, txtColor.Text,
                     txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "", "",
@@ -165,6 +164,7 @@ namespace KhounthavyV2
                     );
 
                 MessageBox.Show("SUCCESS");
+                PrintBill();
                 LoadForm();
             }
             catch (Exception ex)
@@ -172,6 +172,21 @@ namespace KhounthavyV2
                 //api.DeleteCustomer(txtCustId.Text);
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void PrintBill()
+        {
+            PrintFrm print = new PrintFrm();
+
+            DataTable dtb = new DataTable();
+            API api = new API();
+            dtb = api.LoadPawn(txtPawnId.Text);
+            ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
+            print.reportViewer1.LocalReport.DataSources.Clear();
+            print.reportViewer1.LocalReport.DataSources.Add(rptsrc);
+            print.reportViewer1.LocalReport.Refresh();
+
+            print.Show();
         }
     }
 }

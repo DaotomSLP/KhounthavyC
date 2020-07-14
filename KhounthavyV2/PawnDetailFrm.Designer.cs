@@ -83,7 +83,7 @@
             this.PawnDgvShow.ReadOnly = true;
             this.PawnDgvShow.RowHeadersWidth = 5;
             this.PawnDgvShow.RowTemplate.Height = 40;
-            this.PawnDgvShow.Size = new System.Drawing.Size(1277, 713);
+            this.PawnDgvShow.Size = new System.Drawing.Size(1260, 713);
             this.PawnDgvShow.TabIndex = 0;
             this.PawnDgvShow.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PawnDgvShow_CellMouseClick);
             // 
@@ -99,7 +99,7 @@
             this.PanPawnDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
             this.PanPawnDgv.Location = new System.Drawing.Point(28, 531);
             this.PanPawnDgv.Name = "PanPawnDgv";
-            this.PanPawnDgv.Size = new System.Drawing.Size(1283, 726);
+            this.PanPawnDgv.Size = new System.Drawing.Size(1266, 726);
             this.PanPawnDgv.TabIndex = 38;
             // 
             // label2
@@ -120,7 +120,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(587, 241);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(649, 26);
+            this.label3.Size = new System.Drawing.Size(632, 26);
             this.label3.TabIndex = 26;
             this.label3.Text = "ເລກທີຮູບ";
             // 
@@ -132,7 +132,7 @@
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Location = new System.Drawing.Point(589, 166);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(649, 26);
+            this.label22.Size = new System.Drawing.Size(632, 26);
             this.label22.TabIndex = 26;
             this.label22.Text = "ແຂວງ :";
             // 
@@ -144,7 +144,7 @@
             this.panCustFrmHerder.Controls.Add(this.lblCustFrmHeader);
             this.panCustFrmHerder.Location = new System.Drawing.Point(28, 22);
             this.panCustFrmHerder.Name = "panCustFrmHerder";
-            this.panCustFrmHerder.Size = new System.Drawing.Size(1283, 61);
+            this.panCustFrmHerder.Size = new System.Drawing.Size(1266, 61);
             this.panCustFrmHerder.TabIndex = 40;
             // 
             // lblCustFrmHeader
@@ -180,7 +180,7 @@
             this.panCustFrm.Controls.Add(this.txtCustId);
             this.panCustFrm.Location = new System.Drawing.Point(28, 83);
             this.panCustFrm.Name = "panCustFrm";
-            this.panCustFrm.Size = new System.Drawing.Size(1283, 320);
+            this.panCustFrm.Size = new System.Drawing.Size(1266, 320);
             this.panCustFrm.TabIndex = 39;
             // 
             // label6
@@ -201,7 +201,7 @@
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Location = new System.Drawing.Point(589, 91);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(649, 26);
+            this.label18.Size = new System.Drawing.Size(632, 26);
             this.label18.TabIndex = 27;
             this.label18.Text = "ເມືອງ :";
             // 
@@ -234,7 +234,7 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(589, 16);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(649, 26);
+            this.label17.Size = new System.Drawing.Size(632, 26);
             this.label17.TabIndex = 28;
             this.label17.Text = "ບ້ານ :";
             // 
@@ -248,7 +248,7 @@
             this.txtImgNo.Location = new System.Drawing.Point(589, 270);
             this.txtImgNo.Margin = new System.Windows.Forms.Padding(0);
             this.txtImgNo.Name = "txtImgNo";
-            this.txtImgNo.Size = new System.Drawing.Size(647, 31);
+            this.txtImgNo.Size = new System.Drawing.Size(630, 31);
             this.txtImgNo.TabIndex = 24;
             // 
             // label10
@@ -271,7 +271,7 @@
             this.txtProv.Location = new System.Drawing.Point(591, 195);
             this.txtProv.Margin = new System.Windows.Forms.Padding(0);
             this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(647, 31);
+            this.txtProv.Size = new System.Drawing.Size(630, 31);
             this.txtProv.TabIndex = 24;
             // 
             // txtDist
@@ -284,7 +284,7 @@
             this.txtDist.Location = new System.Drawing.Point(591, 123);
             this.txtDist.Margin = new System.Windows.Forms.Padding(0);
             this.txtDist.Name = "txtDist";
-            this.txtDist.Size = new System.Drawing.Size(647, 31);
+            this.txtDist.Size = new System.Drawing.Size(630, 31);
             this.txtDist.TabIndex = 24;
             // 
             // txtVill
@@ -297,7 +297,7 @@
             this.txtVill.Location = new System.Drawing.Point(591, 45);
             this.txtVill.Margin = new System.Windows.Forms.Padding(0);
             this.txtVill.Name = "txtVill";
-            this.txtVill.Size = new System.Drawing.Size(647, 31);
+            this.txtVill.Size = new System.Drawing.Size(630, 31);
             this.txtVill.TabIndex = 24;
             // 
             // txtCustLastName
@@ -370,7 +370,7 @@
             this.panPawnSearchHeader.Controls.Add(this.txtPawnSearch);
             this.panPawnSearchHeader.Location = new System.Drawing.Point(28, 427);
             this.panPawnSearchHeader.Name = "panPawnSearchHeader";
-            this.panPawnSearchHeader.Size = new System.Drawing.Size(1283, 104);
+            this.panPawnSearchHeader.Size = new System.Drawing.Size(1266, 104);
             this.panPawnSearchHeader.TabIndex = 42;
             // 
             // dtpEnd

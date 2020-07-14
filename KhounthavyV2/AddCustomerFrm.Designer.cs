@@ -155,7 +155,7 @@
             this.panCustSearchHeader.Controls.Add(this.txtCustSearch);
             this.panCustSearchHeader.Location = new System.Drawing.Point(358, 24);
             this.panCustSearchHeader.Name = "panCustSearchHeader";
-            this.panCustSearchHeader.Size = new System.Drawing.Size(948, 61);
+            this.panCustSearchHeader.Size = new System.Drawing.Size(914, 61);
             this.panCustSearchHeader.TabIndex = 37;
             // 
             // btnCustSearch
@@ -207,7 +207,7 @@
             this.panPawnFrmHerder.Controls.Add(this.lblPawnFrmHeader);
             this.panPawnFrmHerder.Location = new System.Drawing.Point(30, -359);
             this.panPawnFrmHerder.Name = "panPawnFrmHerder";
-            this.panPawnFrmHerder.Size = new System.Drawing.Size(1189, 61);
+            this.panPawnFrmHerder.Size = new System.Drawing.Size(1155, 61);
             this.panPawnFrmHerder.TabIndex = 35;
             // 
             // Pan_CustDgv
@@ -222,7 +222,7 @@
             this.Pan_CustDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
             this.Pan_CustDgv.Location = new System.Drawing.Point(358, 85);
             this.Pan_CustDgv.Name = "Pan_CustDgv";
-            this.Pan_CustDgv.Size = new System.Drawing.Size(948, 726);
+            this.Pan_CustDgv.Size = new System.Drawing.Size(914, 726);
             this.Pan_CustDgv.TabIndex = 31;
             // 
             // CustDgvShow
@@ -244,7 +244,7 @@
             this.CustDgvShow.ReadOnly = true;
             this.CustDgvShow.RowHeadersWidth = 40;
             this.CustDgvShow.RowTemplate.Height = 40;
-            this.CustDgvShow.Size = new System.Drawing.Size(942, 713);
+            this.CustDgvShow.Size = new System.Drawing.Size(908, 713);
             this.CustDgvShow.TabIndex = 0;
             this.CustDgvShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDgvShow_CellClick);
             // 

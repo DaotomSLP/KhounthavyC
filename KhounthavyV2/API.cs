@@ -186,6 +186,26 @@ namespace KhounthavyV2
             sqlConnection.Close();
         }
 
+        public DataTable LoadPawn(String searchKeyWord)
+        {
+            String queryStr = "SELECT TOP (100) *" +
+                " FROM Pawn_view WHERE Pawn_id = '" + searchKeyWord + "' ORDER BY Pawn_id DESC";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
+        }
+
         public DataTable PawnSearch(String searchKeyWord)
         {
             String queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +

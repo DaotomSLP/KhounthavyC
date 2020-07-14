@@ -68,7 +68,7 @@
             this.btnMenuSetting.Name = "btnMenuSetting";
             this.btnMenuSetting.Size = new System.Drawing.Size(229, 36);
             this.btnMenuSetting.TabIndex = 2;
-            this.btnMenuSetting.Text = "0";
+            this.btnMenuSetting.Text = "ຕັ້ງຄ່າ";
             this.btnMenuSetting.UseVisualStyleBackColor = false;
             this.btnMenuSetting.Click += new System.EventHandler(this.btnMenuSetting_Click);
             // 
@@ -84,7 +84,7 @@
             this.btnMenuPawnDetail.Name = "btnMenuPawnDetail";
             this.btnMenuPawnDetail.Size = new System.Drawing.Size(229, 36);
             this.btnMenuPawnDetail.TabIndex = 2;
-            this.btnMenuPawnDetail.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnMenuPawnDetail.Text = "ຂໍ້ມູນການຈຳນຳ";
             this.btnMenuPawnDetail.UseVisualStyleBackColor = false;
             this.btnMenuPawnDetail.Click += new System.EventHandler(this.btnMenuPawnDetail_Click);
             // 
@@ -116,7 +116,7 @@
             this.btnMenuAddNewPawn.Name = "btnMenuAddNewPawn";
             this.btnMenuAddNewPawn.Size = new System.Drawing.Size(229, 36);
             this.btnMenuAddNewPawn.TabIndex = 2;
-            this.btnMenuAddNewPawn.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnMenuAddNewPawn.Text = "ເພີ່ມການຈຳນຳ";
             this.btnMenuAddNewPawn.UseVisualStyleBackColor = false;
             this.btnMenuAddNewPawn.Click += new System.EventHandler(this.btnMenuAddNewPawn_Click);
             // 
@@ -126,7 +126,7 @@
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(107, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 35);
+            this.label1.Size = new System.Drawing.Size(72, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
