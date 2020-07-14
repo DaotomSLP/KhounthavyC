@@ -23,3 +23,16 @@ D:\TOm\work\KhounthavyV2\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CoreCompileI
 D:\TOm\work\KhounthavyV2\KhounthavyV2\obj\Debug\KhounthavyV2.exe
 D:\TOm\work\KhounthavyV2\KhounthavyV2\obj\Debug\KhounthavyV2.pdb
 D:\TOm\work\KhounthavyV2\KhounthavyV2\obj\Debug\KhounthavyV2.AddCustomerFrm.resources
+D:\t\KhounthavyC\KhounthavyV2\bin\Debug\KhounthavyV2.exe.config
+D:\t\KhounthavyC\KhounthavyV2\bin\Debug\KhounthavyV2.exe
+D:\t\KhounthavyC\KhounthavyV2\bin\Debug\KhounthavyV2.pdb
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.AddCustomerFrm.resources
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.AddPawnFrm.resources
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.Home.resources
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.PawnDetailFrm.resources
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.Properties.Resources.resources
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.GenerateResource.cache
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CoreCompileInputs.cache
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.exe
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.pdb

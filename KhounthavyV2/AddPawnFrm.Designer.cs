@@ -49,7 +49,10 @@
             this.txtCustLastName = new System.Windows.Forms.TextBox();
             this.txtCustName = new System.Windows.Forms.TextBox();
             this.txtCustId = new System.Windows.Forms.TextBox();
+            this.radOldCust = new System.Windows.Forms.RadioButton();
+            this.radNewCust = new System.Windows.Forms.RadioButton();
             this.panPawnFrm = new System.Windows.Forms.Panel();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dtpExp = new System.Windows.Forms.DateTimePicker();
             this.cboDeviceType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,9 +80,6 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.txtCustSearch = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.radOldCust = new System.Windows.Forms.RadioButton();
-            this.radNewCust = new System.Windows.Forms.RadioButton();
             this.Pan_CustDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustDgvShow)).BeginInit();
             this.panCustFrmHeader.SuspendLayout();
@@ -99,9 +99,9 @@
             this.Pan_CustDgv.Controls.Add(this.CustDgvShow);
             this.Pan_CustDgv.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Pan_CustDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
-            this.Pan_CustDgv.Location = new System.Drawing.Point(373, 489);
+            this.Pan_CustDgv.Location = new System.Drawing.Point(360, 490);
             this.Pan_CustDgv.Name = "Pan_CustDgv";
-            this.Pan_CustDgv.Size = new System.Drawing.Size(871, 726);
+            this.Pan_CustDgv.Size = new System.Drawing.Size(946, 726);
             this.Pan_CustDgv.TabIndex = 23;
             // 
             // CustDgvShow
@@ -124,7 +124,7 @@
             this.CustDgvShow.ReadOnly = true;
             this.CustDgvShow.RowHeadersWidth = 40;
             this.CustDgvShow.RowTemplate.Height = 40;
-            this.CustDgvShow.Size = new System.Drawing.Size(865, 713);
+            this.CustDgvShow.Size = new System.Drawing.Size(940, 713);
             this.CustDgvShow.TabIndex = 0;
             this.CustDgvShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDgvShow_CellClick);
             // 
@@ -132,7 +132,7 @@
             // 
             this.panCustFrmHeader.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panCustFrmHeader.Controls.Add(this.lblCustFrmHeader);
-            this.panCustFrmHeader.Location = new System.Drawing.Point(38, 428);
+            this.panCustFrmHeader.Location = new System.Drawing.Point(25, 429);
             this.panCustFrmHeader.Name = "panCustFrmHeader";
             this.panCustFrmHeader.Size = new System.Drawing.Size(307, 61);
             this.panCustFrmHeader.TabIndex = 25;
@@ -168,7 +168,7 @@
             this.panCustForm.Controls.Add(this.txtCustId);
             this.panCustForm.Controls.Add(this.radOldCust);
             this.panCustForm.Controls.Add(this.radNewCust);
-            this.panCustForm.Location = new System.Drawing.Point(38, 489);
+            this.panCustForm.Location = new System.Drawing.Point(25, 490);
             this.panCustForm.Name = "panCustForm";
             this.panCustForm.Size = new System.Drawing.Size(307, 669);
             this.panCustForm.TabIndex = 25;
@@ -374,6 +374,32 @@
             this.txtCustId.Size = new System.Drawing.Size(269, 31);
             this.txtCustId.TabIndex = 17;
             // 
+            // radOldCust
+            // 
+            this.radOldCust.AutoSize = true;
+            this.radOldCust.Font = new System.Drawing.Font("Phetsarath OT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radOldCust.Location = new System.Drawing.Point(161, 10);
+            this.radOldCust.Name = "radOldCust";
+            this.radOldCust.Size = new System.Drawing.Size(99, 28);
+            this.radOldCust.TabIndex = 4;
+            this.radOldCust.Text = "ລູກຄ້າເກົ່າ";
+            this.radOldCust.UseVisualStyleBackColor = true;
+            this.radOldCust.CheckedChanged += new System.EventHandler(this.radOldCust_CheckedChanged_1);
+            // 
+            // radNewCust
+            // 
+            this.radNewCust.AutoSize = true;
+            this.radNewCust.Checked = true;
+            this.radNewCust.Font = new System.Drawing.Font("Phetsarath OT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radNewCust.Location = new System.Drawing.Point(21, 10);
+            this.radNewCust.Name = "radNewCust";
+            this.radNewCust.Size = new System.Drawing.Size(100, 28);
+            this.radNewCust.TabIndex = 5;
+            this.radNewCust.TabStop = true;
+            this.radNewCust.Text = "ລູກຄ້າໃໝ່";
+            this.radNewCust.UseVisualStyleBackColor = true;
+            this.radNewCust.CheckedChanged += new System.EventHandler(this.radNewCust_CheckedChanged_1);
+            // 
             // panPawnFrm
             // 
             this.panPawnFrm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -399,10 +425,20 @@
             this.panPawnFrm.Controls.Add(this.txtDeviceName);
             this.panPawnFrm.Controls.Add(this.txtColor);
             this.panPawnFrm.Controls.Add(this.txtPawnId);
-            this.panPawnFrm.Location = new System.Drawing.Point(38, 84);
+            this.panPawnFrm.Location = new System.Drawing.Point(25, 85);
             this.panPawnFrm.Name = "panPawnFrm";
-            this.panPawnFrm.Size = new System.Drawing.Size(1206, 320);
+            this.panPawnFrm.Size = new System.Drawing.Size(1281, 320);
             this.panPawnFrm.TabIndex = 26;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Enabled = false;
+            this.dtpDate.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDate.Location = new System.Drawing.Point(29, 120);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(392, 31);
+            this.dtpDate.TabIndex = 31;
             // 
             // dtpExp
             // 
@@ -412,7 +448,7 @@
             this.dtpExp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpExp.Location = new System.Drawing.Point(860, 120);
             this.dtpExp.Name = "dtpExp";
-            this.dtpExp.Size = new System.Drawing.Size(317, 31);
+            this.dtpExp.Size = new System.Drawing.Size(392, 31);
             this.dtpExp.TabIndex = 30;
             // 
             // cboDeviceType
@@ -426,7 +462,7 @@
             "ຄອມພິວເຕີ"});
             this.cboDeviceType.Location = new System.Drawing.Point(860, 195);
             this.cboDeviceType.Name = "cboDeviceType";
-            this.cboDeviceType.Size = new System.Drawing.Size(317, 31);
+            this.cboDeviceType.Size = new System.Drawing.Size(392, 30);
             this.cboDeviceType.TabIndex = 29;
             // 
             // label2
@@ -447,7 +483,7 @@
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Location = new System.Drawing.Point(856, 166);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(321, 26);
+            this.label22.Size = new System.Drawing.Size(396, 26);
             this.label22.TabIndex = 26;
             this.label22.Text = "ປະເພດເຄື່ອງ :";
             // 
@@ -479,7 +515,7 @@
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Location = new System.Drawing.Point(856, 91);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(321, 26);
+            this.label18.Size = new System.Drawing.Size(396, 26);
             this.label18.TabIndex = 27;
             this.label18.Text = "ມື້ໝົດກຳນົດ :";
             // 
@@ -522,7 +558,7 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(856, 16);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(321, 26);
+            this.label17.Size = new System.Drawing.Size(396, 26);
             this.label17.TabIndex = 28;
             this.label17.Text = "ລະຫັດປົດລ໋ອກ :";
             // 
@@ -578,7 +614,7 @@
             this.txtDevicePassword.Location = new System.Drawing.Point(858, 45);
             this.txtDevicePassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtDevicePassword.Name = "txtDevicePassword";
-            this.txtDevicePassword.Size = new System.Drawing.Size(319, 31);
+            this.txtDevicePassword.Size = new System.Drawing.Size(394, 31);
             this.txtDevicePassword.TabIndex = 24;
             // 
             // txtDeviceName
@@ -621,9 +657,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panPawnFrmHerder.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panPawnFrmHerder.Controls.Add(this.lblPawnFrmHeader);
-            this.panPawnFrmHerder.Location = new System.Drawing.Point(38, 23);
+            this.panPawnFrmHerder.Location = new System.Drawing.Point(25, 24);
             this.panPawnFrmHerder.Name = "panPawnFrmHerder";
-            this.panPawnFrmHerder.Size = new System.Drawing.Size(1206, 61);
+            this.panPawnFrmHerder.Size = new System.Drawing.Size(1281, 61);
             this.panPawnFrmHerder.TabIndex = 27;
             // 
             // lblPawnFrmHeader
@@ -638,7 +674,7 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(137, 1218);
+            this.panel4.Location = new System.Drawing.Point(124, 1219);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(72, 26);
             this.panel4.TabIndex = 28;
@@ -651,9 +687,9 @@
             this.panCustSearchHeader.Controls.Add(this.btnCustSearch);
             this.panCustSearchHeader.Controls.Add(this.Label1);
             this.panCustSearchHeader.Controls.Add(this.txtCustSearch);
-            this.panCustSearchHeader.Location = new System.Drawing.Point(373, 428);
+            this.panCustSearchHeader.Location = new System.Drawing.Point(360, 429);
             this.panCustSearchHeader.Name = "panCustSearchHeader";
-            this.panCustSearchHeader.Size = new System.Drawing.Size(871, 61);
+            this.panCustSearchHeader.Size = new System.Drawing.Size(946, 61);
             this.panCustSearchHeader.TabIndex = 29;
             // 
             // btnCustSearch
@@ -697,7 +733,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(37, 1170);
+            this.btnSave.Location = new System.Drawing.Point(24, 1171);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(308, 45);
@@ -705,42 +741,6 @@
             this.btnSave.Text = "ພິມບິນ";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Enabled = false;
-            this.dtpDate.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDate.Location = new System.Drawing.Point(29, 120);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(392, 31);
-            this.dtpDate.TabIndex = 31;
-            // 
-            // radOldCust
-            // 
-            this.radOldCust.AutoSize = true;
-            this.radOldCust.Font = new System.Drawing.Font("Phetsarath OT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radOldCust.Location = new System.Drawing.Point(161, 10);
-            this.radOldCust.Name = "radOldCust";
-            this.radOldCust.Size = new System.Drawing.Size(94, 28);
-            this.radOldCust.TabIndex = 4;
-            this.radOldCust.Text = "ລູກຄ້າເກົ່າ";
-            this.radOldCust.UseVisualStyleBackColor = true;
-            this.radOldCust.CheckedChanged += new System.EventHandler(this.radOldCust_CheckedChanged_1);
-            // 
-            // radNewCust
-            // 
-            this.radNewCust.AutoSize = true;
-            this.radNewCust.Checked = true;
-            this.radNewCust.Font = new System.Drawing.Font("Phetsarath OT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNewCust.Location = new System.Drawing.Point(21, 10);
-            this.radNewCust.Name = "radNewCust";
-            this.radNewCust.Size = new System.Drawing.Size(95, 28);
-            this.radNewCust.TabIndex = 5;
-            this.radNewCust.TabStop = true;
-            this.radNewCust.Text = "ລູກຄ້າໃໝ່";
-            this.radNewCust.UseVisualStyleBackColor = true;
-            this.radNewCust.CheckedChanged += new System.EventHandler(this.radNewCust_CheckedChanged_1);
             // 
             // AddPawnFrm
             // 

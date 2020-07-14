@@ -126,10 +126,10 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(57, 782);
+            this.btnSave.Location = new System.Drawing.Point(23, 772);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(134, 39);
+            this.btnSave.Size = new System.Drawing.Size(146, 39);
             this.btnSave.TabIndex = 38;
             this.btnSave.Text = "ບັນທຶກ";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -153,9 +153,9 @@
             this.panCustSearchHeader.Controls.Add(this.btnCustSearch);
             this.panCustSearchHeader.Controls.Add(this.Label1);
             this.panCustSearchHeader.Controls.Add(this.txtCustSearch);
-            this.panCustSearchHeader.Location = new System.Drawing.Point(392, 34);
+            this.panCustSearchHeader.Location = new System.Drawing.Point(358, 24);
             this.panCustSearchHeader.Name = "panCustSearchHeader";
-            this.panCustSearchHeader.Size = new System.Drawing.Size(871, 61);
+            this.panCustSearchHeader.Size = new System.Drawing.Size(948, 61);
             this.panCustSearchHeader.TabIndex = 37;
             // 
             // btnCustSearch
@@ -194,7 +194,7 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(161, 824);
+            this.panel4.Location = new System.Drawing.Point(127, 814);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(72, 26);
             this.panel4.TabIndex = 36;
@@ -205,9 +205,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panPawnFrmHerder.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panPawnFrmHerder.Controls.Add(this.lblPawnFrmHeader);
-            this.panPawnFrmHerder.Location = new System.Drawing.Point(64, -349);
+            this.panPawnFrmHerder.Location = new System.Drawing.Point(30, -359);
             this.panPawnFrmHerder.Name = "panPawnFrmHerder";
-            this.panPawnFrmHerder.Size = new System.Drawing.Size(1206, 61);
+            this.panPawnFrmHerder.Size = new System.Drawing.Size(1189, 61);
             this.panPawnFrmHerder.TabIndex = 35;
             // 
             // Pan_CustDgv
@@ -220,9 +220,9 @@
             this.Pan_CustDgv.Controls.Add(this.CustDgvShow);
             this.Pan_CustDgv.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Pan_CustDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
-            this.Pan_CustDgv.Location = new System.Drawing.Point(392, 95);
+            this.Pan_CustDgv.Location = new System.Drawing.Point(358, 85);
             this.Pan_CustDgv.Name = "Pan_CustDgv";
-            this.Pan_CustDgv.Size = new System.Drawing.Size(871, 726);
+            this.Pan_CustDgv.Size = new System.Drawing.Size(948, 726);
             this.Pan_CustDgv.TabIndex = 31;
             // 
             // CustDgvShow
@@ -244,7 +244,7 @@
             this.CustDgvShow.ReadOnly = true;
             this.CustDgvShow.RowHeadersWidth = 40;
             this.CustDgvShow.RowTemplate.Height = 40;
-            this.CustDgvShow.Size = new System.Drawing.Size(865, 713);
+            this.CustDgvShow.Size = new System.Drawing.Size(942, 713);
             this.CustDgvShow.TabIndex = 0;
             this.CustDgvShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDgvShow_CellClick);
             // 
@@ -252,7 +252,7 @@
             // 
             this.panCustFrmHeader.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panCustFrmHeader.Controls.Add(this.lblCustFrmHeader);
-            this.panCustFrmHeader.Location = new System.Drawing.Point(57, 34);
+            this.panCustFrmHeader.Location = new System.Drawing.Point(23, 24);
             this.panCustFrmHeader.Name = "panCustFrmHeader";
             this.panCustFrmHeader.Size = new System.Drawing.Size(307, 61);
             this.panCustFrmHeader.TabIndex = 32;
@@ -286,7 +286,7 @@
             this.panCustForm.Controls.Add(this.txtCustLastName);
             this.panCustForm.Controls.Add(this.txtCustName);
             this.panCustForm.Controls.Add(this.txtCustId);
-            this.panCustForm.Location = new System.Drawing.Point(57, 95);
+            this.panCustForm.Location = new System.Drawing.Point(23, 85);
             this.panCustForm.Name = "panCustForm";
             this.panCustForm.Size = new System.Drawing.Size(307, 669);
             this.panCustForm.TabIndex = 33;
@@ -447,10 +447,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEdit.Location = new System.Drawing.Point(203, 782);
+            this.btnEdit.Location = new System.Drawing.Point(172, 772);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(161, 39);
+            this.btnEdit.Size = new System.Drawing.Size(158, 39);
             this.btnEdit.TabIndex = 38;
             this.btnEdit.Text = "ບັນທຶກການແກ້ໄຂ";
             this.btnEdit.UseVisualStyleBackColor = false;

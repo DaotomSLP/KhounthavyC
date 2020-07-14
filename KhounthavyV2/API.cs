@@ -12,7 +12,7 @@ namespace KhounthavyV2
     class API
     {
 
-        private String conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Khounthavy;Integrated Security=True";
+        private String conStr = @"Data Source=COMPUTER\SQLEXPRESS;Initial Catalog=Khounthavy;Integrated Security=True";
         SqlDataReader sqlDataReader;
         SqlCommand sqlCommand;
         SqlConnection sqlConnection;
@@ -184,6 +184,81 @@ namespace KhounthavyV2
             sqlCommand.ExecuteNonQuery();
 
             sqlConnection.Close();
+        }
+
+        public DataTable PawnSearch(String searchKeyWord)
+        {
+            String queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +
+                " FROM Pawn_view WHERE Pawn_id like '%" + searchKeyWord + "%' OR Prod_no like N'%" + searchKeyWord +
+                "%' OR  Prod_name like N'%" + searchKeyWord + "' OR Cust_name like N'%" + searchKeyWord +
+                "%' OR Cust_lastname like N'%" + searchKeyWord + "%' ORDER BY Pawn_id DESC";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
+        }
+
+        public DataTable LoadCustomerFromPawn(String PawnId)
+        {
+            String queryStr = "SELECT TOP (50) Cust_id,Cust_name,Cust_lastname,Tel,Village,District,Province,Image" +
+                " FROM Pawn_view WHERE Pawn_id = '" + PawnId + "' ORDER BY Cust_id DESC";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
+        }
+
+        public DataTable SearchPawnByDate(String keyword, String start, String end)
+        {
+            String queryStr = "";
+            if (keyword == "")
+            {
+                queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +
+                 " FROM Pawn_view WHERE Pawn_date BETWEEN '" + start + "' AND '" + end + "' ORDER BY Pawn_id DESC";
+            }
+            else
+            {
+                queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +
+                   " FROM Pawn_view WHERE (Pawn_id like '%" + keyword + "%' OR Prod_no like N'%" + keyword +
+                   "%' OR  Prod_name like N'%" + keyword + "' OR Cust_name like N'%" + keyword +
+                   "%' OR Cust_lastname like N'%" + keyword + "%') AND Pawn_date BETWEEN '" + start + "' AND '" + end +
+                   "' ORDER BY Pawn_id DESC";
+            }
+
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
         }
     }
 
