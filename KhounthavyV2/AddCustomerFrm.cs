@@ -40,6 +40,25 @@ namespace KhounthavyV2
             }
         }
 
+        private void ClearCustForm()
+        {
+            try
+            {
+                foreach (Control control in this.panCustForm.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.Text = "";
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+
         private void AddCustomerFrm_Load(object sender, EventArgs e)
         {
             LoadForm();
@@ -63,6 +82,7 @@ namespace KhounthavyV2
                     );
 
                     MessageBox.Show("SUCCESS");
+                    ClearCustForm();
                     LoadForm();
                 }
                 catch (Exception ex)
@@ -108,6 +128,7 @@ namespace KhounthavyV2
                     txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text
                 );
                 MessageBox.Show("SUCCESS");
+                ClearCustForm();
                 LoadForm();
             }
             catch(Exception ex)
