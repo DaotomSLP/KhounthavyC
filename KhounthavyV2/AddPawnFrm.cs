@@ -18,6 +18,54 @@ namespace KhounthavyV2
             InitializeComponent();
         }
 
+        private void ClearPawnForm()
+        {
+            try
+            {
+                foreach (Control control in this.panPawnFrm1.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.Text = "";
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                foreach (Control control in this.panPawnFrm2.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.Text = "";
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                foreach (Control control in this.panPawnFrm3.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.Text = "";
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
         private void ClearCustForm()
         {
             try
@@ -97,27 +145,6 @@ namespace KhounthavyV2
 
         }
 
-        private void CustDgvShow_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-
-                txtCustId.Text = CustDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtCustName.Text = CustDgvShow.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtCustLastName.Text = CustDgvShow.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtTel.Text = CustDgvShow.Rows[e.RowIndex].Cells[3].Value.ToString();
-                txtVill.Text = CustDgvShow.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtDist.Text = CustDgvShow.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtProv.Text = CustDgvShow.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtImgNo.Text = CustDgvShow.Rows[e.RowIndex].Cells[7].Value.ToString();
-
-            }
-            catch
-            {
-
-            }
-       
-        }
 
         private void LoadForm()
         {
@@ -128,7 +155,7 @@ namespace KhounthavyV2
             txtPawnId.Text = api.GetNewId("Pawn");
             txtCustId.Text = api.GetNewId("Customer");
 
-            
+
 
             cboDeviceType.SelectedItem = "ໂທລະສັບ";
 
@@ -137,6 +164,8 @@ namespace KhounthavyV2
             {
                 CustDgvShow.Columns[i].HeaderText = headerText[i];
             }
+
+            this.ActiveControl = txtDeviceName;
         }
 
         private void AddPawnFrm_Load(object sender, EventArgs e)
@@ -165,11 +194,14 @@ namespace KhounthavyV2
 
                 MessageBox.Show("SUCCESS");
                 PrintBill();
+                ClearCustForm();
+                ClearPawnForm();
+                radNewCust.Checked = true;
                 LoadForm();
+
             }
             catch (Exception ex)
             {
-                //api.DeleteCustomer(txtCustId.Text);
                 MessageBox.Show(ex.Message);
             }
         }
@@ -187,6 +219,27 @@ namespace KhounthavyV2
             print.reportViewer1.LocalReport.Refresh();
 
             print.Show();
+        }
+
+        private void CustDgvShow_CellClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+
+                txtCustId.Text = CustDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCustName.Text = CustDgvShow.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtCustLastName.Text = CustDgvShow.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtTel.Text = CustDgvShow.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtVill.Text = CustDgvShow.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtDist.Text = CustDgvShow.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtProv.Text = CustDgvShow.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtImgNo.Text = CustDgvShow.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

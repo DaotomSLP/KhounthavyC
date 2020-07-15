@@ -35,6 +35,8 @@ namespace KhounthavyV2
                 {
                     CustDgvShow.Columns[i].HeaderText = headerText[i];
                 }
+
+                this.ActiveControl = txtCustName;
             }
         }
 
