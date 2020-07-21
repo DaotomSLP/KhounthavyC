@@ -58,6 +58,13 @@ namespace KhounthavyV2
             }
         }
 
+        private void EnterTextbox(KeyEventArgs e, TextBox textBox)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox.Focus();
+            }
+        }
 
         private void AddCustomerFrm_Load(object sender, EventArgs e)
         {
@@ -138,5 +145,34 @@ namespace KhounthavyV2
 
         }
 
+        private void txtCustName_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtCustLastName);
+        }
+
+        private void txtCustLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtTel);
+        }
+
+        private void txtTel_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtVill);
+        }
+
+        private void txtVill_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtDist);
+        }
+
+        private void txtDist_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtProv);
+        }
+
+        private void txtProv_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtImgNo);
+        }
     }
 }

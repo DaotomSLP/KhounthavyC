@@ -168,6 +168,14 @@ namespace KhounthavyV2
             this.ActiveControl = txtDeviceName;
         }
 
+        private void EnterTextbox(KeyEventArgs e,TextBox textBox)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                textBox.Focus();
+            }
+        }
+
         private void AddPawnFrm_Load(object sender, EventArgs e)
         {
             LoadForm();
@@ -240,6 +248,66 @@ namespace KhounthavyV2
             {
 
             }
+        }
+
+        private void txtDeviceName_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtDeviceNo);
+        }
+
+        private void txtDeviceNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtColor);
+        }
+
+        private void txtColor_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtKip);
+        }
+
+        private void txtKip_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtBath);
+        }
+
+        private void txtBath_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtDevicePassword);
+        }
+
+        private void txtCustId_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtCustName_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtCustLastName);
+        }
+
+        private void txtCustLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtTel);
+        }
+
+        private void txtTel_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtVill);
+        }
+
+        private void txtVill_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtDist);
+        }
+
+        private void txtDist_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtProv);
+        }
+
+        private void txtProv_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterTextbox(e, txtImgNo);
         }
     }
 }
