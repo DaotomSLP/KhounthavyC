@@ -464,6 +464,7 @@
             this.CustDgvShow.RowTemplate.Height = 40;
             this.CustDgvShow.Size = new System.Drawing.Size(865, 656);
             this.CustDgvShow.TabIndex = 0;
+            this.CustDgvShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDgvShow_CellClick);
             // 
             // panel4
             // 
@@ -478,7 +479,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1350, 523);
+            this.ClientSize = new System.Drawing.Size(1367, 523);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.btnEdit);

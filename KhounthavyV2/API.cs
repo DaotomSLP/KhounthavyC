@@ -280,6 +280,32 @@ namespace KhounthavyV2
 
             return dt;
         }
+
+        public void BackUp()
+        {
+            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = 'F:\Tom\DB\DB.bak'";
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+
+        public void Restore()
+        {
+            String queryStr = @"RESTORE DATABASE Khounthavy FROM DISK = 'F:\Tom\DB\DB.bak'";
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
     }
 
 

@@ -22,7 +22,12 @@ namespace KhounthavyV2
         {
             AddPawnFrm addCustomerFrm = new AddPawnFrm();
             ShowNewFrm(addCustomerFrm);
-            
+
+            if( DateTime.Now.ToString("dd") == "28")
+            {
+                API api = new API();
+                api.BackUp();
+            }
         }
 
         private void ClearOldFrm()
