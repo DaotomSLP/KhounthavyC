@@ -181,3 +181,4 @@ C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CoreCompileInputs.ca
 C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CopyComplete
 C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.exe
 C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.pdb
+D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.SettingFrm.resources

@@ -25,8 +25,15 @@ namespace KhounthavyV2
 
             if( DateTime.Now.ToString("dd") == "28")
             {
-                API api = new API();
-                api.BackUp();
+                try
+                {
+                    API api = new API();
+                    api.BackUp();
+                }
+                catch
+                {
+                    MessageBox.Show("Can't Backup");
+                }
             }
         }
 
@@ -105,21 +112,23 @@ namespace KhounthavyV2
 
         private void btnMenuSetting_Click(object sender, EventArgs e)
         {
-            PrintFrm pawnDetailFrm = new PrintFrm();
+            SettingFrm settingFrm = new SettingFrm();
             ClearOldFrm();
-
-            DataTable dtb = new DataTable();
-            API api = new API();
-            dtb = api.LoadPawn("PN000002");
-            ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
-            pawnDetailFrm.reportViewer1.LocalReport.DataSources.Clear();
-            pawnDetailFrm.reportViewer1.LocalReport.DataSources.Add(rptsrc);
-            pawnDetailFrm.reportViewer1.LocalReport.Refresh();
-
-
-            ShowNewFrm(pawnDetailFrm);
+            ShowNewFrm(settingFrm);
             ClearActiveMenu();
             ActiveMenu(btnMenuSetting);
+
+
+
+            //DataTable dtb = new DataTable();
+            //API api = new API();
+            //dtb = api.LoadPawn("PN000002");
+
+            //ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
+            //pawnDetailFrm.reportViewer1.LocalReport.DataSources.Clear();
+            //pawnDetailFrm.reportViewer1.LocalReport.DataSources.Add(rptsrc);
+            //pawnDetailFrm.reportViewer1.LocalReport.Refresh();
+
         }
 
     }
