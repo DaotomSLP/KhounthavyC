@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnBarcode.Barcode;
+using OnBarcode.Barcode.RS2016;
 
 namespace KhounthavyV2
 {
@@ -121,6 +123,14 @@ namespace KhounthavyV2
             txtCustId.Enabled = false;
         }
 
+        private void barcodeGenerate(String id)
+        {
+            LinearRS barcode = new LinearRS();
+            barcode.Type = BarcodeType.CODE128;
+            barcode.Data = id;
+            barcode.drawBarcode(@"D:\TOm\work\KhounthavyC\barcode.jpg");
+        }
+
 
 
         private void radOldCust_CheckedChanged_1(object sender, EventArgs e)
@@ -183,10 +193,13 @@ namespace KhounthavyV2
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+           
+
             API api = new API();
             try
             {
-                if(radNewCust.Checked == true)
+                if (radNewCust.Checked == true)
                 {
                     api.InsertCustomer(
                         txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
@@ -199,7 +212,7 @@ namespace KhounthavyV2
                     txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "", "",
                     txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString()
                     );
-
+                barcodeGenerate(txtPawnId.Text);
                 MessageBox.Show("SUCCESS");
                 PrintBill();
                 ClearCustForm();
