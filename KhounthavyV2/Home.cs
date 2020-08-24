@@ -20,8 +20,6 @@ namespace KhounthavyV2
 
         private void AddNewPawn_Load(object sender, EventArgs e)
         {
-            AddPawnFrm addCustomerFrm = new AddPawnFrm();
-            ShowNewFrm(addCustomerFrm);
 
             if( DateTime.Now.ToString("dd") == "28")
             {
@@ -35,9 +33,10 @@ namespace KhounthavyV2
                     MessageBox.Show("Can't Backup");
                 }
             }
+            txtUserName.Focus();
         }
 
-        private void ClearOldFrm()
+        public void ClearOldFrm()
         {
             foreach(Form form in this.MdiChildren)
             {
@@ -52,7 +51,7 @@ namespace KhounthavyV2
             }  
         }
 
-        private void ShowNewFrm(Form newFrm)
+        public void ShowNewFrm(Form newFrm)
         {
             newFrm.Anchor = AnchorStyles.Bottom;
             newFrm.MdiParent = this;
@@ -61,7 +60,7 @@ namespace KhounthavyV2
             newFrm.WindowState = FormWindowState.Maximized;
         }
 
-        private void ClearActiveMenu()
+        public void ClearActiveMenu()
         {
             try  //try for it not error if it not see button in menu panel.
             {
@@ -77,10 +76,35 @@ namespace KhounthavyV2
             }
         }
 
-        private void ActiveMenu(Button menu)
+        public void ActiveMenu(Button menu)
         {
             menu.BackColor = Color.White;
             menu.ForeColor = SystemColors.ActiveCaptionText;
+        }
+
+        private void Login()
+        {
+            try
+            {
+                API api = new API();
+                if (api.Login(txtUserName.Text, txtPass.Text).Rows.Count > 0)
+                {
+                    AddPawnFrm addPawnFrm = new AddPawnFrm();
+                    ShowNewFrm(addPawnFrm);
+                    ClearActiveMenu();
+                    ActiveMenu(btnMenuAddNewPawn);
+                    MenuPanel.Visible = true;
+                    panLogin.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Username Or Password is Wrong");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("please setting server name");
+            }
         }
 
         private void btnMenuAddNewPawn_Click(object sender, EventArgs e)
@@ -110,6 +134,16 @@ namespace KhounthavyV2
             ActiveMenu(btnMenuPawnDetail);
         }
 
+        private void btnMenuTurnBack_Click(object sender, EventArgs e)
+        {
+            TurnBackFrm turnBackFrm = new TurnBackFrm();
+            ClearOldFrm();
+            ShowNewFrm(turnBackFrm);
+            ClearActiveMenu();
+            ActiveMenu(btnMenuTurnBack);
+
+        }
+
         private void btnMenuSetting_Click(object sender, EventArgs e)
         {
             SettingFrm settingFrm = new SettingFrm();
@@ -118,17 +152,27 @@ namespace KhounthavyV2
             ClearActiveMenu();
             ActiveMenu(btnMenuSetting);
 
+        }
 
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            Login();
+        }
 
-            //DataTable dtb = new DataTable();
-            //API api = new API();
-            //dtb = api.LoadPawn("PN000002");
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPass.Focus();
+            }
+        }
 
-            //ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
-            //pawnDetailFrm.reportViewer1.LocalReport.DataSources.Clear();
-            //pawnDetailFrm.reportViewer1.LocalReport.DataSources.Add(rptsrc);
-            //pawnDetailFrm.reportViewer1.LocalReport.Refresh();
-
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login();
+            }
         }
 
     }

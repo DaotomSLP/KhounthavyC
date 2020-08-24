@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Drawing;
+using System.IO;
 
 namespace KhounthavyV2
 {
     class API
     {
 
-        private String conStr = @"Data Source=COMPUTER\SQLEXPRESS;Initial Catalog=Khounthavy;Integrated Security=True";
+        private String conStr = "";
+
+        public API()
+        {
+            AppSetting appSetting = new AppSetting();
+            conStr = appSetting.GetConnStr("KhounthavyV2.Properties.Settings.KhounthavyConnectionString");
+        }
+
+        
         SqlDataReader sqlDataReader;
         SqlCommand sqlCommand;
         SqlConnection sqlConnection;
@@ -29,7 +39,9 @@ namespace KhounthavyV2
             }
             else if(Table == "Pawn")
             {
-
+                queryStr = "SELECT TOP 70 Pawn_id, Pawn_date, Pawn_exp, Prod_no, Prod_name, Prod_color"+
+                    ", Pawn_amount_kip, Pawn_amount_bath, Pawn_status, Pawn_turnBa_date, Password, img"+
+                    " FROM Pawn_View ORDER BY Pawn_id DESC";
             }
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
@@ -44,7 +56,25 @@ namespace KhounthavyV2
             sqlConnection.Close();
 
             return dt;
-        } 
+        }
+
+        public DataTable Login(String UserName,String Password)
+        {
+            String queryStr = "SELECT TOP 1 * FROM Users WHERE Users_name ='"+UserName+"' AND Users_pass = '"+Password+"' ";
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
+        }
 
         public String GetNewId(String Table)
         {
@@ -152,6 +182,59 @@ namespace KhounthavyV2
             sqlCommand.ExecuteNonQuery();
 
             sqlConnection.Close();
+        }
+
+        public void UpdateBarcodeImage()
+        {
+            String ImagePath = @"D:\barcode.jpg";
+            byte[] content = ImageToStream(ImagePath);
+
+            String SqlQueryString = "UPDATE Barcode_image SET bar_img = @img";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(SqlQueryString, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@img", content);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+
+        public void InsertBarcodeImage()
+        {
+            String ImagePath = @"D:\barcode.jpg";
+            byte[] content = ImageToStream(ImagePath);
+
+            String SqlQueryString = "INSERT INTO Barcode_image (bar_id,bar_img) VALUES('BC00001',@img)";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(SqlQueryString, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@img", content);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+
+        private byte[] ImageToStream(string imagePath)
+        {
+            MemoryStream stream = new MemoryStream();
+             tryagain:
+            try
+            {
+                Bitmap image = new Bitmap(imagePath);
+                image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            catch 
+            {
+                goto tryagain;
+            }
+
+            return stream.ToArray();
         }
 
         public void DeleteCustomer(String id)
@@ -279,6 +362,22 @@ namespace KhounthavyV2
             sqlConnection.Close();
 
             return dt;
+        }
+
+        public void TurnBack(String id, String img_no)
+        {
+            DateTime dateTime = DateTime.Now;
+            String sqlQueryString = "UPDATE Pawn SET Pawn_status=N'ສົ່ງເຄື່ອງຄືນ', img=N'"+img_no+
+                "', Pawn_turnBa_date='"+dateTime+"' WHERE Pawn_id='" + id + "' ";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(sqlQueryString, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
         }
 
         public void BackUp()

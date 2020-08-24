@@ -55,6 +55,7 @@
       <HintPath>..\packages\OnBarcode.BarcodeGenerator.DotnetSuite\dll\OnBarcode.Barcode.RS2016.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -81,6 +82,7 @@
       <DependentUpon>AddPawnFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="API.cs" />
+    <Compile Include="AppSetting.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +115,12 @@
       <DependentUpon>SettingFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TurnBackFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurnBackFrm.Designer.cs">
+      <DependentUpon>TurnBackFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCustomerFrm.resx">
       <DependentUpon>AddCustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +149,9 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="SettingFrm.resx">
       <DependentUpon>SettingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TurnBackFrm.resx">
+      <DependentUpon>TurnBackFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="KhounthavyDataSet.xsc">
       <DependentUpon>KhounthavyDataSet.xsd</DependentUpon>
@@ -184,6 +195,28 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -128,7 +128,7 @@ namespace KhounthavyV2
             LinearRS barcode = new LinearRS();
             barcode.Type = BarcodeType.CODE128;
             barcode.Data = id;
-            barcode.drawBarcode(@"D:\TOm\work\KhounthavyC\barcode.jpg");
+            barcode.drawBarcode(@"D:\barcode.jpg");
         }
 
 
@@ -213,6 +213,17 @@ namespace KhounthavyV2
                     txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString()
                     );
                 barcodeGenerate(txtPawnId.Text);
+
+
+                try
+                {
+                    api.InsertBarcodeImage();
+                }
+                catch
+                {
+                    api.UpdateBarcodeImage();
+                }
+
                 MessageBox.Show("SUCCESS");
                 PrintBill();
                 ClearCustForm();

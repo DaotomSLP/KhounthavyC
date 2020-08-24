@@ -259,3 +259,9 @@ D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\zh-CHT\Microsoft.ReportViewer.Win
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CopyComplete
 D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AxInterop.AcroPDFLib.dll
 D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\Interop.AcroPDFLib.dll
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\Interop.AcroPDFLib.dll
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.ResolveComReference.cache
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\RdlCompile.cache
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\RdlCompile.compiled
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.TurnBackFrm.resources
