@@ -1162,9 +1162,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:KhounthavyV2"
         "ProductCode" = "8:{F8691C15-8D1C-4E40-8A9E-741BD0FB5CDB}"
-        "PackageCode" = "8:{465F68B7-441C-43B7-A0B6-84011344CA42}"
+        "PackageCode" = "8:{BEC488B3-AB4D-4A83-9BBB-1C8F9FD58308}"
         "UpgradeCode" = "8:{15A16BAB-B92E-4676-B183-4E41F8734129}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

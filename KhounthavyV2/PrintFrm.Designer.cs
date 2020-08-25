@@ -31,15 +31,25 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintFrm));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.khounthavyDataSet = new KhounthavyV2.KhounthavyDataSet();
             this.pawnviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.khounthavyDataSet = new KhounthavyV2.KhounthavyDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pawn_viewTableAdapter = new KhounthavyV2.KhounthavyDataSetTableAdapters.Pawn_viewTableAdapter();
             this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
-            ((System.ComponentModel.ISupportInitialize)(this.khounthavyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pawnviewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khounthavyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pawnviewBindingSource
+            // 
+            this.pawnviewBindingSource.DataMember = "Pawn_view";
+            this.pawnviewBindingSource.DataSource = this.khounthavyDataSet;
+            // 
+            // khounthavyDataSet
+            // 
+            this.khounthavyDataSet.DataSetName = "KhounthavyDataSet";
+            this.khounthavyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -52,16 +62,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1335, 580);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // khounthavyDataSet
-            // 
-            this.khounthavyDataSet.DataSetName = "KhounthavyDataSet";
-            this.khounthavyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pawnviewBindingSource
-            // 
-            this.pawnviewBindingSource.DataMember = "Pawn_view";
-            this.pawnviewBindingSource.DataSource = this.khounthavyDataSet;
             // 
             // pawn_viewTableAdapter
             // 
@@ -83,11 +83,12 @@
             this.ClientSize = new System.Drawing.Size(1350, 585);
             this.Controls.Add(this.axAcroPDF);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrintFrm";
             this.Text = "PrintFrm";
             this.Load += new System.EventHandler(this.PrintFrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.khounthavyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pawnviewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khounthavyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             this.ResumeLayout(false);
 
