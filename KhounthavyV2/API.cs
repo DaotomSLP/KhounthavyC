@@ -380,9 +380,9 @@ namespace KhounthavyV2
             sqlConnection.Close();
         }
 
-        public void BackUp()
+        public void BackUp(String savePath)
         {
-            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = '" + Directory.GetCurrentDirectory() + @"\DB.bak'";
+            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = '"+savePath+@"\DB.bak'";
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();
@@ -393,9 +393,9 @@ namespace KhounthavyV2
             sqlConnection.Close();
         }
 
-        public void Restore()
+        public void Restore(String restorePath)
         {
-            String queryStr = @"RESTORE DATABASE Khounthavy FROM DISK = '"+ Directory.GetCurrentDirectory() + @"\DB.bak'";
+            String queryStr = @"RESTORE DATABASE Khounthavy FROM DISK = '"+ restorePath+"'";
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();

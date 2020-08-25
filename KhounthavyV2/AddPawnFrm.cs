@@ -187,9 +187,45 @@ namespace KhounthavyV2
             }
         }
 
+        private void backUpDialog()
+        {
+            if (DateTime.Now.ToString("dd") == "28")
+            {
+                DialogResult dialogResult = MessageBox.Show("ຕ້ອງການ BackUp ຂໍ້ມູນຫຼືບໍ່ ??", "", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (var fbd = new FolderBrowserDialog())
+                        {
+                            DialogResult result = fbd.ShowDialog();
+
+                            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                            {
+                                    API api = new API();
+                                    api.BackUp(fbd.SelectedPath);
+                                MessageBox.Show("Back up Success...");
+                            }
+                        }
+
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Can't Backup");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+
+            }
+        }
+
         private void AddPawnFrm_Load(object sender, EventArgs e)
         {
             LoadForm();
+            backUpDialog();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

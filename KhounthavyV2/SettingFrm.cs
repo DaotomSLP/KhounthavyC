@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,27 +20,49 @@ namespace KhounthavyV2
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            try
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                API api = new API();
-                api.Restore();
+                openFileDialog.Filter = "Back up files (*.bak)|*.bak|All files (*.*)|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                   String filePath = openFileDialog.FileName;
+
+                    try
+                    {
+                        API api = new API();
+                        api.Restore(filePath);
+                        MessageBox.Show("Restore Success..");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+
         }
 
         private void btnBackUp_Click(object sender, EventArgs e)
         {
-            try
+            using (var fbd = new FolderBrowserDialog())
             {
-                API api = new API();
-                api.BackUp();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    try
+                    {
+                        API api = new API();
+                        api.BackUp(fbd.SelectedPath);
+                        MessageBox.Show("Back up Success...");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
             }
         }
     }

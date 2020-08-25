@@ -21,18 +21,6 @@ namespace KhounthavyV2
 
         private void AddNewPawn_Load(object sender, EventArgs e)
         {
-            if ( DateTime.Now.ToString("dd") == "28")
-            {
-                try
-                {
-                    API api = new API();
-                    api.BackUp();
-                }
-                catch
-                {
-                    MessageBox.Show("Can't Backup");
-                }
-            }
             txtUserName.Focus();
         }
 
