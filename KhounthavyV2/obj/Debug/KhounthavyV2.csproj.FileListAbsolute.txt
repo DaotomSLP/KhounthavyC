@@ -182,7 +182,6 @@ C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CopyComplete
 C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.exe
 C:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.pdb
 D:\t\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.SettingFrm.resources
-D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.AddCustomerFrm.resources
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.AddPawnFrm.resources
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.Home.resources

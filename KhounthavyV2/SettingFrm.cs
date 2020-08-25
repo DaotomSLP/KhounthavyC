@@ -24,9 +24,9 @@ namespace KhounthavyV2
                 API api = new API();
                 api.Restore();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Can't Restore");
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -37,9 +37,9 @@ namespace KhounthavyV2
                 API api = new API();
                 api.BackUp();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Can't Backup");
+                MessageBox.Show(ex.ToString());
             }
         }
     }

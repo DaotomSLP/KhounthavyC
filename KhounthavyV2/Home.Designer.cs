@@ -30,12 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MenuPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnMenuAddNewPawn = new System.Windows.Forms.Button();
-            this.btnMenuCustomer = new System.Windows.Forms.Button();
-            this.btnMenuPawnDetail = new System.Windows.Forms.Button();
+            this.btnMenuTurnBack = new System.Windows.Forms.Button();
             this.btnMenuSetting = new System.Windows.Forms.Button();
+            this.btnMenuPawnDetail = new System.Windows.Forms.Button();
+            this.btnMenuCustomer = new System.Windows.Forms.Button();
+            this.btnMenuAddNewPawn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panLogin = new System.Windows.Forms.Panel();
             this.lblServername = new System.Windows.Forms.Label();
             this.txtServerName = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.btnMenuTurnBack = new System.Windows.Forms.Button();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panLogin.SuspendLayout();
@@ -80,57 +80,37 @@
             this.MenuPanel.TabIndex = 0;
             this.MenuPanel.Visible = false;
             // 
-            // pictureBox1
+            // btnMenuTurnBack
             // 
-            this.pictureBox1.Image = global::KhounthavyV2.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnMenuTurnBack.BackColor = System.Drawing.Color.Black;
+            this.btnMenuTurnBack.FlatAppearance.BorderSize = 0;
+            this.btnMenuTurnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuTurnBack.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuTurnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuTurnBack.Location = new System.Drawing.Point(791, 54);
+            this.btnMenuTurnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuTurnBack.Name = "btnMenuTurnBack";
+            this.btnMenuTurnBack.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuTurnBack.TabIndex = 3;
+            this.btnMenuTurnBack.Text = "ສົ່ງເຄື່ອງຄືນ";
+            this.btnMenuTurnBack.UseVisualStyleBackColor = false;
+            this.btnMenuTurnBack.Click += new System.EventHandler(this.btnMenuTurnBack_Click);
             // 
-            // label1
+            // btnMenuSetting
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ຮ້ານຄູນທະວີ";
-            // 
-            // btnMenuAddNewPawn
-            // 
-            this.btnMenuAddNewPawn.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMenuAddNewPawn.FlatAppearance.BorderSize = 0;
-            this.btnMenuAddNewPawn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAddNewPawn.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuAddNewPawn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenuAddNewPawn.Location = new System.Drawing.Point(92, 54);
-            this.btnMenuAddNewPawn.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuAddNewPawn.Name = "btnMenuAddNewPawn";
-            this.btnMenuAddNewPawn.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuAddNewPawn.TabIndex = 2;
-            this.btnMenuAddNewPawn.Text = "ເພີ່ມການຈຳນຳ";
-            this.btnMenuAddNewPawn.UseVisualStyleBackColor = false;
-            this.btnMenuAddNewPawn.Click += new System.EventHandler(this.btnMenuAddNewPawn_Click);
-            // 
-            // btnMenuCustomer
-            // 
-            this.btnMenuCustomer.BackColor = System.Drawing.Color.Black;
-            this.btnMenuCustomer.FlatAppearance.BorderSize = 0;
-            this.btnMenuCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuCustomer.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuCustomer.Location = new System.Drawing.Point(325, 54);
-            this.btnMenuCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuCustomer.Name = "btnMenuCustomer";
-            this.btnMenuCustomer.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuCustomer.TabIndex = 2;
-            this.btnMenuCustomer.Text = "ຂໍ້ມູນລູກຄ້າ";
-            this.btnMenuCustomer.UseVisualStyleBackColor = false;
-            this.btnMenuCustomer.Click += new System.EventHandler(this.btnMenuCustomer_Click);
+            this.btnMenuSetting.BackColor = System.Drawing.Color.Black;
+            this.btnMenuSetting.FlatAppearance.BorderSize = 0;
+            this.btnMenuSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuSetting.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuSetting.Location = new System.Drawing.Point(1024, 54);
+            this.btnMenuSetting.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuSetting.Name = "btnMenuSetting";
+            this.btnMenuSetting.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuSetting.TabIndex = 2;
+            this.btnMenuSetting.Text = "ຕັ້ງຄ່າ";
+            this.btnMenuSetting.UseVisualStyleBackColor = false;
+            this.btnMenuSetting.Click += new System.EventHandler(this.btnMenuSetting_Click);
             // 
             // btnMenuPawnDetail
             // 
@@ -148,21 +128,57 @@
             this.btnMenuPawnDetail.UseVisualStyleBackColor = false;
             this.btnMenuPawnDetail.Click += new System.EventHandler(this.btnMenuPawnDetail_Click);
             // 
-            // btnMenuSetting
+            // btnMenuCustomer
             // 
-            this.btnMenuSetting.BackColor = System.Drawing.Color.Black;
-            this.btnMenuSetting.FlatAppearance.BorderSize = 0;
-            this.btnMenuSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuSetting.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuSetting.Location = new System.Drawing.Point(1024, 54);
-            this.btnMenuSetting.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuSetting.Name = "btnMenuSetting";
-            this.btnMenuSetting.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuSetting.TabIndex = 2;
-            this.btnMenuSetting.Text = "ຕັ້ງຄ່າ";
-            this.btnMenuSetting.UseVisualStyleBackColor = false;
-            this.btnMenuSetting.Click += new System.EventHandler(this.btnMenuSetting_Click);
+            this.btnMenuCustomer.BackColor = System.Drawing.Color.Black;
+            this.btnMenuCustomer.FlatAppearance.BorderSize = 0;
+            this.btnMenuCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuCustomer.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuCustomer.Location = new System.Drawing.Point(325, 54);
+            this.btnMenuCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuCustomer.Name = "btnMenuCustomer";
+            this.btnMenuCustomer.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuCustomer.TabIndex = 2;
+            this.btnMenuCustomer.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnMenuCustomer.UseVisualStyleBackColor = false;
+            this.btnMenuCustomer.Click += new System.EventHandler(this.btnMenuCustomer_Click);
+            // 
+            // btnMenuAddNewPawn
+            // 
+            this.btnMenuAddNewPawn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMenuAddNewPawn.FlatAppearance.BorderSize = 0;
+            this.btnMenuAddNewPawn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAddNewPawn.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuAddNewPawn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMenuAddNewPawn.Location = new System.Drawing.Point(92, 54);
+            this.btnMenuAddNewPawn.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuAddNewPawn.Name = "btnMenuAddNewPawn";
+            this.btnMenuAddNewPawn.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuAddNewPawn.TabIndex = 2;
+            this.btnMenuAddNewPawn.Text = "ເພີ່ມການຈຳນຳ";
+            this.btnMenuAddNewPawn.UseVisualStyleBackColor = false;
+            this.btnMenuAddNewPawn.Click += new System.EventHandler(this.btnMenuAddNewPawn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(107, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ຮ້ານຄູນທະວີ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KhounthavyV2.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panLogin
             // 
@@ -225,6 +241,7 @@
             this.btnDatabaseSetting.TabIndex = 61;
             this.btnDatabaseSetting.Text = "Database Connect Setting";
             this.btnDatabaseSetting.UseVisualStyleBackColor = false;
+            this.btnDatabaseSetting.Click += new System.EventHandler(this.btnDatabaseSetting_Click);
             // 
             // btnSaveConnStr
             // 
@@ -243,6 +260,7 @@
             this.btnSaveConnStr.Text = "Save";
             this.btnSaveConnStr.UseVisualStyleBackColor = false;
             this.btnSaveConnStr.Visible = false;
+            this.btnSaveConnStr.Click += new System.EventHandler(this.btnSaveConnStr_Click);
             // 
             // btnLogin
             // 
@@ -330,22 +348,6 @@
             this.txtUserName.Size = new System.Drawing.Size(365, 31);
             this.txtUserName.TabIndex = 57;
             this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
-            // 
-            // btnMenuTurnBack
-            // 
-            this.btnMenuTurnBack.BackColor = System.Drawing.Color.Black;
-            this.btnMenuTurnBack.FlatAppearance.BorderSize = 0;
-            this.btnMenuTurnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuTurnBack.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuTurnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuTurnBack.Location = new System.Drawing.Point(791, 54);
-            this.btnMenuTurnBack.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuTurnBack.Name = "btnMenuTurnBack";
-            this.btnMenuTurnBack.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuTurnBack.TabIndex = 3;
-            this.btnMenuTurnBack.Text = "ສົ່ງເຄື່ອງຄືນ";
-            this.btnMenuTurnBack.UseVisualStyleBackColor = false;
-            this.btnMenuTurnBack.Click += new System.EventHandler(this.btnMenuTurnBack_Click);
             // 
             // Home
             // 

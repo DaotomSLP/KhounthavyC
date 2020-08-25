@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OnBarcode.Barcode;
 using OnBarcode.Barcode.RS2016;
+using System.IO;
 
 namespace KhounthavyV2
 {
@@ -128,7 +129,7 @@ namespace KhounthavyV2
             LinearRS barcode = new LinearRS();
             barcode.Type = BarcodeType.CODE128;
             barcode.Data = id;
-            barcode.drawBarcode(@"D:\barcode.jpg");
+            barcode.drawBarcode( Directory.GetCurrentDirectory() + @"\barcode.jpg");
         }
 
 

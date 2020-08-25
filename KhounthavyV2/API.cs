@@ -186,7 +186,7 @@ namespace KhounthavyV2
 
         public void UpdateBarcodeImage()
         {
-            String ImagePath = @"D:\barcode.jpg";
+            String ImagePath = Directory.GetCurrentDirectory() + @"\barcode.jpg";
             byte[] content = ImageToStream(ImagePath);
 
             String SqlQueryString = "UPDATE Barcode_image SET bar_img = @img";
@@ -204,7 +204,7 @@ namespace KhounthavyV2
 
         public void InsertBarcodeImage()
         {
-            String ImagePath = @"D:\barcode.jpg";
+            String ImagePath = Directory.GetCurrentDirectory() + @"\barcode.jpg";
             byte[] content = ImageToStream(ImagePath);
 
             String SqlQueryString = "INSERT INTO Barcode_image (bar_id,bar_img) VALUES('BC00001',@img)";
@@ -382,7 +382,7 @@ namespace KhounthavyV2
 
         public void BackUp()
         {
-            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = 'F:\Tom\DB\DB.bak'";
+            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = '" + Directory.GetCurrentDirectory() + @"\DB.bak'";
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();
@@ -395,7 +395,7 @@ namespace KhounthavyV2
 
         public void Restore()
         {
-            String queryStr = @"RESTORE DATABASE Khounthavy FROM DISK = 'F:\Tom\DB\DB.bak'";
+            String queryStr = @"RESTORE DATABASE Khounthavy FROM DISK = '"+ Directory.GetCurrentDirectory() + @"\DB.bak'";
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();

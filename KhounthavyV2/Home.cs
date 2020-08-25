@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,7 @@ namespace KhounthavyV2
 
         private void AddNewPawn_Load(object sender, EventArgs e)
         {
-
-            if( DateTime.Now.ToString("dd") == "28")
+            if ( DateTime.Now.ToString("dd") == "28")
             {
                 try
                 {
@@ -175,5 +175,26 @@ namespace KhounthavyV2
             }
         }
 
+        private void btnDatabaseSetting_Click(object sender, EventArgs e)
+        {
+            txtServerName.Visible = true;
+            btnSaveConnStr.Visible = true;
+            lblServername.Visible = true;
+        }
+
+        private void btnSaveConnStr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AppSetting appSetting = new AppSetting();
+                String NewConnStr = String.Format("Data Source={0};Initial Catalog=Khounthavy;Integrated Security=True", txtServerName.Text);
+                appSetting.SaveConnStr("KhounthavyV2.Properties.Settings.KhounthavyConnectionString", NewConnStr);
+                MessageBox.Show("Success");            }
+            catch
+            {
+                MessageBox.Show("Please Run in Administrator to setting Server Name and restart Program");
+            }
+            
+        }
     }
 }

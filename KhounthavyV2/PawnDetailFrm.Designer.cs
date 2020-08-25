@@ -87,7 +87,7 @@
             this.PawnDgvShow.ReadOnly = true;
             this.PawnDgvShow.RowHeadersWidth = 5;
             this.PawnDgvShow.RowTemplate.Height = 40;
-            this.PawnDgvShow.Size = new System.Drawing.Size(1240, 713);
+            this.PawnDgvShow.Size = new System.Drawing.Size(1223, 713);
             this.PawnDgvShow.TabIndex = 0;
             this.PawnDgvShow.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PawnDgvShow_CellMouseClick);
             // 
@@ -103,7 +103,7 @@
             this.PanPawnDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
             this.PanPawnDgv.Location = new System.Drawing.Point(28, 531);
             this.PanPawnDgv.Name = "PanPawnDgv";
-            this.PanPawnDgv.Size = new System.Drawing.Size(1246, 726);
+            this.PanPawnDgv.Size = new System.Drawing.Size(1229, 726);
             this.PanPawnDgv.TabIndex = 38;
             // 
             // label2
@@ -114,7 +114,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(26, 240);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(576, 26);
+            this.label2.Size = new System.Drawing.Size(593, 26);
             this.label2.TabIndex = 25;
             this.label2.Text = "ເບີໂທ :";
             // 
@@ -126,7 +126,7 @@
             this.panCustFrmHerder.Controls.Add(this.lblCustFrmHeader);
             this.panCustFrmHerder.Location = new System.Drawing.Point(28, 22);
             this.panCustFrmHerder.Name = "panCustFrmHerder";
-            this.panCustFrmHerder.Size = new System.Drawing.Size(1246, 61);
+            this.panCustFrmHerder.Size = new System.Drawing.Size(1281, 61);
             this.panCustFrmHerder.TabIndex = 40;
             // 
             // lblCustFrmHeader
@@ -147,7 +147,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(24, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(576, 26);
+            this.label6.Size = new System.Drawing.Size(593, 26);
             this.label6.TabIndex = 26;
             this.label6.Text = "ນາມສະກຸນ :";
             // 
@@ -159,7 +159,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(24, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(576, 26);
+            this.label9.Size = new System.Drawing.Size(593, 26);
             this.label9.TabIndex = 27;
             this.label9.Text = "ຊື່ :";
             // 
@@ -173,7 +173,7 @@
             this.txtTel.Location = new System.Drawing.Point(26, 269);
             this.txtTel.Margin = new System.Windows.Forms.Padding(0);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(574, 31);
+            this.txtTel.Size = new System.Drawing.Size(591, 31);
             this.txtTel.TabIndex = 21;
             // 
             // label10
@@ -184,7 +184,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(24, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(576, 26);
+            this.label10.Size = new System.Drawing.Size(593, 26);
             this.label10.TabIndex = 28;
             this.label10.Text = "ລະຫັດລູກຄ້າ :";
             // 
@@ -198,7 +198,7 @@
             this.txtCustLastName.Location = new System.Drawing.Point(26, 194);
             this.txtCustLastName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustLastName.Name = "txtCustLastName";
-            this.txtCustLastName.Size = new System.Drawing.Size(574, 31);
+            this.txtCustLastName.Size = new System.Drawing.Size(591, 31);
             this.txtCustLastName.TabIndex = 22;
             // 
             // txtCustName
@@ -211,7 +211,7 @@
             this.txtCustName.Location = new System.Drawing.Point(26, 122);
             this.txtCustName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustName.Name = "txtCustName";
-            this.txtCustName.Size = new System.Drawing.Size(574, 31);
+            this.txtCustName.Size = new System.Drawing.Size(591, 31);
             this.txtCustName.TabIndex = 24;
             // 
             // txtCustId
@@ -225,7 +225,7 @@
             this.txtCustId.Location = new System.Drawing.Point(26, 44);
             this.txtCustId.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustId.Name = "txtCustId";
-            this.txtCustId.Size = new System.Drawing.Size(574, 31);
+            this.txtCustId.Size = new System.Drawing.Size(591, 31);
             this.txtCustId.TabIndex = 24;
             // 
             // btnPawnSearch
@@ -264,7 +264,7 @@
             this.panPawnSearchHeader.Controls.Add(this.txtPawnSearch);
             this.panPawnSearchHeader.Location = new System.Drawing.Point(28, 427);
             this.panPawnSearchHeader.Name = "panPawnSearchHeader";
-            this.panPawnSearchHeader.Size = new System.Drawing.Size(1246, 104);
+            this.panPawnSearchHeader.Size = new System.Drawing.Size(1229, 104);
             this.panPawnSearchHeader.TabIndex = 42;
             // 
             // dtpEnd
@@ -331,7 +331,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1246, 325);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 325);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
             // panel1
@@ -349,7 +349,7 @@
             this.panel1.Controls.Add(this.txtCustLastName);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 319);
+            this.panel1.Size = new System.Drawing.Size(634, 319);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -365,9 +365,9 @@
             this.panel2.Controls.Add(this.txtProv);
             this.panel2.Controls.Add(this.txtDist);
             this.panel2.Controls.Add(this.txtVill);
-            this.panel2.Location = new System.Drawing.Point(626, 3);
+            this.panel2.Location = new System.Drawing.Point(643, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(617, 319);
+            this.panel2.Size = new System.Drawing.Size(635, 319);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -378,7 +378,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(11, 240);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(584, 26);
+            this.label3.Size = new System.Drawing.Size(602, 26);
             this.label3.TabIndex = 33;
             this.label3.Text = "ເລກທີຮູບ";
             // 
@@ -390,7 +390,7 @@
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Location = new System.Drawing.Point(13, 165);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(584, 26);
+            this.label22.Size = new System.Drawing.Size(602, 26);
             this.label22.TabIndex = 34;
             this.label22.Text = "ແຂວງ :";
             // 
@@ -402,7 +402,7 @@
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Location = new System.Drawing.Point(13, 90);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(584, 26);
+            this.label18.Size = new System.Drawing.Size(602, 26);
             this.label18.TabIndex = 35;
             this.label18.Text = "ເມືອງ :";
             // 
@@ -414,7 +414,7 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(13, 15);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(584, 26);
+            this.label17.Size = new System.Drawing.Size(602, 26);
             this.label17.TabIndex = 36;
             this.label17.Text = "ບ້ານ :";
             // 
@@ -428,7 +428,7 @@
             this.txtImgNo.Location = new System.Drawing.Point(13, 269);
             this.txtImgNo.Margin = new System.Windows.Forms.Padding(0);
             this.txtImgNo.Name = "txtImgNo";
-            this.txtImgNo.Size = new System.Drawing.Size(582, 31);
+            this.txtImgNo.Size = new System.Drawing.Size(600, 31);
             this.txtImgNo.TabIndex = 29;
             // 
             // txtProv
@@ -441,7 +441,7 @@
             this.txtProv.Location = new System.Drawing.Point(15, 194);
             this.txtProv.Margin = new System.Windows.Forms.Padding(0);
             this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(582, 31);
+            this.txtProv.Size = new System.Drawing.Size(600, 31);
             this.txtProv.TabIndex = 30;
             // 
             // txtDist
@@ -454,7 +454,7 @@
             this.txtDist.Location = new System.Drawing.Point(15, 122);
             this.txtDist.Margin = new System.Windows.Forms.Padding(0);
             this.txtDist.Name = "txtDist";
-            this.txtDist.Size = new System.Drawing.Size(582, 31);
+            this.txtDist.Size = new System.Drawing.Size(600, 31);
             this.txtDist.TabIndex = 31;
             // 
             // txtVill
@@ -467,7 +467,7 @@
             this.txtVill.Location = new System.Drawing.Point(15, 44);
             this.txtVill.Margin = new System.Windows.Forms.Padding(0);
             this.txtVill.Name = "txtVill";
-            this.txtVill.Size = new System.Drawing.Size(582, 31);
+            this.txtVill.Size = new System.Drawing.Size(600, 31);
             this.txtVill.TabIndex = 32;
             // 
             // PawnDetailFrm
