@@ -105,7 +105,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4EAF7BAB290D4333ADF56D3849301853"
+        "MsmKey" = "8:_5136F9581D9644B4AFFC5FCB04AA3473"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -416,6 +416,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -665,12 +673,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4EAF7BAB290D4333ADF56D3849301853"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5136F9581D9644B4AFFC5FCB04AA3473"
             {
-            "SourcePath" = "8:C:\\Program Files (x86)\\Common Files\\Adobe\\Acrobat\\ActiveX\\AcroPDF.dll"
-            "TargetName" = "8:AcroPDF.dll"
+            "SourcePath" = "8:..\\KhounthavyV2\\Resources\\logo.ico"
+            "TargetName" = "8:logo.ico"
             "Tag" = "8:"
-            "Folder" = "8:_DA88B0EC4ED541C9BD5EB4B51BCE8AAC"
+            "Folder" = "8:_BE89E92847BF441497809B53A5DB704A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1156,7 +1164,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{F8691C15-8D1C-4E40-8A9E-741BD0FB5CDB}"
-        "PackageCode" = "8:{37F80227-BDD3-4239-B571-815CD52EB638}"
+        "PackageCode" = "8:{465F68B7-441C-43B7-A0B6-84011344CA42}"
         "UpgradeCode" = "8:{15A16BAB-B92E-4676-B183-4E41F8734129}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1287,21 +1295,7 @@
             "Target" = "8:_6DF142019044469090161FBDDE0C9D71"
             "Folder" = "8:_BE89E92847BF441497809B53A5DB704A"
             "WorkingFolder" = "8:_DA88B0EC4ED541C9BD5EB4B51BCE8AAC"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DC28F9EA6B2745C2AA42A4F50AF5B80D"
-            {
-            "Name" = "8:KhounthavyV2"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_6DF142019044469090161FBDDE0C9D71"
-            "Folder" = "8:_727D92086CF84E0099BBB5B6B1AF9B0C"
-            "WorkingFolder" = "8:_DA88B0EC4ED541C9BD5EB4B51BCE8AAC"
-            "Icon" = "8:"
+            "Icon" = "8:_5136F9581D9644B4AFFC5FCB04AA3473"
             "Feature" = "8:"
             }
         }
