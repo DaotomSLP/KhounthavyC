@@ -87,7 +87,7 @@
             this.PawnDgvShow.ReadOnly = true;
             this.PawnDgvShow.RowHeadersWidth = 5;
             this.PawnDgvShow.RowTemplate.Height = 40;
-            this.PawnDgvShow.Size = new System.Drawing.Size(1223, 713);
+            this.PawnDgvShow.Size = new System.Drawing.Size(1272, 713);
             this.PawnDgvShow.TabIndex = 0;
             this.PawnDgvShow.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PawnDgvShow_CellMouseClick);
             // 
@@ -103,7 +103,7 @@
             this.PanPawnDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
             this.PanPawnDgv.Location = new System.Drawing.Point(28, 531);
             this.PanPawnDgv.Name = "PanPawnDgv";
-            this.PanPawnDgv.Size = new System.Drawing.Size(1229, 726);
+            this.PanPawnDgv.Size = new System.Drawing.Size(1278, 726);
             this.PanPawnDgv.TabIndex = 38;
             // 
             // label2
@@ -264,7 +264,7 @@
             this.panPawnSearchHeader.Controls.Add(this.txtPawnSearch);
             this.panPawnSearchHeader.Location = new System.Drawing.Point(28, 427);
             this.panPawnSearchHeader.Name = "panPawnSearchHeader";
-            this.panPawnSearchHeader.Size = new System.Drawing.Size(1229, 104);
+            this.panPawnSearchHeader.Size = new System.Drawing.Size(1278, 104);
             this.panPawnSearchHeader.TabIndex = 42;
             // 
             // dtpEnd
