@@ -85,7 +85,8 @@ namespace KhounthavyV2
                 {
                     api.InsertCustomer(
                         txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text
+                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
+                        api.ConvertImageToByte(txtImgPath.Text)
                     );
 
                     MessageBox.Show("SUCCESS");
@@ -132,7 +133,8 @@ namespace KhounthavyV2
             {
                 api.UpdateCustomer(
                     txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                    txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text
+                    txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text, 
+                    api.ConvertImageToByte(txtImgPath.Text)
                 );
                 MessageBox.Show("SUCCESS");
                 ClearCustForm();
@@ -173,6 +175,30 @@ namespace KhounthavyV2
         private void txtProv_KeyDown(object sender, KeyEventArgs e)
         {
             EnterTextbox(e, txtImgNo);
+        }
+
+        private void btnImgChoose_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    String filePath = openFileDialog.FileName;
+                    txtImgPath.Text = filePath;
+
+                    try
+                    {
+                        PicImg.Image = Image.FromFile(filePath);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+            }
         }
     }
 }

@@ -146,18 +146,19 @@ namespace KhounthavyV2
 
         public void InsertCustomer
             (
-                String id,String name, String lastname,String tel,String Vill,String Dist,String Prov,String Img
+                String id,String name, String lastname,String tel,String Vill,String Dist,String Prov,String Img,  byte[] ImageData
             )
         {
 
             String sqlQueryString = "INSERT INTO Customer VALUES('"+id+"',N'"+name+"',N'"+lastname+"','"+tel+"',N'"+
-                Vill+"',N'"+Dist+"',N'"+Prov+"','"+Img+"')";
+                Vill+"',N'"+Dist+"',N'"+Prov+"','"+Img+"',@Image)";
             
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();
 
             sqlCommand = new SqlCommand(sqlQueryString, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@Image",ImageData);
             sqlCommand.ExecuteNonQuery();
 
             sqlConnection.Close();
@@ -252,18 +253,19 @@ namespace KhounthavyV2
 
         public void UpdateCustomer
             (
-                String id, String name, String lastname, String tel, String Vill, String Dist, String Prov, String Img
+                String id, String name, String lastname, String tel, String Vill, String Dist, String Prov, String Img, byte[] ImageData
             )
         {
             String sqlQueryString = "UPDATE Customer SET Cust_name=N'" + name + "', Cust_lastname=N'" + lastname +
                 "', Tel='" + tel + "', Village=N'" + Vill + "', District=N'" + Dist + "', Province=N'"+Prov+
-                "',Image='"+Img+"' WHERE Cust_id='"+id+"' ";
+                "',Image='"+Img+"', Image_Pic=@Image WHERE Cust_id='"+id+"' ";
 
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();
 
             sqlCommand = new SqlCommand(sqlQueryString, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@Image", ImageData);
             sqlCommand.ExecuteNonQuery();
 
             sqlConnection.Close();
@@ -404,6 +406,17 @@ namespace KhounthavyV2
             sqlCommand.ExecuteNonQuery();
 
             sqlConnection.Close();
+        }
+
+        public byte[] ConvertImageToByte(String FilePath)
+        {
+            FileStream fs = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fs);
+            byte[] ImageData = binaryReader.ReadBytes((int)fs.Length);
+            fs.Close();
+            binaryReader.Close();
+
+            return ImageData;
         }
     }
 

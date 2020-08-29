@@ -75,9 +75,9 @@ namespace KhounthavyV2
             {
                 foreach (Control control in this.panCustForm.Controls)
                 {
-                    if(control is TextBox)
+                    if (control is TextBox)
                     {
-                       control.Text = "";
+                        control.Text = "";
                     }
                 }
             }
@@ -91,7 +91,7 @@ namespace KhounthavyV2
         {
             try
             {
-                foreach(Control control in this.panCustForm.Controls)
+                foreach (Control control in this.panCustForm.Controls)
                 {
                     if (control is TextBox)
                     {
@@ -129,7 +129,7 @@ namespace KhounthavyV2
             LinearRS barcode = new LinearRS();
             barcode.Type = BarcodeType.CODE128;
             barcode.Data = id;
-            barcode.drawBarcode( Directory.GetCurrentDirectory() + @"\barcode.jpg");
+            barcode.drawBarcode(Directory.GetCurrentDirectory() + @"\barcode.jpg");
         }
 
 
@@ -165,12 +165,9 @@ namespace KhounthavyV2
 
             txtPawnId.Text = api.GetNewId("Pawn");
             txtCustId.Text = api.GetNewId("Customer");
-
-
-
             cboDeviceType.SelectedItem = "ໂທລະສັບ";
 
-            String[] headerText = { "ລະຫັດລູກຄ້າ", "ຊື່", "ນາມສະກຸນ", "ເບີໂທ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ຮູບ" };
+            String[] headerText = { "ລະຫັດລູກຄ້າ", "ຊື່", "ນາມສະກຸນ", "ເບີໂທ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເລກຮູບ" };
             for (int i = 0; i <= headerText.Length - 1; i++)
             {
                 CustDgvShow.Columns[i].HeaderText = headerText[i];
@@ -179,9 +176,9 @@ namespace KhounthavyV2
             this.ActiveControl = txtDeviceName;
         }
 
-        private void EnterTextbox(KeyEventArgs e,TextBox textBox)
+        private void EnterTextbox(KeyEventArgs e, TextBox textBox)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 textBox.Focus();
             }
@@ -202,8 +199,8 @@ namespace KhounthavyV2
 
                             if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                             {
-                                    API api = new API();
-                                    api.BackUp(fbd.SelectedPath);
+                                API api = new API();
+                                api.BackUp(fbd.SelectedPath);
                                 MessageBox.Show("Back up Success...");
                             }
                         }
@@ -231,8 +228,6 @@ namespace KhounthavyV2
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-           
-
             API api = new API();
             try
             {
@@ -240,7 +235,8 @@ namespace KhounthavyV2
                 {
                     api.InsertCustomer(
                         txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text
+                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text, 
+                        api.ConvertImageToByte(txtImgPath.Text)
                     );
                 }
 
@@ -370,5 +366,29 @@ namespace KhounthavyV2
         {
             EnterTextbox(e, txtImgNo);
         }
+
+        private void btnImgChoose_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    String filePath = openFileDialog.FileName;
+                    txtImgPath.Text = filePath;
+
+                    try
+                    {
+                        PicImg.Image = Image.FromFile(filePath);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+            }
+    }
     }
 }

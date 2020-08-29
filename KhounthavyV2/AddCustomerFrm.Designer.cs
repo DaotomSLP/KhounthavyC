@@ -57,12 +57,17 @@
             this.Pan_CustDgv = new System.Windows.Forms.Panel();
             this.CustDgvShow = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PicImg = new System.Windows.Forms.PictureBox();
+            this.btnImgChoose = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtImgPath = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panCustForm.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.Pan_CustDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustDgvShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicImg)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -73,7 +78,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEdit.Location = new System.Drawing.Point(179, 773);
+            this.btnEdit.Location = new System.Drawing.Point(179, 961);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(158, 39);
@@ -89,7 +94,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(30, 773);
+            this.btnSave.Location = new System.Drawing.Point(30, 961);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(146, 39);
@@ -116,7 +121,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1300, 730);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1283, 913);
             this.tableLayoutPanel2.TabIndex = 39;
             // 
             // panCustForm
@@ -125,6 +130,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panCustForm.BackColor = System.Drawing.Color.White;
+            this.panCustForm.Controls.Add(this.PicImg);
+            this.panCustForm.Controls.Add(this.btnImgChoose);
+            this.panCustForm.Controls.Add(this.label11);
+            this.panCustForm.Controls.Add(this.txtImgPath);
             this.panCustForm.Controls.Add(this.label21);
             this.panCustForm.Controls.Add(this.label20);
             this.panCustForm.Controls.Add(this.label3);
@@ -144,7 +153,7 @@
             this.panCustForm.Location = new System.Drawing.Point(0, 61);
             this.panCustForm.Margin = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.panCustForm.Name = "panCustForm";
-            this.panCustForm.Size = new System.Drawing.Size(375, 669);
+            this.panCustForm.Size = new System.Drawing.Size(369, 852);
             this.panCustForm.TabIndex = 43;
             // 
             // label21
@@ -155,7 +164,7 @@
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label21.Location = new System.Drawing.Point(16, 584);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(342, 26);
+            this.label21.Size = new System.Drawing.Size(336, 26);
             this.label21.TabIndex = 30;
             this.label21.Text = "ເລກທີ່ຮູູບ :";
             // 
@@ -167,7 +176,7 @@
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label20.Location = new System.Drawing.Point(14, 509);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(342, 26);
+            this.label20.Size = new System.Drawing.Size(336, 26);
             this.label20.TabIndex = 31;
             this.label20.Text = "ແຂວງ :";
             // 
@@ -179,7 +188,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(14, 284);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 26);
+            this.label3.Size = new System.Drawing.Size(336, 26);
             this.label3.TabIndex = 32;
             this.label3.Text = "ເບີໂທ :";
             // 
@@ -191,7 +200,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(14, 434);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(342, 26);
+            this.label12.Size = new System.Drawing.Size(336, 26);
             this.label12.TabIndex = 33;
             this.label12.Text = "ເມືອງ :";
             // 
@@ -203,7 +212,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(14, 209);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(342, 26);
+            this.label4.Size = new System.Drawing.Size(336, 26);
             this.label4.TabIndex = 34;
             this.label4.Text = "ນາມສະກຸນ :";
             // 
@@ -217,7 +226,7 @@
             this.txtImgNo.Location = new System.Drawing.Point(16, 613);
             this.txtImgNo.Margin = new System.Windows.Forms.Padding(0);
             this.txtImgNo.Name = "txtImgNo";
-            this.txtImgNo.Size = new System.Drawing.Size(340, 31);
+            this.txtImgNo.Size = new System.Drawing.Size(334, 31);
             this.txtImgNo.TabIndex = 22;
             // 
             // label8
@@ -228,7 +237,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(14, 359);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(342, 26);
+            this.label8.Size = new System.Drawing.Size(336, 26);
             this.label8.TabIndex = 35;
             this.label8.Text = "ບ້ານ :";
             // 
@@ -242,7 +251,7 @@
             this.txtProv.Location = new System.Drawing.Point(16, 538);
             this.txtProv.Margin = new System.Windows.Forms.Padding(0);
             this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(340, 31);
+            this.txtProv.Size = new System.Drawing.Size(334, 31);
             this.txtProv.TabIndex = 23;
             this.txtProv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProv_KeyDown);
             // 
@@ -254,7 +263,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(14, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(342, 26);
+            this.label5.Size = new System.Drawing.Size(336, 26);
             this.label5.TabIndex = 36;
             this.label5.Text = "ຊື່ລູກຄ້າ :";
             // 
@@ -268,7 +277,7 @@
             this.txtTel.Location = new System.Drawing.Point(16, 313);
             this.txtTel.Margin = new System.Windows.Forms.Padding(0);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(340, 31);
+            this.txtTel.Size = new System.Drawing.Size(334, 31);
             this.txtTel.TabIndex = 24;
             this.txtTel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTel_KeyDown);
             // 
@@ -282,7 +291,7 @@
             this.txtDist.Location = new System.Drawing.Point(16, 463);
             this.txtDist.Margin = new System.Windows.Forms.Padding(0);
             this.txtDist.Name = "txtDist";
-            this.txtDist.Size = new System.Drawing.Size(340, 31);
+            this.txtDist.Size = new System.Drawing.Size(334, 31);
             this.txtDist.TabIndex = 25;
             this.txtDist.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDist_KeyDown);
             // 
@@ -294,7 +303,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(14, 59);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(342, 26);
+            this.label7.Size = new System.Drawing.Size(336, 26);
             this.label7.TabIndex = 37;
             this.label7.Text = "ລະຫັດລູກຄ້າ :";
             // 
@@ -308,7 +317,7 @@
             this.txtVill.Location = new System.Drawing.Point(16, 388);
             this.txtVill.Margin = new System.Windows.Forms.Padding(0);
             this.txtVill.Name = "txtVill";
-            this.txtVill.Size = new System.Drawing.Size(340, 31);
+            this.txtVill.Size = new System.Drawing.Size(334, 31);
             this.txtVill.TabIndex = 27;
             this.txtVill.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtVill_KeyDown);
             // 
@@ -322,7 +331,7 @@
             this.txtCustLastName.Location = new System.Drawing.Point(16, 238);
             this.txtCustLastName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustLastName.Name = "txtCustLastName";
-            this.txtCustLastName.Size = new System.Drawing.Size(340, 31);
+            this.txtCustLastName.Size = new System.Drawing.Size(334, 31);
             this.txtCustLastName.TabIndex = 26;
             this.txtCustLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCustLastName_KeyDown);
             // 
@@ -336,7 +345,7 @@
             this.txtCustName.Location = new System.Drawing.Point(16, 163);
             this.txtCustName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustName.Name = "txtCustName";
-            this.txtCustName.Size = new System.Drawing.Size(340, 31);
+            this.txtCustName.Size = new System.Drawing.Size(334, 31);
             this.txtCustName.TabIndex = 28;
             this.txtCustName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCustName_KeyDown);
             // 
@@ -351,7 +360,7 @@
             this.txtCustId.Location = new System.Drawing.Point(16, 88);
             this.txtCustId.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustId.Name = "txtCustId";
-            this.txtCustId.Size = new System.Drawing.Size(340, 31);
+            this.txtCustId.Size = new System.Drawing.Size(334, 31);
             this.txtCustId.TabIndex = 29;
             // 
             // panel5
@@ -364,7 +373,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(375, 61);
+            this.panel5.Size = new System.Drawing.Size(369, 61);
             this.panel5.TabIndex = 42;
             // 
             // label1
@@ -386,10 +395,10 @@
             this.panel7.Controls.Add(this.btnCustSearch);
             this.panel7.Controls.Add(this.label19);
             this.panel7.Controls.Add(this.txtCustSearch);
-            this.panel7.Location = new System.Drawing.Point(405, 0);
+            this.panel7.Location = new System.Drawing.Point(399, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(895, 61);
+            this.panel7.Size = new System.Drawing.Size(884, 61);
             this.panel7.TabIndex = 44;
             // 
             // btnCustSearch
@@ -437,10 +446,10 @@
             this.Pan_CustDgv.Controls.Add(this.CustDgvShow);
             this.Pan_CustDgv.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Pan_CustDgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(23)))));
-            this.Pan_CustDgv.Location = new System.Drawing.Point(405, 61);
+            this.Pan_CustDgv.Location = new System.Drawing.Point(399, 61);
             this.Pan_CustDgv.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.Pan_CustDgv.Name = "Pan_CustDgv";
-            this.Pan_CustDgv.Size = new System.Drawing.Size(895, 669);
+            this.Pan_CustDgv.Size = new System.Drawing.Size(884, 852);
             this.Pan_CustDgv.TabIndex = 45;
             // 
             // CustDgvShow
@@ -462,16 +471,66 @@
             this.CustDgvShow.ReadOnly = true;
             this.CustDgvShow.RowHeadersWidth = 40;
             this.CustDgvShow.RowTemplate.Height = 40;
-            this.CustDgvShow.Size = new System.Drawing.Size(889, 656);
+            this.CustDgvShow.Size = new System.Drawing.Size(878, 839);
             this.CustDgvShow.TabIndex = 0;
             this.CustDgvShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDgvShow_CellClick);
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(369, 821);
+            this.panel4.Location = new System.Drawing.Point(369, 1009);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(72, 26);
             this.panel4.TabIndex = 40;
+            // 
+            // PicImg
+            // 
+            this.PicImg.Location = new System.Drawing.Point(15, 727);
+            this.PicImg.Name = "PicImg";
+            this.PicImg.Size = new System.Drawing.Size(130, 95);
+            this.PicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicImg.TabIndex = 44;
+            this.PicImg.TabStop = false;
+            // 
+            // btnImgChoose
+            // 
+            this.btnImgChoose.BackColor = System.Drawing.Color.Sienna;
+            this.btnImgChoose.FlatAppearance.BorderSize = 0;
+            this.btnImgChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImgChoose.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImgChoose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnImgChoose.Location = new System.Drawing.Point(271, 691);
+            this.btnImgChoose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnImgChoose.Name = "btnImgChoose";
+            this.btnImgChoose.Size = new System.Drawing.Size(69, 31);
+            this.btnImgChoose.TabIndex = 43;
+            this.btnImgChoose.Text = "ເລືອກ";
+            this.btnImgChoose.UseVisualStyleBackColor = false;
+            this.btnImgChoose.Click += new System.EventHandler(this.btnImgChoose_Click);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(14, 662);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(327, 26);
+            this.label11.TabIndex = 42;
+            this.label11.Text = "ເລືອກຮູບ :";
+            // 
+            // txtImgPath
+            // 
+            this.txtImgPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtImgPath.BackColor = System.Drawing.Color.White;
+            this.txtImgPath.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
+            this.txtImgPath.ForeColor = System.Drawing.Color.Green;
+            this.txtImgPath.Location = new System.Drawing.Point(14, 691);
+            this.txtImgPath.Margin = new System.Windows.Forms.Padding(0);
+            this.txtImgPath.Name = "txtImgPath";
+            this.txtImgPath.Size = new System.Drawing.Size(249, 31);
+            this.txtImgPath.TabIndex = 41;
             // 
             // AddCustomerFrm
             // 
@@ -497,6 +556,7 @@
             this.panel7.PerformLayout();
             this.Pan_CustDgv.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustDgvShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,5 +592,9 @@
         internal System.Windows.Forms.Panel Pan_CustDgv;
         internal System.Windows.Forms.DataGridView CustDgvShow;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox PicImg;
+        internal System.Windows.Forms.Button btnImgChoose;
+        internal System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.TextBox txtImgPath;
     }
 }
