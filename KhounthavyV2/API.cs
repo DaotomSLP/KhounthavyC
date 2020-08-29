@@ -408,13 +408,10 @@ namespace KhounthavyV2
             sqlConnection.Close();
         }
 
-        public byte[] ConvertImageToByte(String FilePath)
+        public byte[] ConvertImageToByte(PictureBox PicImg)
         {
-            FileStream fs = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
-            BinaryReader binaryReader = new BinaryReader(fs);
-            byte[] ImageData = binaryReader.ReadBytes((int)fs.Length);
-            fs.Close();
-            binaryReader.Close();
+            ImageConverter imageConverter = new ImageConverter();
+            Byte[] ImageData = (Byte[])imageConverter.ConvertTo(PicImg.Image, Type.GetType("System.Byte[]"));
 
             return ImageData;
         }

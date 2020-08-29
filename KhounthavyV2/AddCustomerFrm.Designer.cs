@@ -61,6 +61,7 @@
             this.btnImgChoose = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtImgPath = new System.Windows.Forms.TextBox();
+            this.btnReSaveImage = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.panCustForm.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -131,6 +132,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panCustForm.BackColor = System.Drawing.Color.White;
             this.panCustForm.Controls.Add(this.PicImg);
+            this.panCustForm.Controls.Add(this.btnReSaveImage);
             this.panCustForm.Controls.Add(this.btnImgChoose);
             this.panCustForm.Controls.Add(this.label11);
             this.panCustForm.Controls.Add(this.txtImgPath);
@@ -532,6 +534,23 @@
             this.txtImgPath.Size = new System.Drawing.Size(249, 31);
             this.txtImgPath.TabIndex = 41;
             // 
+            // btnReSaveImage
+            // 
+            this.btnReSaveImage.BackColor = System.Drawing.Color.Sienna;
+            this.btnReSaveImage.FlatAppearance.BorderSize = 0;
+            this.btnReSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReSaveImage.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReSaveImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReSaveImage.Location = new System.Drawing.Point(163, 790);
+            this.btnReSaveImage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReSaveImage.Name = "btnReSaveImage";
+            this.btnReSaveImage.Size = new System.Drawing.Size(187, 31);
+            this.btnReSaveImage.TabIndex = 43;
+            this.btnReSaveImage.Text = "ບັນທຶກຮູບຄືນ";
+            this.btnReSaveImage.UseVisualStyleBackColor = false;
+            this.btnReSaveImage.Visible = false;
+            this.btnReSaveImage.Click += new System.EventHandler(this.btnImgChoose_Click);
+            // 
             // AddCustomerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,5 +615,6 @@
         internal System.Windows.Forms.Button btnImgChoose;
         internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.TextBox txtImgPath;
+        internal System.Windows.Forms.Button btnReSaveImage;
     }
 }

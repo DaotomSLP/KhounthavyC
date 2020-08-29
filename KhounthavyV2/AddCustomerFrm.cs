@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace KhounthavyV2
                 API api = new API();
 
                 CustDgvShow.DataSource = api.LoadData("Customer");
+                ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
 
                 txtCustId.Text = api.GetNewId("Customer");
 
@@ -30,7 +32,7 @@ namespace KhounthavyV2
 
                 btnSave.Text = "ບັນທຶກ";
 
-                String[] headerText = { "ລະຫັດລູກຄ້າ", "ຊື່", "ນາມສະກຸນ", "ເບີໂທ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ຮູບ" };
+                String[] headerText = { "ລະຫັດລູກຄ້າ", "ຊື່", "ນາມສະກຸນ", "ເບີໂທ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເລກຮູບ","ຮູບ" };
                 for (int i = 0; i <= headerText.Length - 1; i++)
                 {
                     CustDgvShow.Columns[i].HeaderText = headerText[i];
@@ -86,7 +88,7 @@ namespace KhounthavyV2
                     api.InsertCustomer(
                         txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
                         txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
-                        api.ConvertImageToByte(txtImgPath.Text)
+                        api.ConvertImageToByte(PicImg)
                     );
 
                     MessageBox.Show("SUCCESS");
@@ -118,6 +120,29 @@ namespace KhounthavyV2
                 txtProv.Text = CustDgvShow.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtImgNo.Text = CustDgvShow.Rows[e.RowIndex].Cells[7].Value.ToString();
 
+                PicImg.Image = null;
+
+                try
+                {
+                    var imgByte = (Byte[])(CustDgvShow.Rows[e.RowIndex].Cells[8].Value);
+                    MemoryStream memoryStream = new MemoryStream(imgByte);
+                    PicImg.Image = Image.FromStream(memoryStream);
+                }
+                
+                catch
+                {
+
+                }
+
+                //if picture box is not empty:
+                if(PicImg.Image == null || PicImg==null)
+                {
+                    btnReSaveImage.Visible = false;
+                }
+                else
+                {
+                    btnReSaveImage.Visible = true;
+                }
             }
             catch
             {
@@ -134,7 +159,7 @@ namespace KhounthavyV2
                 api.UpdateCustomer(
                     txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
                     txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text, 
-                    api.ConvertImageToByte(txtImgPath.Text)
+                    api.ConvertImageToByte(PicImg)
                 );
                 MessageBox.Show("SUCCESS");
                 ClearCustForm();
