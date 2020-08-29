@@ -230,45 +230,52 @@ namespace KhounthavyV2
         {
 
             API api = new API();
-            try
+            if (PicImg.Image == null || PicImg == null)
             {
-                if (radNewCust.Checked == true)
-                {
-                    api.InsertCustomer(
-                        txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text, 
-                        api.ConvertImageToByte(PicImg)
-                    );
-                }
-
-                api.InsertPawn(
-                    txtPawnId.Text, dtpDate, txtDeviceNo.Text, txtDeviceName.Text, txtColor.Text,
-                    txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "", "",
-                    txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString()
-                    );
-                barcodeGenerate(txtPawnId.Text);
-
-
+                MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
+            }
+            else
+            {
                 try
                 {
-                    api.InsertBarcodeImage();
+                    if (radNewCust.Checked == true)
+                    {
+                        api.InsertCustomer(
+                           txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
+                           txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
+                           api.ConvertImageToByte(PicImg)
+                        );
+                    }
+
+                    api.InsertPawn(
+                        txtPawnId.Text, dtpDate, txtDeviceNo.Text, txtDeviceName.Text, txtColor.Text,
+                        txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "", "",
+                        txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString()
+                        );
+                    barcodeGenerate(txtPawnId.Text);
+
+
+                    try
+                    {
+                        api.InsertBarcodeImage();
+                    }
+                    catch
+                    {
+                        api.UpdateBarcodeImage();
+                    }
+
+                    MessageBox.Show("SUCCESS");
+                    PrintBill();
+                    ClearCustForm();
+                    ClearPawnForm();
+                    radNewCust.Checked = true;
+                    LoadForm();
+
                 }
-                catch
+                catch (Exception ex)
                 {
-                    api.UpdateBarcodeImage();
+                    MessageBox.Show(ex.Message);
                 }
-
-                MessageBox.Show("SUCCESS");
-                PrintBill();
-                ClearCustForm();
-                ClearPawnForm();
-                radNewCust.Checked = true;
-                LoadForm();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -413,5 +420,27 @@ namespace KhounthavyV2
                 }
             }
     }
+
+        private void btnReSaveImage_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    try
+                    {
+                        API api = new API();
+                        api.BackUp(fbd.SelectedPath);
+                        MessageBox.Show("Back up Success...");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
+        }
     }
 }

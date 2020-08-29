@@ -75,32 +75,38 @@ namespace KhounthavyV2
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(btnEdit.Enabled == true)
+            API api = new API();
+            if (PicImg.Image == null || PicImg == null)
             {
-                btnSave.Text = "ບັນທຶກ";
-                btnEdit.Enabled = false;
+                MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
             }
             else
             {
-                API api = new API();
-                try
+                if (btnEdit.Enabled == true)
                 {
-                    api.InsertCustomer(
-                        txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
-                        api.ConvertImageToByte(PicImg)
-                    );
-
-                    MessageBox.Show("SUCCESS");
-                    ClearCustForm();
-                    LoadForm();
+                    btnSave.Text = "ບັນທຶກ";
+                    btnEdit.Enabled = false;
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        api.InsertCustomer(
+                            txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
+                            txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
+                            api.ConvertImageToByte(PicImg)
+                        );
+
+                        MessageBox.Show("SUCCESS");
+                        ClearCustForm();
+                        LoadForm();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
-
         }
 
         private void CustDgvShow_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -152,22 +158,29 @@ namespace KhounthavyV2
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            API api = new API();
 
-            try
+            API api = new API();
+            if (PicImg.Image == null || PicImg == null)
             {
-                api.UpdateCustomer(
-                    txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                    txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text, 
-                    api.ConvertImageToByte(PicImg)
-                );
-                MessageBox.Show("SUCCESS");
-                ClearCustForm();
-                LoadForm();
+                MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    api.UpdateCustomer(
+                        txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
+                        txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
+                        api.ConvertImageToByte(PicImg)
+                    );
+                    MessageBox.Show("SUCCESS");
+                    ClearCustForm();
+                    LoadForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
 
         }
@@ -204,7 +217,7 @@ namespace KhounthavyV2
 
         private void btnImgChoose_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+           using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
 
@@ -221,6 +234,28 @@ namespace KhounthavyV2
                     catch (Exception ex)
                     {
 
+                    }
+                }
+            }
+        }
+
+        private void btnReSaveImage_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new SaveFileDialog())
+            {
+                fbd.Filter = "JPG|*.jpg|JPEG|*.jpeg|PNG|*.png|All files (*.*)|*.*";
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    try
+                    {
+                        PicImg.Image.Save(fbd.FileName);
+                        MessageBox.Show("Success...");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
                     }
                 }
             }

@@ -549,7 +549,7 @@
             this.btnReSaveImage.Text = "ບັນທຶກຮູບຄືນ";
             this.btnReSaveImage.UseVisualStyleBackColor = false;
             this.btnReSaveImage.Visible = false;
-            this.btnReSaveImage.Click += new System.EventHandler(this.btnImgChoose_Click);
+            this.btnReSaveImage.Click += new System.EventHandler(this.btnReSaveImage_Click);
             // 
             // AddCustomerFrm
             // 
