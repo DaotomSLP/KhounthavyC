@@ -384,7 +384,7 @@ namespace KhounthavyV2
 
         public void BackUp(String savePath)
         {
-            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = '"+savePath+@"\DB.bak'";
+            String queryStr = @"BACKUP DATABASE Khounthavy TO DISK = '"+savePath+"'";
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
             sqlConnection.Open();

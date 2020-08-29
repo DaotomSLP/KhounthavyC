@@ -46,16 +46,17 @@ namespace KhounthavyV2
 
         private void btnBackUp_Click(object sender, EventArgs e)
         {
-            using (var fbd = new FolderBrowserDialog())
+            using (var fbd = new SaveFileDialog())
             {
+                fbd.Filter = "BAK|*.bak|All files (*.*)|*.*";
                 DialogResult result = fbd.ShowDialog();
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                if (result == DialogResult.OK)
                 {
                     try
                     {
                         API api = new API();
-                        api.BackUp(fbd.SelectedPath);
+                        api.BackUp(fbd.FileName);
                         MessageBox.Show("Back up Success...");
                     }
                     catch (Exception ex)

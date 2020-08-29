@@ -194,15 +194,23 @@ namespace KhounthavyV2
                 {
                     try
                     {
-                        using (var fbd = new FolderBrowserDialog())
+                        using (var fbd = new SaveFileDialog())
                         {
+                            fbd.Filter = "BAK|*.bak|All files (*.*)|*.*";
                             DialogResult result = fbd.ShowDialog();
 
-                            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                            if (result == DialogResult.OK)
                             {
-                                API api = new API();
-                                api.BackUp(fbd.SelectedPath);
-                                MessageBox.Show("Back up Success...");
+                                try
+                                {
+                                    API api = new API();
+                                    api.BackUp(fbd.FileName);
+                                    MessageBox.Show("Back up Success...");
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.ToString());
+                                }
                             }
                         }
 
@@ -423,17 +431,17 @@ namespace KhounthavyV2
 
         private void btnReSaveImage_Click(object sender, EventArgs e)
         {
-            using (var fbd = new FolderBrowserDialog())
+            using (var fbd = new SaveFileDialog())
             {
+                fbd.Filter = "JPG|*.jpg|JPEG|*.jpeg|PNG|*.png|All files (*.*)|*.*";
                 DialogResult result = fbd.ShowDialog();
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                if (result == DialogResult.OK)
                 {
                     try
                     {
-                        API api = new API();
-                        api.BackUp(fbd.SelectedPath);
-                        MessageBox.Show("Back up Success...");
+                        PicImg.Image.Save(fbd.FileName);
+                        MessageBox.Show("Success...");
                     }
                     catch (Exception ex)
                     {
