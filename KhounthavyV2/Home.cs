@@ -177,6 +177,7 @@ namespace KhounthavyV2
                 AppSetting appSetting = new AppSetting();
                 String NewConnStr = String.Format("Data Source={0};Initial Catalog=Khounthavy;Integrated Security=True", txtServerName.Text);
                 appSetting.SaveConnStr("KhounthavyV2.Properties.Settings.KhounthavyConnectionString", NewConnStr);
+                appSetting.SaveConnStr("KhounthavyV2.Properties.Settings.KhounthavyConnectionString1", NewConnStr);
                 MessageBox.Show("Success");            }
             catch
             {

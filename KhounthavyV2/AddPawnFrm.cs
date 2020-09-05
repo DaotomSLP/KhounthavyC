@@ -238,21 +238,23 @@ namespace KhounthavyV2
         {
 
             API api = new API();
-            if (PicImg.Image == null || PicImg == null)
-            {
-                MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
-            }
-            else
-            {
+
                 try
                 {
                     if (radNewCust.Checked == true)
                     {
-                        api.InsertCustomer(
-                           txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                           txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
-                           api.ConvertImageToByte(PicImg)
-                        );
+                        if (PicImg.Image == null || PicImg == null)
+                        {
+                            MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
+                        }
+                        else
+                        {
+                            api.InsertCustomer(
+                               txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
+                               txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
+                               api.ConvertImageToByte(PicImg)
+                            );
+                        }
                     }
 
                     api.InsertPawn(
@@ -284,7 +286,6 @@ namespace KhounthavyV2
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
         }
 
         private void PrintBill()
@@ -410,26 +411,7 @@ namespace KhounthavyV2
             CameraFrm cameraFrm = new CameraFrm();
             cameraFrm.Show();
             cameraFrm.FormClosed += returnImageFrm;
-            //using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            //{
-            //    openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
 
-            //    if (openFileDialog.ShowDialog() == DialogResult.OK)
-            //    {
-            //        //Get the path of specified file
-            //        String filePath = openFileDialog.FileName;
-            //        txtImgPath.Text = filePath;
-
-            //        try
-            //        {
-            //            PicImg.Image = Image.FromFile(filePath);
-            //        }
-            //        catch (Exception ex)
-            //        {
-
-            //        }
-            //    }
-            //}
     }
 
         private void returnImageFrm(object sender, EventArgs e)
@@ -458,6 +440,11 @@ namespace KhounthavyV2
                     }
                 }
             }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

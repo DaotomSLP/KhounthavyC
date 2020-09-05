@@ -22,9 +22,9 @@ namespace KhounthavyV2
             try
             {
                 API api = new API();
-                api.TurnBack(txtPawnId.Text, txtImgNo.Text);
+                //api.TurnBack(txtPawnId.Text, txtImgNo.Text);
                 MessageBox.Show("Success...");
-                txtImgNo.Clear();
+                //txtImgNo.Clear();
                 txtPawnId.Clear();
             }
             catch
@@ -47,6 +47,23 @@ namespace KhounthavyV2
         }
 
         private void txtImgNo_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnImgChoose_Click(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = new CameraFrm();
+            cameraFrm.Show();
+            cameraFrm.FormClosed += returnImageFrm;
+        }
+        private void returnImageFrm(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = (CameraFrm)sender;
+            PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }

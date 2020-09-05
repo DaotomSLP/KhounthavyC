@@ -215,30 +215,6 @@ namespace KhounthavyV2
             EnterTextbox(e, txtImgNo);
         }
 
-        private void btnImgChoose_Click(object sender, EventArgs e)
-        {
-           using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    String filePath = openFileDialog.FileName;
-                    txtImgPath.Text = filePath;
-
-                    try
-                    {
-                        PicImg.Image = Image.FromFile(filePath);
-                    }
-                    catch (Exception ex)
-                    {
-
-                    }
-                }
-            }
-        }
-
         private void btnReSaveImage_Click(object sender, EventArgs e)
         {
             using (var fbd = new SaveFileDialog())
@@ -259,6 +235,18 @@ namespace KhounthavyV2
                     }
                 }
             }
+        }
+
+        private void btnImgChoose_Click_1(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = new CameraFrm();
+            cameraFrm.Show();
+            cameraFrm.FormClosed += returnImageFrm;
+        }
+        private void returnImageFrm(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = (CameraFrm)sender;
+            PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
         }
     }
 }
