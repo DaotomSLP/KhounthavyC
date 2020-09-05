@@ -264,3 +264,11 @@ D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.ResolveComRef
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\RdlCompile.cache
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\RdlCompile.compiled
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.TurnBackFrm.resources
+D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.dll
+D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.DirectShow.dll
+D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.dll
+D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.xml
+D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.xml
+D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.DirectShow.xml
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
+D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.CameraFrm.resources
