@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace KhounthavyV2
 
             PawnDgvShow.DataSource = api.LoadData("Pawn");
 
-            String[] headerText = { "ລະຫັດ", "ວັນທີ", "ມື້ຫຼຸດຈຳນຳ", "ເລກເຄື່ອງ", "ຊື່ເຄື່ອງ", "ສີ", "ຈຳນວນເງິນ(ກີບ)", "ຈຳນວນເງິນ(ບາດ)", "ສະຖານະ", "ມື້ສົ່ງເຄື່ອງ", "ລະຫັດລ໋ອກເຄື່ອງ", "ລະຫັດຮູບຜູ້ມາເອົາເຄື່ອງ" };
+            String[] headerText = { "ລະຫັດ", "ວັນທີ", "ມື້ຫຼຸດຈຳນຳ", "ເລກເຄື່ອງ", "ຊື່ເຄື່ອງ", "ສີ", "ຈຳນວນເງິນ(ກີບ)", "ຈຳນວນເງິນ(ບາດ)", "ສະຖານະ", "ມື້ສົ່ງເຄື່ອງ", "ລະຫັດລ໋ອກເຄື່ອງ", "ລະຫັດຜູ້ມາຈຳ", "ລະຫັດຜູ້ມາເອົາເຄື່ອງ" };
             for (int i = 0; i <= headerText.Length - 1; i++)
             {
                 PawnDgvShow.Columns[i].HeaderText = headerText[i];
@@ -53,7 +54,7 @@ namespace KhounthavyV2
 
                 try
                 {
-                    var imgByte = (Byte[])(row[7].Value);
+                    var imgByte = (Byte[])(row[7]);
                     MemoryStream memoryStream = new MemoryStream(imgByte);
                     PicImg.Image = Image.FromStream(memoryStream);
                 }
@@ -96,9 +97,21 @@ namespace KhounthavyV2
 
         private void PawnDgvShow_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            cust_id = PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
-            khon_ma_ao = PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if(PawnDgvShow.Rows[e.RowIndex].Cells[12].Value.ToString() != "")
+            {
+                radPhuJam.Visible = true;
+                radPhuMaAo.Visible = true;
+            }
+            else
+            {
+                radPhuJam.Visible = false;
+                radPhuMaAo.Visible = false;
+            }
+
+            cust_id = PawnDgvShow.Rows[e.RowIndex].Cells[11].Value.ToString();
+            khon_ma_ao = PawnDgvShow.Rows[e.RowIndex].Cells[12].Value.ToString();
             ShowCustomerByPawn(cust_id);
+
         }
 
         private void PawnDetailFrm_Load(object sender, EventArgs e)
@@ -109,6 +122,22 @@ namespace KhounthavyV2
         private void PawnDetailFrm_Resize(object sender, EventArgs e)
         {
             this.ActiveControl = txtPawnSearch;
+        }
+
+        private void btnReSaveImage_Click(object sender, EventArgs e)
+        {
+            API api = new API();
+            api.ReSaveImage(PicImg);
+        }
+
+        private void radPhuJam_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowCustomerByPawn(cust_id);
+        }
+
+        private void radPhuMaAo_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowCustomerByPawn(khon_ma_ao);
         }
     }
 }

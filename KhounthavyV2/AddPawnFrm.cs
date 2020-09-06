@@ -254,9 +254,35 @@ namespace KhounthavyV2
                                txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
                                api.ConvertImageToByte(PicImg)
                             );
-                        }
-                    }
 
+                            api.InsertPawn(
+                                txtPawnId.Text, dtpDate, txtDeviceNo.Text, txtDeviceName.Text, txtColor.Text,
+                                txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "ຍັງບໍ່ມາເອົາ", "",
+                                txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString(), ""
+                                );
+                            barcodeGenerate(txtPawnId.Text);
+
+
+                        try
+                        {
+                            api.InsertBarcodeImage();
+                        }
+                        catch
+                        {
+                            api.UpdateBarcodeImage();
+                        }
+
+                        MessageBox.Show("SUCCESS");
+                        PrintBill();
+                        ClearCustForm();
+                        ClearPawnForm();
+                        radNewCust.Checked = true;
+                        LoadForm();
+
+                    }
+                    }
+                else
+                {
                     api.InsertPawn(
                         txtPawnId.Text, dtpDate, txtDeviceNo.Text, txtDeviceName.Text, txtColor.Text,
                         txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "ຍັງບໍ່ມາເອົາ", "",
@@ -280,6 +306,7 @@ namespace KhounthavyV2
                     ClearPawnForm();
                     radNewCust.Checked = true;
                     LoadForm();
+                }
 
                 }
                 catch (Exception ex)
@@ -417,7 +444,7 @@ namespace KhounthavyV2
         private void returnImageFrm(object sender, EventArgs e)
         {
             CameraFrm cameraFrm = (CameraFrm)sender;
-                PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
+            PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
         }
 
         private void btnReSaveImage_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,6 +51,43 @@ namespace KhounthavyV2
             }
         }
 
+        private void LockCustForm()
+        {
+            try
+            {
+                foreach (Control control in this.panCustForm.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.Enabled = false;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void UnLockCustForm()
+        {
+            try
+            {
+                foreach (Control control in this.panCustForm.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.Enabled = true;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+            txtCustId.Enabled = false;
+        }
+
         private void btnTurnBack_Click(object sender, EventArgs e)
         {
             try
@@ -80,16 +118,10 @@ namespace KhounthavyV2
             }
         }
         
-        private void btnImgChoose_Click(object sender, EventArgs e)
-        {
-            CameraFrm cameraFrm = new CameraFrm();
-            cameraFrm.Show();
-            cameraFrm.FormClosed += returnImageFrm;
-        }
         private void returnImageFrm(object sender, EventArgs e)
         {
-            CameraFrm cameraFrm = (CameraFrm)sender;
-            PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
+                CameraFrm cameraFrm = (CameraFrm)sender;
+                PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -98,33 +130,114 @@ namespace KhounthavyV2
 
             try
             {
-                if (radNewCust.Checked == true)
+                if (txtPawnId.Text != "")
                 {
-                    if (PicImg.Image == null || PicImg == null)
+                    if (radNewCust.Checked == true)
                     {
-                        MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
+                        if (PicImg.Image == null || PicImg == null)
+                        {
+                            MessageBox.Show("ກະລຸນາເລືອກຮູບກ່ອນບັນທຶກ !!!");
+                        }
+                        else
+                        {
+                            api.InsertCustomer(
+                               txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
+                               txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
+                               api.ConvertImageToByte(PicImg)
+                            );
+
+
+                            api.TurnBack(txtPawnId.Text, txtCustId.Text);
+
+                            MessageBox.Show("SUCCESS");
+                            ClearCustForm();
+                            radNewCust.Checked = true;
+                            LoadForm();
+                        }
                     }
                     else
                     {
-                        api.InsertCustomer(
-                           txtCustId.Text, txtCustName.Text, txtCustLastName.Text, txtTel.Text,
-                           txtVill.Text, txtDist.Text, txtProv.Text, txtImgNo.Text,
-                           api.ConvertImageToByte(PicImg)
-                        );
+
+                        api.TurnBack(txtPawnId.Text, txtCustId.Text);
+
+                        MessageBox.Show("SUCCESS");
+                        ClearCustForm();
+                        radNewCust.Checked = true;
+                        LoadForm();
                     }
+
                 }
-
-                api.TurnBack(txtPawnId.Text,  txtCustId.Text);
-
-                MessageBox.Show("SUCCESS");
-                ClearCustForm();
-                radNewCust.Checked = true;
-                LoadForm();
-
+                else
+                {
+                    MessageBox.Show("ກະລຸນາປ້ອນລະຫັດການຈຳ");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnImgChoose_Click_1(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = new CameraFrm();
+            cameraFrm.Show();
+            cameraFrm.FormClosed += returnImageFrm;
+        }
+
+        private void radNewCust_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radNewCust.Checked == true)
+            {
+                CustDgvShow.Enabled = false;
+                ClearCustForm();
+                UnLockCustForm();
+                API api = new API();
+                txtCustId.Text = api.GetNewId("Customer");
+            }
+        }
+
+        private void radOldCust_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radOldCust.Checked == true)
+            {
+                CustDgvShow.Enabled = true;
+                LockCustForm();
+            }
+        }
+
+        private void CustDgvShow_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                txtCustId.Text = CustDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCustName.Text = CustDgvShow.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtCustLastName.Text = CustDgvShow.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtTel.Text = CustDgvShow.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtVill.Text = CustDgvShow.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtDist.Text = CustDgvShow.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtProv.Text = CustDgvShow.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtImgNo.Text = CustDgvShow.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                PicImg.Image = null;
+
+                try
+                {
+                    var imgByte = (Byte[])(CustDgvShow.Rows[e.RowIndex].Cells[8].Value);
+                    MemoryStream memoryStream = new MemoryStream(imgByte);
+                    PicImg.Image = Image.FromStream(memoryStream);
+                }
+                catch
+                {
+
+                }
+
+            }
+            catch
+            {
+
             }
         }
     }
