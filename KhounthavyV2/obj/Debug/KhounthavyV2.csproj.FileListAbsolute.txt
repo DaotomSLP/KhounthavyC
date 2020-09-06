@@ -270,5 +270,4 @@ D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.dll
 D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.xml
 D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.xml
 D:\TOm\work\KhounthavyC\KhounthavyV2\bin\Debug\AForge.Video.DirectShow.xml
-D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
 D:\TOm\work\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.CameraFrm.resources
