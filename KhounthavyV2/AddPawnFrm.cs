@@ -442,7 +442,17 @@ namespace KhounthavyV2
             }
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void panPawnFrm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panPawnFrmHerder_Paint(object sender, PaintEventArgs e)
         {
 
         }
