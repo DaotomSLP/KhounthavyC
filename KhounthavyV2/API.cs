@@ -40,7 +40,7 @@ namespace KhounthavyV2
             else if(Table == "Pawn")
             {
                 queryStr = "SELECT TOP 70 Pawn_id, Pawn_date, Pawn_exp, Prod_no, Prod_name, Prod_color"+
-                    ", Pawn_amount_kip, Pawn_amount_bath, Pawn_status, Pawn_turnBa_date, Password, img"+
+                    ", Pawn_amount_kip, Pawn_amount_bath, Pawn_status, Pawn_turnBa_date, Password, k_Cust_name"+
                     " FROM Pawn_View ORDER BY Pawn_id DESC";
             }
             sqlConnection = new SqlConnection();
@@ -167,13 +167,13 @@ namespace KhounthavyV2
         public void InsertPawn
             (
                 String id, DateTimePicker date,String no, String name, String color, String kipp, String bath, DateTimePicker exp, 
-                String Cust_id, String User_id, String status, String turnDate, String password, String img,String type
+                String Cust_id, String User_id, String status, String turnDate, String password, String img,String type, String khon_ma_ao
             )
         {
 
             String sqlQueryString = "INSERT INTO Pawn VALUES('" + id + "','" + date.Value + "',N'" + no + "',N'" +
                 name + "',N'" + color + "','" + kipp + "','" + bath + "','" + exp.Value + "','"+Cust_id+"','" +
-                User_id+"',N'"+ status + "','" + turnDate + "',N'" + password + "','" + img + "',N'"+type+"')";
+                User_id+"',N'"+ status + "','" + turnDate + "',N'" + password + "','" + img + "',N'"+type+"','"+khon_ma_ao+"')";
 
             sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = conStr;
@@ -293,7 +293,8 @@ namespace KhounthavyV2
 
         public DataTable PawnSearch(String searchKeyWord)
         {
-            String queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +
+            String queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,"+
+                "Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,khon_ma_ao" +
                 " FROM Pawn_view WHERE Pawn_id like '%" + searchKeyWord + "%' OR Prod_no like N'%" + searchKeyWord +
                 "%' OR  Prod_name like N'%" + searchKeyWord + "' OR Cust_name like N'%" + searchKeyWord +
                 "%' OR Cust_lastname like N'%" + searchKeyWord + "%' ORDER BY Pawn_id DESC";
@@ -338,12 +339,14 @@ namespace KhounthavyV2
             String queryStr = "";
             if (keyword == "")
             {
-                queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +
+                queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,"+
+                "Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,khon_ma_ao" +
                  " FROM Pawn_view WHERE Pawn_date BETWEEN '" + start + "' AND '" + end + "' ORDER BY Pawn_id DESC";
             }
             else
             {
-                queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,img" +
+                queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip,"+
+                    "Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password,khon_ma_ao" +
                    " FROM Pawn_view WHERE (Pawn_id like '%" + keyword + "%' OR Prod_no like N'%" + keyword +
                    "%' OR  Prod_name like N'%" + keyword + "' OR Cust_name like N'%" + keyword +
                    "%' OR Cust_lastname like N'%" + keyword + "%') AND Pawn_date BETWEEN '" + start + "' AND '" + end +
@@ -366,10 +369,10 @@ namespace KhounthavyV2
             return dt;
         }
 
-        public void TurnBack(String id, String img_no)
+        public void TurnBack(String id, String khon_ma_ao)
         {
             DateTime dateTime = DateTime.Now;
-            String sqlQueryString = "UPDATE Pawn SET Pawn_status=N'ສົ່ງເຄື່ອງຄືນ', img=N'"+img_no+
+            String sqlQueryString = "UPDATE Pawn SET Pawn_status=N'ສົ່ງເຄື່ອງຄືນ', khon_ma_ao='"+khon_ma_ao+
                 "', Pawn_turnBa_date='"+dateTime+"' WHERE Pawn_id='" + id + "' ";
 
             sqlConnection = new SqlConnection();
@@ -414,6 +417,27 @@ namespace KhounthavyV2
             Byte[] ImageData = (Byte[])imageConverter.ConvertTo(PicImg.Image, Type.GetType("System.Byte[]"));
 
             return ImageData;
+        }
+
+        public void ReSaveImage(PictureBox PicImg){
+            using (var fbd = new SaveFileDialog())
+            {
+                fbd.Filter = "JPG|*.jpg|JPEG|*.jpeg|PNG|*.png|All files (*.*)|*.*";
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    try
+                    {
+                        PicImg.Image.Save(fbd.FileName);
+                        MessageBox.Show("Success...");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
         }
     }
 

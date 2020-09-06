@@ -17,6 +17,9 @@ namespace KhounthavyV2
             InitializeComponent();
         }
 
+        private String cust_id="";
+        private String khon_ma_ao="";
+
         public void LoadForm()
         {
             API api = new API();
@@ -32,10 +35,49 @@ namespace KhounthavyV2
             this.ActiveControl = txtPawnSearch;
         }
 
+        private void ShowCustomerByPawn(String id){
+            API api = new API();
+            DataTable dt;
+            dt = api.LoadCustomerFromPawn(id);
+            foreach (DataRow row in dt.Rows)
+            {
+                txtCustId.Text = row[0].ToString();
+                txtCustName.Text = row[1].ToString();
+                txtCustLastName.Text = row[2].ToString();
+                txtTel.Text = row[3].ToString();
+                txtVill.Text = row[4].ToString();
+                txtDist.Text = row[5].ToString();
+                txtProv.Text = row[6].ToString();
+
+                PicImg.Image = null;
+
+                try
+                {
+                    var imgByte = (Byte[])(row[7].Value);
+                    MemoryStream memoryStream = new MemoryStream(imgByte);
+                    PicImg.Image = Image.FromStream(memoryStream);
+                }
+                catch
+                {
+
+                }
+
+                                //if picture box is not empty:
+                if (PicImg.Image == null || PicImg == null)
+                {
+                    btnReSaveImage.Visible = false;
+                }
+                else
+                {
+                    btnReSaveImage.Visible = true;
+                }
+            }
+        }
+
         private void dtpStart_ValueChanged(object sender, EventArgs e)
         {
             API api = new API();
-
+            
             PawnDgvShow.DataSource = api.SearchPawnByDate(txtPawnSearch.Text, dtpStart.Value.ToString(), dtpEnd.Value.ToString());
         }
 
@@ -54,20 +96,9 @@ namespace KhounthavyV2
 
         private void PawnDgvShow_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            API api = new API();
-            DataTable dt;
-            dt = api.LoadCustomerFromPawn(PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString());
-            foreach (DataRow row in dt.Rows)
-            {
-                txtCustId.Text = row[0].ToString();
-                txtCustName.Text = row[1].ToString();
-                txtCustLastName.Text = row[2].ToString();
-                txtTel.Text = row[3].ToString();
-                txtVill.Text = row[4].ToString();
-                txtDist.Text = row[5].ToString();
-                txtProv.Text = row[6].ToString();
-                txtImgNo.Text = row[7].ToString();
-            }
+            cust_id = PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+            khon_ma_ao = PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+            ShowCustomerByPawn(cust_id);
         }
 
         private void PawnDetailFrm_Load(object sender, EventArgs e)

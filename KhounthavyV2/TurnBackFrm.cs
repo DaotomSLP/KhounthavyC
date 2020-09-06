@@ -79,12 +79,7 @@ namespace KhounthavyV2
                 txtPawnId.Focus();
             }
         }
-
-        private void txtImgNo_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
+        
         private void btnImgChoose_Click(object sender, EventArgs e)
         {
             CameraFrm cameraFrm = new CameraFrm();
@@ -118,6 +113,8 @@ namespace KhounthavyV2
                         );
                     }
                 }
+
+                api.TurnBack(txtPawnId.Text,  txtCustId.Text);
 
                 MessageBox.Show("SUCCESS");
                 ClearCustForm();

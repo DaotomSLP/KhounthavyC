@@ -259,8 +259,8 @@ namespace KhounthavyV2
 
                     api.InsertPawn(
                         txtPawnId.Text, dtpDate, txtDeviceNo.Text, txtDeviceName.Text, txtColor.Text,
-                        txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "", "",
-                        txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString()
+                        txtKip.Text, txtBath.Text, dtpExp, txtCustId.Text, API.Current_user, "ຍັງບໍ່ມາເອົາ", "",
+                        txtDevicePassword.Text, "", cboDeviceType.SelectedItem.ToString(), ""
                         );
                     barcodeGenerate(txtPawnId.Text);
 
@@ -422,24 +422,8 @@ namespace KhounthavyV2
 
         private void btnReSaveImage_Click(object sender, EventArgs e)
         {
-            using (var fbd = new SaveFileDialog())
-            {
-                fbd.Filter = "JPG|*.jpg|JPEG|*.jpeg|PNG|*.png|All files (*.*)|*.*";
-                DialogResult result = fbd.ShowDialog();
-
-                if (result == DialogResult.OK)
-                {
-                    try
-                    {
-                        PicImg.Image.Save(fbd.FileName);
-                        MessageBox.Show("Success...");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                    }
-                }
-            }
+            API api = new API();
+            api.ReSaveImage(PicImg);
         }
 
         private void panPawnFrm_Paint(object sender, PaintEventArgs e)
