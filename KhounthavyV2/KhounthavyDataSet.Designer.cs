@@ -1600,8 +1600,6 @@ namespace KhounthavyV2 {
             
             private global::System.Data.DataColumn columnimg;
             
-            private global::System.Data.DataColumn columnUsers_id;
-            
             private global::System.Data.DataColumn columnUsers_name;
             
             private global::System.Data.DataColumn columnbar_img;
@@ -1809,14 +1807,6 @@ namespace KhounthavyV2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Users_idColumn {
-                get {
-                    return this.columnUsers_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Users_nameColumn {
                 get {
                     return this.columnUsers_name;
@@ -1890,7 +1880,6 @@ namespace KhounthavyV2 {
                         string Password, 
                         string type, 
                         string img, 
-                        string Users_id, 
                         string Users_name, 
                         byte[] bar_img) {
                 Pawn_viewRow rowPawn_viewRow = ((Pawn_viewRow)(this.NewRow()));
@@ -1916,21 +1905,11 @@ namespace KhounthavyV2 {
                         Password,
                         type,
                         img,
-                        Users_id,
                         Users_name,
                         bar_img};
                 rowPawn_viewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPawn_viewRow);
                 return rowPawn_viewRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Pawn_viewRow FindByCust_idPawn_idUsers_id(string Cust_id, string Pawn_id, string Users_id) {
-                return ((Pawn_viewRow)(this.Rows.Find(new object[] {
-                            Cust_id,
-                            Pawn_id,
-                            Users_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1971,7 +1950,6 @@ namespace KhounthavyV2 {
                 this.columnPassword = base.Columns["Password"];
                 this.columntype = base.Columns["type"];
                 this.columnimg = base.Columns["img"];
-                this.columnUsers_id = base.Columns["Users_id"];
                 this.columnUsers_name = base.Columns["Users_name"];
                 this.columnbar_img = base.Columns["bar_img"];
             }
@@ -2021,16 +1999,10 @@ namespace KhounthavyV2 {
                 base.Columns.Add(this.columntype);
                 this.columnimg = new global::System.Data.DataColumn("img", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimg);
-                this.columnUsers_id = new global::System.Data.DataColumn("Users_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUsers_id);
                 this.columnUsers_name = new global::System.Data.DataColumn("Users_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUsers_name);
                 this.columnbar_img = new global::System.Data.DataColumn("bar_img", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbar_img);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCust_id,
-                                this.columnPawn_id,
-                                this.columnUsers_id}, true));
                 this.columnCust_id.AllowDBNull = false;
                 this.columnCust_id.MaxLength = 50;
                 this.columnCust_name.MaxLength = 100;
@@ -2049,11 +2021,8 @@ namespace KhounthavyV2 {
                 this.columnPawn_amount_bath.MaxLength = 50;
                 this.columnPawn_status.MaxLength = 50;
                 this.columnPassword.MaxLength = 100;
-                this.columntype.AllowDBNull = false;
                 this.columntype.MaxLength = 50;
                 this.columnimg.MaxLength = 50;
-                this.columnUsers_id.AllowDBNull = false;
-                this.columnUsers_id.MaxLength = 50;
                 this.columnUsers_name.MaxLength = 50;
             }
             
@@ -3532,7 +3501,12 @@ namespace KhounthavyV2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string type {
                 get {
-                    return ((string)(this[this.tablePawn_view.typeColumn]));
+                    try {
+                        return ((string)(this[this.tablePawn_view.typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'type\' in table \'Pawn_view\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablePawn_view.typeColumn] = value;
@@ -3552,17 +3526,6 @@ namespace KhounthavyV2 {
                 }
                 set {
                     this[this.tablePawn_view.imgColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Users_id {
-                get {
-                    return ((string)(this[this.tablePawn_view.Users_idColumn]));
-                }
-                set {
-                    this[this.tablePawn_view.Users_idColumn] = value;
                 }
             }
             
@@ -3800,6 +3763,18 @@ namespace KhounthavyV2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPasswordNull() {
                 this[this.tablePawn_view.PasswordColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IstypeNull() {
+                return this.IsNull(this.tablePawn_view.typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SettypeNull() {
+                this[this.tablePawn_view.typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6043,7 +6018,6 @@ SELECT Users_id, Users_name, Users_pass FROM Users WHERE (Users_id = @Users_id)"
             tableMapping.ColumnMappings.Add("Password", "Password");
             tableMapping.ColumnMappings.Add("type", "type");
             tableMapping.ColumnMappings.Add("img", "img");
-            tableMapping.ColumnMappings.Add("Users_id", "Users_id");
             tableMapping.ColumnMappings.Add("Users_name", "Users_name");
             tableMapping.ColumnMappings.Add("bar_img", "bar_img");
             this._adapter.TableMappings.Add(tableMapping);
@@ -6063,7 +6037,7 @@ SELECT Users_id, Users_name, Users_pass FROM Users WHERE (Users_id = @Users_id)"
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Cust_id, Cust_name, Cust_lastname, Village, Tel, District, Province, Image, Pawn_id, Pawn_date, Prod_no, Prod_name, Prod_color, Pawn_amount_kip, Pawn_amount_bath, Pawn_exp, Pawn_status, Pawn_turnBa_date, 
-                         Password, type, img, Users_id, Users_name, bar_img
+                         Password, type, img, Users_name, bar_img
 FROM            Pawn_view";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -6244,7 +6218,7 @@ FROM            Pawn_view";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::KhounthavyV2.Properties.Settings.Default.KhounthavyConnectionString1;
+            this._connection.ConnectionString = global::KhounthavyV2.Properties.Settings.Default.KhounthavyConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -26,20 +26,22 @@ namespace KhounthavyV2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string KhounthavyConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PPJ3V2G\\SQLEXPRESS;Initial Catalog=Khounthavy;Integrated Secu" +
+            "rity=True")]
+        public string KhounthavyConnectionString1 {
             get {
-                return ((string)(this["KhounthavyConnectionString"]));
+                return ((string)(this["KhounthavyConnectionString1"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Khounthavy;Integrated Security" +
-            "=True")]
-        public string KhounthavyConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PPJ3V2G\\SQLEXPRESS;Initial Catalog=Khounthavy;Integrated Secu" +
+            "rity=True")]
+        public string KhounthavyConnectionString {
             get {
-                return ((string)(this["KhounthavyConnectionString1"]));
+                return ((string)(this["KhounthavyConnectionString"]));
             }
         }
     }

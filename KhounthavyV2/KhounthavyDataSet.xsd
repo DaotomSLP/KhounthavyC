@@ -304,7 +304,7 @@ SELECT Users_id, Users_name, Users_pass FROM Users WHERE (Users_id = @Users_id)<
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Cust_id, Cust_name, Cust_lastname, Village, Tel, District, Province, Image, Pawn_id, Pawn_date, Prod_no, Prod_name, Prod_color, Pawn_amount_kip, Pawn_amount_bath, Pawn_exp, Pawn_status, Pawn_turnBa_date, 
-                         Password, type, img, Users_id, Users_name, bar_img
+                         Password, type, img, Users_name, bar_img
 FROM            Pawn_view</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -333,7 +333,6 @@ FROM            Pawn_view</CommandText>
               <Mapping SourceColumn="Password" DataSetColumn="Password" />
               <Mapping SourceColumn="type" DataSetColumn="type" />
               <Mapping SourceColumn="img" DataSetColumn="img" />
-              <Mapping SourceColumn="Users_id" DataSetColumn="Users_id" />
               <Mapping SourceColumn="Users_name" DataSetColumn="Users_name" />
               <Mapping SourceColumn="bar_img" DataSetColumn="bar_img" />
             </Mappings>
@@ -341,7 +340,7 @@ FROM            Pawn_view</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Barcode_imageTableAdapter" GeneratorDataComponentClassName="Barcode_imageTableAdapter" Name="Barcode_image" UserDataComponentName="Barcode_imageTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="KhounthavyConnectionString1 (Settings)" DbObjectName="Khounthavy.dbo.Barcode_image" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="KhounthavyConnectionString (Settings)" DbObjectName="Khounthavy.dbo.Barcode_image" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Barcode_image] WHERE (([bar_id] = @Original_bar_id))</CommandText>
@@ -694,7 +693,7 @@ SELECT bar_id, bar_img FROM Barcode_image WHERE (bar_id = @bar_id)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type">
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -702,13 +701,6 @@ SELECT bar_id, bar_img FROM Barcode_image WHERE (bar_id = @bar_id)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="img" msprop:Generator_ColumnVarNameInTable="columnimg" msprop:Generator_ColumnPropNameInRow="img" msprop:Generator_ColumnPropNameInTable="imgColumn" msprop:Generator_UserColumnName="img" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Users_id" msprop:Generator_ColumnVarNameInTable="columnUsers_id" msprop:Generator_ColumnPropNameInRow="Users_id" msprop:Generator_ColumnPropNameInTable="Users_idColumn" msprop:Generator_UserColumnName="Users_id">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -752,12 +744,6 @@ SELECT bar_id, bar_img FROM Barcode_image WHERE (bar_id = @bar_id)</CommandText>
     </xs:unique>
     <xs:unique name="Users_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Users" />
-      <xs:field xpath="mstns:Users_id" />
-    </xs:unique>
-    <xs:unique name="Pawn_view_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Pawn_view" />
-      <xs:field xpath="mstns:Cust_id" />
-      <xs:field xpath="mstns:Pawn_id" />
       <xs:field xpath="mstns:Users_id" />
     </xs:unique>
     <xs:unique name="Barcode_image_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
