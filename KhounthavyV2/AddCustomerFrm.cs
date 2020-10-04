@@ -128,6 +128,18 @@ namespace KhounthavyV2
 
                 PicImg.Image = null;
 
+                PanPawnDgv.Visible = true;
+                panPawnFrmHerder.Visible = true;
+                API api = new API();
+
+                PawnDgvShow.DataSource = api.PawnSearchByCustomer(txtCustId.Text);
+
+                String[] headerText = { "ລະຫັດ", "ວັນທີ", "ມື້ຫຼຸດຈຳນຳ", "ເລກເຄື່ອງ", "ຊື່ເຄື່ອງ", "ສີ", "ຈຳນວນເງິນ(ກີບ)", "ຈຳນວນເງິນ(ບາດ)", "ສະຖານະ", "ມື້ສົ່ງເຄື່ອງ", "ລະຫັດລ໋ອກເຄື່ອງ", "ລະຫັດຜູ້ມາຈຳ", "ລະຫັດຜູ້ມາເອົາເຄື່ອງ" };
+                for (int i = 0; i <= headerText.Length - 1; i++)
+                {
+                    PawnDgvShow.Columns[i].HeaderText = headerText[i];
+                }
+
                 try
                 {
                     var imgByte = (Byte[])(CustDgvShow.Rows[e.RowIndex].Cells[8].Value);
@@ -154,6 +166,7 @@ namespace KhounthavyV2
             {
 
             }
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

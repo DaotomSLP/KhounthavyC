@@ -57,13 +57,14 @@
             this.panPawnFrm.Controls.Add(this.btnCapture, 0, 1);
             this.panPawnFrm.Controls.Add(this.btnOk, 1, 1);
             this.panPawnFrm.Controls.Add(this.btnExit, 1, 2);
-            this.panPawnFrm.Location = new System.Drawing.Point(38, 28);
+            this.panPawnFrm.Location = new System.Drawing.Point(51, 34);
+            this.panPawnFrm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panPawnFrm.Name = "panPawnFrm";
             this.panPawnFrm.RowCount = 3;
             this.panPawnFrm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.panPawnFrm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.panPawnFrm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.panPawnFrm.Size = new System.Drawing.Size(1302, 627);
+            this.panPawnFrm.Size = new System.Drawing.Size(1736, 772);
             this.panPawnFrm.TabIndex = 32;
             // 
             // panPawnFrm2
@@ -73,9 +74,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panPawnFrm2.BackColor = System.Drawing.Color.White;
             this.panPawnFrm2.Controls.Add(this.pictureBox2);
-            this.panPawnFrm2.Location = new System.Drawing.Point(914, 3);
+            this.panPawnFrm2.Location = new System.Drawing.Point(1219, 4);
+            this.panPawnFrm2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panPawnFrm2.Name = "panPawnFrm2";
-            this.panPawnFrm2.Size = new System.Drawing.Size(385, 495);
+            this.panPawnFrm2.Size = new System.Drawing.Size(513, 609);
             this.panPawnFrm2.TabIndex = 1;
             // 
             // pictureBox2
@@ -83,9 +85,10 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(379, 271);
+            this.pictureBox2.Size = new System.Drawing.Size(505, 334);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -97,9 +100,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panPawnFrm1.BackColor = System.Drawing.Color.White;
             this.panPawnFrm1.Controls.Add(this.pictureBox1);
-            this.panPawnFrm1.Location = new System.Drawing.Point(3, 3);
+            this.panPawnFrm1.Location = new System.Drawing.Point(4, 4);
+            this.panPawnFrm1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panPawnFrm1.Name = "panPawnFrm1";
-            this.panPawnFrm1.Size = new System.Drawing.Size(905, 495);
+            this.panPawnFrm1.Size = new System.Drawing.Size(1207, 609);
             this.panPawnFrm1.TabIndex = 3;
             // 
             // pictureBox1
@@ -107,24 +111,27 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(899, 489);
+            this.pictureBox1.Size = new System.Drawing.Size(1199, 602);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // btnCapture
             // 
+            this.btnCapture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCapture.BackColor = System.Drawing.Color.Sienna;
             this.btnCapture.FlatAppearance.BorderSize = 0;
             this.btnCapture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapture.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCapture.Location = new System.Drawing.Point(0, 501);
+            this.btnCapture.Location = new System.Drawing.Point(0, 617);
             this.btnCapture.Margin = new System.Windows.Forms.Padding(0);
             this.btnCapture.Name = "btnCapture";
-            this.btnCapture.Size = new System.Drawing.Size(274, 31);
+            this.btnCapture.Size = new System.Drawing.Size(365, 77);
             this.btnCapture.TabIndex = 44;
             this.btnCapture.Text = "ຖ່າຍຮູບ";
             this.btnCapture.UseVisualStyleBackColor = false;
@@ -132,17 +139,18 @@
             // 
             // btnOk
             // 
-            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.BackColor = System.Drawing.Color.Sienna;
             this.btnOk.FlatAppearance.BorderSize = 0;
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOk.Location = new System.Drawing.Point(911, 501);
+            this.btnOk.Location = new System.Drawing.Point(1215, 617);
             this.btnOk.Margin = new System.Windows.Forms.Padding(0);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(391, 31);
+            this.btnOk.Size = new System.Drawing.Size(521, 77);
             this.btnOk.TabIndex = 44;
             this.btnOk.Text = "ຕົກລົງ";
             this.btnOk.UseVisualStyleBackColor = false;
@@ -150,17 +158,18 @@
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.Black;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExit.Location = new System.Drawing.Point(911, 563);
+            this.btnExit.Location = new System.Drawing.Point(1215, 694);
             this.btnExit.Margin = new System.Windows.Forms.Padding(0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(391, 31);
+            this.btnExit.Size = new System.Drawing.Size(521, 78);
             this.btnExit.TabIndex = 45;
             this.btnExit.Text = "ອອກ";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -168,12 +177,13 @@
             // 
             // CameraFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1367, 667);
+            this.ClientSize = new System.Drawing.Size(1823, 821);
             this.Controls.Add(this.panPawnFrm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CameraFrm";

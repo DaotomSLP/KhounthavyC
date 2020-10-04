@@ -314,6 +314,27 @@ namespace KhounthavyV2
             return dt;
         }
 
+        public DataTable PawnSearchByCustomer(String cust_id)
+        {
+            String queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip," +
+                "Pawn_amount_bath,Pawn_status,Pawn_turnBa_date,Password, Cust_id, khon_ma_ao" +
+                " FROM Pawn_view WHERE Cust_id like '%" + cust_id  + "%' ORDER BY Pawn_id DESC";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
+        }
+
         public DataTable LoadCustomerFromPawn(String Cust_id)
         {
 

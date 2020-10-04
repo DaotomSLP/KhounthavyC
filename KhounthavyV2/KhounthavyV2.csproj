@@ -132,6 +132,9 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhounthavyDataSet.cs">
+      <DependentUpon>KhounthavyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="KhounthavyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
