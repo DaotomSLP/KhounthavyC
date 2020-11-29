@@ -430,7 +430,6 @@ D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\bin\Debug\zh-CHS\Microsoft.Repo
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\bin\Debug\Interop.AcroPDFLib.dll
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\bin\Debug\AxInterop.AcroPDFLib.dll
-D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\Interop.AcroPDFLib.dll
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\AxInterop.AcroPDFLib.dll
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.ResolveComReference.cache
