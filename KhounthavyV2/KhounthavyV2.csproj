@@ -196,6 +196,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="SettingFrm.resx">
       <DependentUpon>SettingFrm.cs</DependentUpon>
     </EmbeddedResource>

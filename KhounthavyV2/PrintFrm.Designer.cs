@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintFrm));
             this.pawnviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khounthavyDataSet = new KhounthavyV2.KhounthavyDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pawn_viewTableAdapter = new KhounthavyV2.KhounthavyDataSetTableAdapters.Pawn_viewTableAdapter();
             this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
+            this.Pawn_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pawnviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khounthavyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pawn_viewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pawnviewBindingSource
@@ -53,11 +54,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.pawnviewBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "KhounthavyV2.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "KhounthavyV2.Report4.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 4);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1335, 580);
@@ -71,25 +70,33 @@
             // 
             this.axAcroPDF.Enabled = true;
             this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
+            this.axAcroPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axAcroPDF.Name = "axAcroPDF";
             this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
             this.axAcroPDF.Size = new System.Drawing.Size(1351, 595);
             this.axAcroPDF.TabIndex = 1;
             // 
+            // Pawn_viewBindingSource
+            // 
+            this.Pawn_viewBindingSource.DataMember = "Pawn_view";
+            this.Pawn_viewBindingSource.DataSource = this.khounthavyDataSet;
+            // 
             // PrintFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 585);
+                 this.ClientSize = new System.Drawing.Size(1350, 585);
             this.Controls.Add(this.axAcroPDF);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PrintFrm";
             this.Text = "PrintFrm";
             this.Load += new System.EventHandler(this.PrintFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pawnviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khounthavyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pawn_viewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,5 +107,6 @@
         private System.Windows.Forms.BindingSource pawnviewBindingSource;
         private KhounthavyDataSetTableAdapters.Pawn_viewTableAdapter pawn_viewTableAdapter;
         private AxAcroPDFLib.AxAcroPDF axAcroPDF;
+        private System.Windows.Forms.BindingSource Pawn_viewBindingSource;
     }
 }
