@@ -4,5 +4,8 @@
 
     partial class KhounthavyDataSet
     {
+        partial class CustomerDataTable
+        {
+        }
     }
 }

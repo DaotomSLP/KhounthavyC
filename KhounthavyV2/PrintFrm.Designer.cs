@@ -54,12 +54,15 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "KhounthavyV2.Report4.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 4);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(5);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1335, 580);
+            this.reportViewer1.Size = new System.Drawing.Size(1800, 720);
             this.reportViewer1.TabIndex = 0;
             // 
             // pawn_viewTableAdapter
@@ -68,9 +71,12 @@
             // 
             // axAcroPDF
             // 
+            this.axAcroPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.axAcroPDF.Enabled = true;
             this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
-            this.axAcroPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.axAcroPDF.Margin = new System.Windows.Forms.Padding(5);
             this.axAcroPDF.Name = "axAcroPDF";
             this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
             this.axAcroPDF.Size = new System.Drawing.Size(1351, 595);
@@ -83,13 +89,13 @@
             // 
             // PrintFrm
             // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-                 this.ClientSize = new System.Drawing.Size(1350, 585);
+            this.ClientSize = new System.Drawing.Size(1800, 720);
             this.Controls.Add(this.axAcroPDF);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PrintFrm";
             this.Text = "PrintFrm";
             this.Load += new System.EventHandler(this.PrintFrm_Load);
