@@ -872,6 +872,7 @@
             this.btnCustSearch.TabIndex = 4;
             this.btnCustSearch.Text = "ຄົ້ນຫາ";
             this.btnCustSearch.UseVisualStyleBackColor = false;
+            this.btnCustSearch.Click += new System.EventHandler(this.btnCustSearch_Click);
             // 
             // label19
             // 

@@ -314,6 +314,26 @@ namespace KhounthavyV2
             return dt;
         }
 
+        public DataTable CustomerSearch(String searchKeyWord)
+        {
+            String queryStr = "SELECT TOP (100) * FROM Customer WHERE Cust_id like '%" + searchKeyWord + "%' OR Cust_name like N'%" + searchKeyWord +
+                "%' OR  Cust_lastname like N'%" + searchKeyWord + "' ORDER BY Cust_id DESC";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(queryStr, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            dt = new DataTable();
+            dt.Load(sqlDataReader);
+
+            sqlConnection.Close();
+
+            return dt;
+        }
+
         public DataTable PawnSearchByCustomer(String cust_id)
         {
             String queryStr = "SELECT TOP (100) Pawn_id,Pawn_date,Pawn_exp,Prod_no,Prod_name,Prod_color,Pawn_amount_kip," +

@@ -495,5 +495,13 @@ namespace KhounthavyV2
 
             }
         }
+
+        private void btnCustSearch_Click(object sender, EventArgs e)
+        {
+            API api = new API();
+
+            CustDgvShow.DataSource = api.CustomerSearch(txtCustSearch.Text);
+            ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+        }
     }
 }
