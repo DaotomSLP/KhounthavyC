@@ -205,7 +205,6 @@ namespace KhounthavyV2
 
         public void InsertBarcodeImage()
         {
-            MessageBox.Show(Directory.GetCurrentDirectory());
             String ImagePath = Directory.GetCurrentDirectory() + @"\barcode.jpg";
             byte[] content = ImageToStream(ImagePath);
 
