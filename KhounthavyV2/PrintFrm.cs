@@ -27,7 +27,7 @@ namespace KhounthavyV2
             this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
 
             byte[] pdfContent = reportViewer1.LocalReport.Render(format: "PDF", deviceInfo: "<DeviceInfo><EmbedFonts>None</EmbedFonts></DeviceInfo>");
-            String pdfPath = @"D:\report.PDF";
+            String pdfPath = Directory.GetCurrentDirectory() + @"\report.PDF";
             FileStream pdfFile = new FileStream(pdfPath, FileMode.Create);
             pdfFile.Write(pdfContent, 0, pdfContent.Length);
             pdfFile.Close();
