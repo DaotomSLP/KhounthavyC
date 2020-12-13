@@ -449,4 +449,3 @@ D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.C
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csproj.CopyComplete
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.exe
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.pdb
-D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache

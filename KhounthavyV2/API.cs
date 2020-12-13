@@ -187,7 +187,7 @@ namespace KhounthavyV2
 
         public void UpdateBarcodeImage()
         {
-            String ImagePath = @"C:\barcode.jpg";
+            String ImagePath = Directory.GetCurrentDirectory() + @"\barcode.jpg";
             byte[] content = ImageToStream(ImagePath);
 
             String SqlQueryString = "UPDATE Barcode_image SET bar_img = @img";
@@ -205,7 +205,8 @@ namespace KhounthavyV2
 
         public void InsertBarcodeImage()
         {
-            String ImagePath = @"C:\barcode.jpg";
+            MessageBox.Show(Directory.GetCurrentDirectory());
+            String ImagePath = Directory.GetCurrentDirectory() + @"\barcode.jpg";
             byte[] content = ImageToStream(ImagePath);
 
             String SqlQueryString = "INSERT INTO Barcode_image (bar_id,bar_img) VALUES('BC00001',@img)";
