@@ -467,5 +467,33 @@ namespace KhounthavyV2
         {
 
         }
+
+        private void txtKip_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double kip = Convert.ToDouble(txtKip.Text);
+                txtKip.Text = String.Format("{0:0,0}", kip);
+                txtKip.SelectionStart = txtKip.TextLength;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void txtBath_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double bath = Convert.ToDouble(txtBath.Text);
+                txtBath.Text = String.Format("{0:0,0}", bath);
+                txtBath.SelectionStart = txtBath.TextLength;
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

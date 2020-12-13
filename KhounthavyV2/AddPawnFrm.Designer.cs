@@ -233,6 +233,7 @@
             this.txtBath.Name = "txtBath";
             this.txtBath.Size = new System.Drawing.Size(356, 31);
             this.txtBath.TabIndex = 29;
+            this.txtBath.TextChanged += new System.EventHandler(this.txtBath_TextChanged);
             this.txtBath.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBath_KeyDown);
             // 
             // txtKip
@@ -247,6 +248,7 @@
             this.txtKip.Name = "txtKip";
             this.txtKip.Size = new System.Drawing.Size(356, 31);
             this.txtKip.TabIndex = 30;
+            this.txtKip.TextChanged += new System.EventHandler(this.txtKip_TextChanged);
             this.txtKip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKip_KeyDown);
             // 
             // txtColor
