@@ -178,6 +178,7 @@
             this.btnReSaveImage.Text = "ບັນທຶກຮູບຄືນ";
             this.btnReSaveImage.UseVisualStyleBackColor = false;
             this.btnReSaveImage.Visible = false;
+                        this.btnReSaveImage.Click += new System.EventHandler(this.btnReSaveImage_Click_1);
             // 
             // PicImg
             // 

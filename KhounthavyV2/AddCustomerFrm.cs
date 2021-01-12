@@ -269,5 +269,13 @@ namespace KhounthavyV2
             CustDgvShow.DataSource = api.CustomerSearch(txtCustSearch.Text);
             ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
+
+        private void btnReSaveImage_Click_1(object sender, EventArgs e)
+        {
+            API api = new API();
+
+            CustDgvShow.DataSource = api.CustomerSearch(txtCustSearch.Text);
+            ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+        }
     }
 }
