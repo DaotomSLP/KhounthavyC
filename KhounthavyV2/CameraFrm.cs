@@ -66,10 +66,7 @@ namespace KhounthavyV2
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            AddPawnFrm addPawnFrm = new AddPawnFrm();
-            addPawnFrm.PicImg.Image = (Bitmap)pictureBox1.Image.Clone();
-
-            returnPictureBox = pictureBox1;
+         
 
 
             videoSource.Stop();

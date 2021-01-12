@@ -228,7 +228,30 @@ namespace KhounthavyV2
             EnterTextbox(e, txtImgNo);
         }
 
-        private void btnReSaveImage_Click(object sender, EventArgs e)
+        private void btnImgChoose_Click_1(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = new CameraFrm();
+            cameraFrm.Show();
+            cameraFrm.FormClosed += returnImageFrm;
+        }
+        private void returnImageFrm(object sender, EventArgs e)
+        {
+            CameraFrm cameraFrm = (CameraFrm)sender;
+            if (cameraFrm.returnPictureBox != null)
+            {
+                PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
+            }
+        }
+
+        private void btnCustSearch_Click(object sender, EventArgs e)
+        {
+            API api = new API();
+
+            CustDgvShow.DataSource = api.CustomerSearch(txtCustSearch.Text);
+            ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+        }
+
+        private void btnReSaveImage_Click_1(object sender, EventArgs e)
         {
             using (var fbd = new SaveFileDialog())
             {
@@ -248,34 +271,6 @@ namespace KhounthavyV2
                     }
                 }
             }
-        }
-
-        private void btnImgChoose_Click_1(object sender, EventArgs e)
-        {
-            CameraFrm cameraFrm = new CameraFrm();
-            cameraFrm.Show();
-            cameraFrm.FormClosed += returnImageFrm;
-        }
-        private void returnImageFrm(object sender, EventArgs e)
-        {
-            CameraFrm cameraFrm = (CameraFrm)sender;
-            PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
-        }
-
-        private void btnCustSearch_Click(object sender, EventArgs e)
-        {
-            API api = new API();
-
-            CustDgvShow.DataSource = api.CustomerSearch(txtCustSearch.Text);
-            ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-        }
-
-        private void btnReSaveImage_Click_1(object sender, EventArgs e)
-        {
-            API api = new API();
-
-            CustDgvShow.DataSource = api.CustomerSearch(txtCustSearch.Text);
-            ((DataGridViewImageColumn)CustDgvShow.Columns[8]).ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
     }
 }

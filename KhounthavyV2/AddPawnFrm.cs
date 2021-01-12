@@ -435,16 +435,20 @@ namespace KhounthavyV2
 
         private void btnImgChoose_Click(object sender, EventArgs e)
         {
-            CameraFrm cameraFrm = new CameraFrm();
-            cameraFrm.Show();
-            cameraFrm.FormClosed += returnImageFrm;
-
+           
+                CameraFrm cameraFrm = new CameraFrm();
+                cameraFrm.Show();
+                cameraFrm.FormClosed += returnImageFrm;
     }
 
         private void returnImageFrm(object sender, EventArgs e)
         {
-            CameraFrm cameraFrm = (CameraFrm)sender;
-            PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
+                CameraFrm cameraFrm = (CameraFrm)sender;
+                if(cameraFrm.returnPictureBox != null)
+                {
+                    PicImg.Image = (Bitmap)cameraFrm.returnPictureBox.Image;
+                }
+
         }
 
         private void btnReSaveImage_Click(object sender, EventArgs e)
