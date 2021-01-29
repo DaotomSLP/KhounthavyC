@@ -317,8 +317,8 @@ namespace KhounthavyV2
 
         private void PrintBill()
         {
-            PrintFrm print = new PrintFrm();
 
+            PrintFrm print = new PrintFrm();
             DataTable dtb = new DataTable();
             API api = new API();
             dtb = api.LoadPawn(txtPawnId.Text);
@@ -327,7 +327,7 @@ namespace KhounthavyV2
             print.reportViewer1.LocalReport.DataSources.Add(rptsrc);
             print.reportViewer1.LocalReport.Refresh();
 
-            print.Show();
+            print.ShowDialog();
         }
 
         private void CustDgvShow_CellClick(object sender, DataGridViewCellMouseEventArgs e)

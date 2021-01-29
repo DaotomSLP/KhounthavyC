@@ -38,5 +38,9 @@ namespace KhounthavyV2
             this.reportViewer1.RefreshReport();
         }
 
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
