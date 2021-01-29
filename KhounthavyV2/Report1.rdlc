@@ -23,7 +23,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.635cm</Top>
-        <Left>8.45773cm</Left>
+        <Left>8.14023cm</Left>
         <Height>0.9525cm</Height>
         <Width>2.43417cm</Width>
         <Style>
@@ -55,7 +55,11 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>2.92206cm</Top>
+<<<<<<< HEAD
         <Left>12.38448cm</Left>
+=======
+        <Left>11.74948cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.61877cm</Height>
         <Width>1.37583cm</Width>
         <ZIndex>1</ZIndex>
@@ -86,7 +90,11 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>2.92206cm</Top>
+<<<<<<< HEAD
         <Left>14.98432cm</Left>
+=======
+        <Left>14.34932cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>4.97109cm</Width>
         <ZIndex>2</ZIndex>
@@ -120,7 +128,11 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>2.07539cm</Top>
+<<<<<<< HEAD
         <Left>12.37544cm</Left>
+=======
+        <Left>11.74044cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.635cm</Height>
         <Width>2.17272cm</Width>
         <ZIndex>3</ZIndex>
@@ -152,7 +164,11 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>2.14595cm</Top>
+<<<<<<< HEAD
         <Left>14.93964cm</Left>
+=======
+        <Left>14.30464cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.635cm</Height>
         <Width>4.97109cm</Width>
         <ZIndex>4</ZIndex>
@@ -183,8 +199,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>4.85429cm</Top>
         <Left>8.01374cm</Left>
+=======
+        <Top>4.32512cm</Top>
+        <Left>11.48005cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>1.83444cm</Width>
         <ZIndex>5</ZIndex>
@@ -214,8 +235,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.16239cm</Top>
         <Left>7.99825cm</Left>
+=======
+        <Top>5.63322cm</Top>
+        <Left>11.46456cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.05022cm</Width>
         <ZIndex>6</ZIndex>
@@ -246,8 +272,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Prod_name</rd:DefaultName>
+<<<<<<< HEAD
         <Top>4.85429cm</Top>
         <Left>9.88346cm</Left>
+=======
+        <Top>4.32512cm</Top>
+        <Left>13.34977cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>5.23589cm</Width>
         <ZIndex>7</ZIndex>
@@ -277,8 +308,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Prod_no</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.16239cm</Top>
         <Left>11.26013cm</Left>
+=======
+        <Top>5.63322cm</Top>
+        <Left>14.72644cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.84373cm</Width>
         <ZIndex>8</ZIndex>
@@ -309,8 +345,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>1.905cm</Top>
-        <Left>3.74224cm</Left>
+        <Top>1.5875cm</Top>
+        <Left>3.42474cm</Left>
         <Height>0.65405cm</Height>
         <Width>4.75681cm</Width>
         <ZIndex>9</ZIndex>
@@ -342,8 +378,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>2.55905cm</Top>
-        <Left>0.88402cm</Left>
+        <Top>2.24155cm</Top>
+        <Left>0.56652cm</Left>
         <Height>0.65405cm</Height>
         <Width>7.5749cm</Width>
         <ZIndex>10</ZIndex>
@@ -382,8 +418,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.86715cm</Top>
-        <Left>0.88474cm</Left>
+        <Top>3.54965cm</Top>
+        <Left>0.56724cm</Left>
         <Height>0.65405cm</Height>
         <Width>7.22897cm</Width>
         <ZIndex>11</ZIndex>
@@ -413,8 +449,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.2131cm</Top>
-        <Left>0.90066cm</Left>
+        <Top>2.8956cm</Top>
+        <Left>0.58316cm</Left>
         <Height>0.65405cm</Height>
         <Width>6.85983cm</Width>
         <ZIndex>12</ZIndex>
@@ -431,9 +467,9 @@
         <Value>ສ້ອມແປງໂທລະສັບແລະຄອມພີວເຕີ້</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0cm</Top>
-        <Left>0.89287cm</Left>
-        <Height>2.55905cm</Height>
-        <Width>2.53187cm</Width>
+        <Left>0.57537cm</Left>
+        <Height>2.09338cm</Height>
+        <Width>2.56496cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -442,10 +478,15 @@
         </Style>
       </Image>
       <Line Name="Line2">
+<<<<<<< HEAD
         <Top>4.69759cm</Top>
         <Left>0.90066cm</Left>
+=======
+        <Top>4.21189cm</Top>
+        <Left>0.56724cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0cm</Height>
-        <Width>19.07067cm</Width>
+        <Width>18.75317cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -471,8 +512,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>5.5746cm</Top>
         <Left>0.91906cm</Left>
+=======
+        <Top>5.04543cm</Top>
+        <Left>0.57537cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>0.9477cm</Width>
         <ZIndex>15</ZIndex>
@@ -502,8 +548,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.8827cm</Top>
         <Left>0.92685cm</Left>
+=======
+        <Top>6.35353cm</Top>
+        <Left>0.58316cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>1.41509cm</Width>
         <ZIndex>16</ZIndex>
@@ -547,8 +598,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Prod_no</rd:DefaultName>
+<<<<<<< HEAD
         <Top>5.5746cm</Top>
         <Left>2.04315cm</Left>
+=======
+        <Top>5.04543cm</Top>
+        <Left>1.69946cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>5.71734cm</Width>
         <ZIndex>17</ZIndex>
@@ -578,8 +634,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_amount_kip</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.8827cm</Top>
         <Left>3.6682cm</Left>
+=======
+        <Top>6.35353cm</Top>
+        <Left>3.32451cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.29853cm</Width>
         <ZIndex>18</ZIndex>
@@ -609,8 +670,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_amount_kip1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>7.6073cm</Top>
         <Left>3.64287cm</Left>
+=======
+        <Top>7.07813cm</Top>
+        <Left>3.29918cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.34033cm</Width>
         <ZIndex>19</ZIndex>
@@ -640,8 +706,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>7.60731cm</Top>
         <Left>0.91093cm</Left>
+=======
+        <Top>7.07814cm</Top>
+        <Left>0.56724cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>1.42322cm</Width>
         <ZIndex>20</ZIndex>
@@ -671,8 +742,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_amount_kip1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.26135cm</Top>
         <Left>3.66041cm</Left>
+=======
+        <Top>7.73218cm</Top>
+        <Left>3.31672cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.57767cm</Height>
         <Width>3.33091cm</Width>
         <ZIndex>21</ZIndex>
@@ -702,8 +778,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.26135cm</Top>
         <Left>0.91905cm</Left>
+=======
+        <Top>7.73218cm</Top>
+        <Left>0.57536cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.57767cm</Height>
         <Width>1.75199cm</Width>
         <ZIndex>22</ZIndex>
@@ -733,8 +814,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>4.85429cm</Top>
         <Left>0.91906cm</Left>
+=======
+        <Top>4.32512cm</Top>
+        <Left>0.57537cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>2.56496cm</Width>
         <ZIndex>23</ZIndex>
@@ -764,8 +850,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_amount_kip</rd:DefaultName>
+<<<<<<< HEAD
         <Top>4.98681cm</Top>
         <Left>3.6682cm</Left>
+=======
+        <Top>4.45764cm</Top>
+        <Left>3.32451cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.58779cm</Height>
         <Width>3.82169cm</Width>
         <ZIndex>24</ZIndex>
@@ -795,8 +886,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.22865cm</Top>
         <Left>0.92685cm</Left>
+=======
+        <Top>5.69948cm</Top>
+        <Left>0.58316cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>1.41542cm</Width>
         <ZIndex>25</ZIndex>
@@ -833,8 +929,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_amount_kip</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.33448cm</Top>
         <Left>3.65228cm</Left>
+=======
+        <Top>5.80531cm</Top>
+        <Left>3.30859cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.38501cm</Width>
         <ZIndex>26</ZIndex>
@@ -867,8 +968,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>10.43946cm</Top>
         <Left>7.04796cm</Left>
+=======
+        <Top>10.25293cm</Top>
+        <Left>0.47774cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>7.22085cm</Width>
         <ZIndex>27</ZIndex>
@@ -901,8 +1007,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>11.74756cm</Top>
         <Left>7.05575cm</Left>
+=======
+        <Top>11.56103cm</Top>
+        <Left>0.48553cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>7.39414cm</Width>
         <ZIndex>28</ZIndex>
@@ -932,8 +1043,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>7.47049cm</Top>
         <Left>7.99825cm</Left>
+=======
+        <Top>6.94132cm</Top>
+        <Left>11.46456cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.2266cm</Width>
         <ZIndex>29</ZIndex>
@@ -963,8 +1079,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_exp</rd:DefaultName>
+<<<<<<< HEAD
         <Top>7.74842cm</Top>
         <Left>11.33069cm</Left>
+=======
+        <Top>7.21925cm</Top>
+        <Left>14.797cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.7473cm</Width>
         <ZIndex>30</ZIndex>
@@ -994,8 +1115,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.83902cm</Top>
         <Left>0.91021cm</Left>
+=======
+        <Top>8.30985cm</Top>
+        <Left>0.56652cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>2.6cm</Width>
         <ZIndex>31</ZIndex>
@@ -1025,8 +1151,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_exp</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.94486cm</Top>
         <Left>3.66041cm</Left>
+=======
+        <Top>8.41569cm</Top>
+        <Left>3.31672cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.75311cm</Width>
         <ZIndex>32</ZIndex>
@@ -1057,8 +1188,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>5.50834cm</Top>
         <Left>8.01374cm</Left>
+=======
+        <Top>4.97917cm</Top>
+        <Left>11.48005cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>0.82924cm</Width>
         <ZIndex>33</ZIndex>
@@ -1089,8 +1225,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Prod_name</rd:DefaultName>
+<<<<<<< HEAD
         <Top>5.5789cm</Top>
         <Left>8.88452cm</Left>
+=======
+        <Top>5.04973cm</Top>
+        <Left>12.35083cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>6.26402cm</Width>
         <ZIndex>34</ZIndex>
@@ -1123,8 +1264,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>11.09351cm</Top>
         <Left>5.77796cm</Left>
+=======
+        <Top>10.90698cm</Top>
+        <Left>0.47774cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>10.47528cm</Width>
         <ZIndex>35</ZIndex>
@@ -1137,11 +1283,54 @@
         </Style>
       </Textbox>
       <Rectangle Name="Rectangle4">
+        <ReportItems>
+          <Textbox Name="Textbox39">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ລາຍເຊັນເຈົ້າຂອງເຄື່ອງ :</Value>
+                    <Style>
+                      <FontFamily>Saysettha OT</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.16085cm</Top>
+            <Left>1.1436cm</Left>
+            <Height>0.65405cm</Height>
+            <Width>5.08473cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+        </ReportItems>
         <KeepTogether>true</KeepTogether>
+<<<<<<< HEAD
         <Top>5.38198cm</Top>
         <Left>15.61785cm</Left>
         <Height>3.96387cm</Height>
         <Width>4.22144cm</Width>
+=======
+        <Top>10.09208cm</Top>
+        <Left>12.01741cm</Left>
+        <Height>2.123cm</Height>
+        <Width>7.20537cm</Width>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <ZIndex>36</ZIndex>
         <Style>
           <Border>
@@ -1167,8 +1356,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>6.81644cm</Top>
         <Left>8.01374cm</Left>
+=======
+        <Top>6.28727cm</Top>
+        <Left>11.48005cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.03473cm</Width>
         <ZIndex>37</ZIndex>
@@ -1200,8 +1394,13 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Pawn_amount_kip</rd:DefaultName>
+<<<<<<< HEAD
         <Top>7.09866cm</Top>
         <Left>11.28932cm</Left>
+=======
+        <Top>6.56949cm</Top>
+        <Left>14.75563cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.50864cm</Height>
         <Width>3.85922cm</Width>
         <ZIndex>38</ZIndex>
@@ -1213,6 +1412,7 @@
           <PaddingRight>2pt</PaddingRight>
         </Style>
       </Textbox>
+<<<<<<< HEAD
       <Textbox Name="Textbox39">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -1250,9 +1450,14 @@
       <Line Name="Line3">
         <Top>10.33363cm</Top>
         <Left>0.77015cm</Left>
+=======
+      <Line Name="Line3">
+        <Top>10.07654cm</Top>
+        <Left>0.42646cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0cm</Height>
-        <Width>19.06914cm</Width>
-        <ZIndex>40</ZIndex>
+        <Width>18.8234cm</Width>
+        <ZIndex>39</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1278,10 +1483,14 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>3.54083cm</Top>
+<<<<<<< HEAD
         <Left>12.38448cm</Left>
+=======
+        <Left>11.74948cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>2.42346cm</Width>
-        <ZIndex>41</ZIndex>
+        <ZIndex>40</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1309,10 +1518,14 @@
         </Paragraphs>
         <rd:DefaultName>Pawn_exp</rd:DefaultName>
         <Top>3.64666cm</Top>
+<<<<<<< HEAD
         <Left>14.95513cm</Left>
+=======
+        <Left>14.32013cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>4.97109cm</Width>
-        <ZIndex>42</ZIndex>
+        <ZIndex>41</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1339,11 +1552,16 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.30093cm</Top>
         <Left>7.94318cm</Left>
+=======
+        <Top>7.77176cm</Top>
+        <Left>11.40949cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.21111cm</Width>
-        <ZIndex>43</ZIndex>
+        <ZIndex>42</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1370,11 +1588,16 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.99026cm</Top>
         <Left>7.94318cm</Left>
+=======
+        <Top>8.46109cm</Top>
+        <Left>11.40949cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.21111cm</Width>
-        <ZIndex>44</ZIndex>
+        <ZIndex>43</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1401,11 +1624,16 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>9.67958cm</Top>
         <Left>7.94318cm</Left>
+=======
+        <Top>9.15041cm</Top>
+        <Left>11.40949cm</Left>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Height>0.65405cm</Height>
         <Width>3.21111cm</Width>
-        <ZIndex>45</ZIndex>
+        <ZIndex>44</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1432,11 +1660,19 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.30093cm</Top>
         <Left>11.33069cm</Left>
         <Height>0.65405cm</Height>
         <Width>4.11077cm</Width>
         <ZIndex>46</ZIndex>
+=======
+        <Top>7.77176cm</Top>
+        <Left>14.797cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>4.3811cm</Width>
+        <ZIndex>45</ZIndex>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Style>
           <Border>
             <Style>None</Style>
@@ -1463,11 +1699,19 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>8.99026cm</Top>
         <Left>11.33069cm</Left>
         <Height>0.65405cm</Height>
         <Width>4.11077cm</Width>
         <ZIndex>47</ZIndex>
+=======
+        <Top>8.46109cm</Top>
+        <Left>14.797cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>4.3811cm</Width>
+        <ZIndex>46</ZIndex>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Style>
           <Border>
             <Style>None</Style>
@@ -1494,11 +1738,19 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
         <Top>9.67958cm</Top>
         <Left>11.33069cm</Left>
         <Height>0.65405cm</Height>
         <Width>4.11077cm</Width>
         <ZIndex>48</ZIndex>
+=======
+        <Top>9.15041cm</Top>
+        <Left>14.797cm</Left>
+        <Height>0.65405cm</Height>
+        <Width>4.3811cm</Width>
+        <ZIndex>47</ZIndex>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Style>
           <Border>
             <Style>None</Style>
@@ -1513,10 +1765,17 @@
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
         <Top>0.3175cm</Top>
+<<<<<<< HEAD
         <Left>12.38448cm</Left>
         <Height>1.60655cm</Height>
         <Width>5.27626cm</Width>
         <ZIndex>49</ZIndex>
+=======
+        <Left>12.06698cm</Left>
+        <Height>1.77588cm</Height>
+        <Width>6.17876cm</Width>
+        <ZIndex>48</ZIndex>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
         <Style>
           <Border>
             <Style>None</Style>
@@ -1524,13 +1783,22 @@
         </Style>
       </Image>
     </ReportItems>
+<<<<<<< HEAD
     <Height>12.84214cm</Height>
+=======
+    <Height>12.62417cm</Height>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
     <Style />
   </Body>
-  <Width>21cm</Width>
+  <Width>20cm</Width>
   <Page>
+<<<<<<< HEAD
     <PageHeight>14cm</PageHeight>
     <PageWidth>21cm</PageWidth>
+=======
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>20cm</PageWidth>
+>>>>>>> 24670de1e6293ba6110612cdfa760beea9a5fdb0
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>
