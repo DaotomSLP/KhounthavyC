@@ -8,6 +8,8 @@ namespace KhounthavyV2
 {
     static class Program
     {
+        public static string Pawn_id { get; set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,6 +21,7 @@ namespace KhounthavyV2
             Application.Run(new Home());
 
         }
+
     }
 }
  

@@ -14,10 +14,19 @@ namespace KhounthavyV2
 {
     public partial class Home : Form
     {
+
         public Home()
         {
             InitializeComponent();
         }
+
+        PrintFrm print = new PrintFrm();
+        AddPawnFrm addPawnFrm = new AddPawnFrm();
+        SettingFrm settingFrm = new SettingFrm();
+        AddCustomerFrm addCustomerFrm = new AddCustomerFrm();
+        PawnDetailFrm pawnDetailFrm = new PawnDetailFrm();
+        TurnBackFrm turnBackFrm = new TurnBackFrm();
+
 
         private void AddNewPawn_Load(object sender, EventArgs e)
         {
@@ -30,7 +39,7 @@ namespace KhounthavyV2
             {
                 try
                 {
-                        form.Close();
+                        form.Hide();
                 }
                 catch
                 {
@@ -97,48 +106,56 @@ namespace KhounthavyV2
 
         private void btnMenuAddNewPawn_Click(object sender, EventArgs e)
         {
-            AddPawnFrm addPawnFrm = new AddPawnFrm();
             ClearOldFrm();
             ShowNewFrm(addPawnFrm);
             ClearActiveMenu();
             ActiveMenu(btnMenuAddNewPawn);
+            print_panel.Visible = false;
+            Program.Pawn_id = "";
+
         }
 
         private void btnMenuCustomer_Click(object sender, EventArgs e)
         {
-            AddCustomerFrm addCustomerFrm = new AddCustomerFrm();
             ClearOldFrm();
             ShowNewFrm(addCustomerFrm);
             ClearActiveMenu();
             ActiveMenu(btnMenuCustomer);
+            print_panel.Visible = false;
+            Program.Pawn_id = "";
+
         }
 
         private void btnMenuPawnDetail_Click(object sender, EventArgs e)
         {
-            PawnDetailFrm pawnDetailFrm = new PawnDetailFrm();
             ClearOldFrm();
             ShowNewFrm(pawnDetailFrm);
             ClearActiveMenu();
             ActiveMenu(btnMenuPawnDetail);
+            print_panel.Visible = true;
+            Program.Pawn_id = "";
+
         }
 
         private void btnMenuTurnBack_Click(object sender, EventArgs e)
         {
-            TurnBackFrm turnBackFrm = new TurnBackFrm();
             ClearOldFrm();
             ShowNewFrm(turnBackFrm);
             ClearActiveMenu();
             ActiveMenu(btnMenuTurnBack);
+            print_panel.Visible = false;
+            Program.Pawn_id = "";
 
         }
 
         private void btnMenuSetting_Click(object sender, EventArgs e)
         {
-            SettingFrm settingFrm = new SettingFrm();
             ClearOldFrm();
             ShowNewFrm(settingFrm);
             ClearActiveMenu();
             ActiveMenu(btnMenuSetting);
+            print_panel.Visible = false;
+            Program.Pawn_id = "";
 
         }
 
@@ -184,6 +201,47 @@ namespace KhounthavyV2
                 MessageBox.Show("Please Run in Administrator to setting Server Name and restart Program");
             }
             
+        }
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Program.Pawn_id == "")
+            {
+                MessageBox.Show("ກະລຸນາເລືອກການຈຳກ່ອນ");
+            }
+            else {
+
+
+                DataTable dtb = new DataTable();
+                API api = new API();
+                dtb = api.LoadPawn(Program.Pawn_id);
+                ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
+
+                print.reportViewer1.LocalReport.DataSources.Clear();
+                print.reportViewer1.LocalReport.DataSources.Add(rptsrc);
+
+                print.reportViewer1.LocalReport.Refresh();
+
+
+                ClearOldFrm();
+                ShowNewFrm(print);
+
+
+                print.pawn_viewTableAdapter.Fill(print.khounthavyDataSet.Pawn_view);
+
+                print.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+
+                byte[] pdfContent = print.reportViewer1.LocalReport.Render(format: "PDF", deviceInfo: "<DeviceInfo><EmbedFonts>None</EmbedFonts></DeviceInfo>");
+                String pdfPath = Directory.GetCurrentDirectory() + @"\report.PDF";
+                FileStream pdfFile = new FileStream(pdfPath, FileMode.Create);
+                pdfFile.Write(pdfContent, 0, pdfContent.Length);
+                pdfFile.Close();
+
+                print.axAcroPDF.src = pdfPath;
+            }
+
         }
     }
 }

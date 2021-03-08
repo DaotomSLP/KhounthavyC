@@ -27,7 +27,7 @@ namespace KhounthavyV2
 
             PawnDgvShow.DataSource = api.LoadData("Pawn");
 
-            String[] headerText = { "ລະຫັດ", "ວັນທີ", "ມື້ຫຼຸດຈຳນຳ", "ເລກເຄື່ອງ", "ຊື່ເຄື່ອງ", "ສີ", "ຈຳນວນເງິນ(ກີບ)", "ຈຳນວນເງິນ(ບາດ)", "ສະຖານະ", "ມື້ສົ່ງເຄື່ອງ", "ລະຫັດລ໋ອກເຄື່ອງ", "ລະຫັດຜູ້ມາຈຳ", "ລະຫັດຜູ້ມາເອົາເຄື່ອງ" };
+            String[] headerText = { "ລະຫັດ", "ວັນທີ", "ມື້ຫຼຸດຈຳນຳ", "ເລກເຄື່ອງ", "ຊື່ເຄື່ອງ", "ສີ", "ຈຳນວນເງິນ(ກີບ)", "ຈຳນວນເງິນ(ບາດ)", "ສະຖານະ", "ມື້ສົ່ງເຄື່ອງ", "ລະຫັດລ໋ອກເຄື່ອງ", "ລະຫັດຜູ້ມາຈຳ", "ລະຫັດຜູ້ມາເອົາເຄື່ອງ", "ປະເພດເຄື່ອງ" };
             for (int i = 0; i <= headerText.Length - 1; i++)
             {
                 PawnDgvShow.Columns[i].HeaderText = headerText[i];
@@ -110,6 +110,19 @@ namespace KhounthavyV2
 
             cust_id = PawnDgvShow.Rows[e.RowIndex].Cells[11].Value.ToString();
             khon_ma_ao = PawnDgvShow.Rows[e.RowIndex].Cells[12].Value.ToString();
+            txtPawnId.Text = PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtColor.Text = PawnDgvShow.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtDevicePassword.Text = PawnDgvShow.Rows[e.RowIndex].Cells[10].Value.ToString();
+            txtKip.Text = PawnDgvShow.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtBath.Text = PawnDgvShow.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtDeviceName.Text = PawnDgvShow.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtDeviceNo.Text = PawnDgvShow.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dtpExp.Value = Convert.ToDateTime(PawnDgvShow.Rows[e.RowIndex].Cells[2].Value.ToString());
+            dtpDate.Value = Convert.ToDateTime(PawnDgvShow.Rows[e.RowIndex].Cells[1].Value.ToString());
+            cboDeviceType.SelectedItem = PawnDgvShow.Rows[e.RowIndex].Cells[13].Value.ToString() == ""? "ໂທລະສັບ" : PawnDgvShow.Rows[e.RowIndex].Cells[13].Value.ToString();
+
+            Program.Pawn_id = PawnDgvShow.Rows[e.RowIndex].Cells[0].Value.ToString();
+
             ShowCustomerByPawn(cust_id);
 
         }
@@ -138,6 +151,31 @@ namespace KhounthavyV2
         private void radPhuMaAo_CheckedChanged(object sender, EventArgs e)
         {
             ShowCustomerByPawn(khon_ma_ao);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            API api = new API();
+            try
+            {
+                api.UpdatePawn(txtPawnId.Text, txtDeviceName.Text, txtColor.Text, txtDeviceNo.Text, txtDevicePassword.Text, txtKip.Text, txtBath.Text, dtpDate, dtpExp, cboDeviceType.SelectedItem.ToString());
+                MessageBox.Show("Success");
+            }
+            catch
+            {
+                MessageBox.Show("error");
+            }
+
+            PawnDgvShow.DataSource = api.LoadData("Pawn");
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            API api = new API();
+            api.DeletePawn(txtPawnId.Text);
+            MessageBox.Show("Success");
+            PawnDgvShow.DataSource = api.LoadData("Pawn");
+
         }
     }
 }

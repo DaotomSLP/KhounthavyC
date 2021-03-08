@@ -272,15 +272,17 @@ namespace KhounthavyV2
                             api.UpdateBarcodeImage();
                         }
 
-                        MessageBox.Show("SUCCESS");
                         PrintBill();
+
                         ClearCustForm();
                         ClearPawnForm();
                         radNewCust.Checked = true;
                         LoadForm();
 
+
+
                     }
-                    }
+                }
                 else
                 {
                     api.InsertPawn(
@@ -299,35 +301,41 @@ namespace KhounthavyV2
                     {
                         api.UpdateBarcodeImage();
                     }
-
-                    MessageBox.Show("SUCCESS");
                     PrintBill();
+
                     ClearCustForm();
                     ClearPawnForm();
                     radNewCust.Checked = true;
                     LoadForm();
-                }
+
+
 
                 }
+
+            }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
         }
 
+
         private void PrintBill()
         {
-
             PrintFrm print = new PrintFrm();
-            DataTable dtb = new DataTable();
-            API api = new API();
-            dtb = api.LoadPawn(txtPawnId.Text);
-            ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
-            print.reportViewer1.LocalReport.DataSources.Clear();
-            print.reportViewer1.LocalReport.DataSources.Add(rptsrc);
-            print.reportViewer1.LocalReport.Refresh();
 
-            print.ShowDialog();
+            DataTable dtb = new DataTable();
+                API api = new API();
+                dtb = api.LoadPawn(txtPawnId.Text);
+                ReportDataSource rptsrc = new ReportDataSource("DataSet1", dtb);
+
+                print.reportViewer1.LocalReport.DataSources.Clear();
+                print.reportViewer1.LocalReport.DataSources.Add(rptsrc);
+
+                print.reportViewer1.LocalReport.Refresh();
+                print.Show();
+            
+
         }
 
         private void CustDgvShow_CellClick(object sender, DataGridViewCellMouseEventArgs e)

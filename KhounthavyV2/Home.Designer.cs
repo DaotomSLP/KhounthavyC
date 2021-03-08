@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MenuPanel = new System.Windows.Forms.Panel();
-            this.btnMenuTurnBack = new System.Windows.Forms.Button();
-            this.btnMenuSetting = new System.Windows.Forms.Button();
-            this.btnMenuPawnDetail = new System.Windows.Forms.Button();
-            this.btnMenuCustomer = new System.Windows.Forms.Button();
-            this.btnMenuAddNewPawn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panLogin = new System.Windows.Forms.Panel();
             this.lblServername = new System.Windows.Forms.Label();
             this.txtServerName = new System.Windows.Forms.TextBox();
@@ -49,137 +40,24 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.MenuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.print_panel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMenuAddNewPawn = new System.Windows.Forms.Button();
+            this.btnMenuCustomer = new System.Windows.Forms.Button();
+            this.btnMenuPawnDetail = new System.Windows.Forms.Button();
+            this.btnMenuSetting = new System.Windows.Forms.Button();
+            this.btnMenuTurnBack = new System.Windows.Forms.Button();
+            this.MenuPanel = new System.Windows.Forms.Panel();
+            this.txtHomeId = new System.Windows.Forms.TextBox();
             this.panLogin.SuspendLayout();
+            this.print_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MenuPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1350, 90);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuPanel
-            // 
-            this.MenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MenuPanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.MenuPanel.Controls.Add(this.btnMenuTurnBack);
-            this.MenuPanel.Controls.Add(this.btnMenuSetting);
-            this.MenuPanel.Controls.Add(this.btnMenuPawnDetail);
-            this.MenuPanel.Controls.Add(this.btnMenuCustomer);
-            this.MenuPanel.Controls.Add(this.btnMenuAddNewPawn);
-            this.MenuPanel.Controls.Add(this.label1);
-            this.MenuPanel.Controls.Add(this.pictureBox1);
-            this.MenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(1352, 90);
-            this.MenuPanel.TabIndex = 0;
-            this.MenuPanel.Visible = false;
-            // 
-            // btnMenuTurnBack
-            // 
-            this.btnMenuTurnBack.BackColor = System.Drawing.Color.Black;
-            this.btnMenuTurnBack.FlatAppearance.BorderSize = 0;
-            this.btnMenuTurnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuTurnBack.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuTurnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuTurnBack.Location = new System.Drawing.Point(791, 54);
-            this.btnMenuTurnBack.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuTurnBack.Name = "btnMenuTurnBack";
-            this.btnMenuTurnBack.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuTurnBack.TabIndex = 3;
-            this.btnMenuTurnBack.Text = "ສົ່ງເຄື່ອງຄືນ";
-            this.btnMenuTurnBack.UseVisualStyleBackColor = false;
-            this.btnMenuTurnBack.Click += new System.EventHandler(this.btnMenuTurnBack_Click);
-            // 
-            // btnMenuSetting
-            // 
-            this.btnMenuSetting.BackColor = System.Drawing.Color.Black;
-            this.btnMenuSetting.FlatAppearance.BorderSize = 0;
-            this.btnMenuSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuSetting.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuSetting.Location = new System.Drawing.Point(1024, 54);
-            this.btnMenuSetting.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuSetting.Name = "btnMenuSetting";
-            this.btnMenuSetting.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuSetting.TabIndex = 2;
-            this.btnMenuSetting.Text = "ຕັ້ງຄ່າ";
-            this.btnMenuSetting.UseVisualStyleBackColor = false;
-            this.btnMenuSetting.Click += new System.EventHandler(this.btnMenuSetting_Click);
-            // 
-            // btnMenuPawnDetail
-            // 
-            this.btnMenuPawnDetail.BackColor = System.Drawing.Color.Black;
-            this.btnMenuPawnDetail.FlatAppearance.BorderSize = 0;
-            this.btnMenuPawnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuPawnDetail.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuPawnDetail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuPawnDetail.Location = new System.Drawing.Point(558, 54);
-            this.btnMenuPawnDetail.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuPawnDetail.Name = "btnMenuPawnDetail";
-            this.btnMenuPawnDetail.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuPawnDetail.TabIndex = 2;
-            this.btnMenuPawnDetail.Text = "ຂໍ້ມູນການຈຳນຳ";
-            this.btnMenuPawnDetail.UseVisualStyleBackColor = false;
-            this.btnMenuPawnDetail.Click += new System.EventHandler(this.btnMenuPawnDetail_Click);
-            // 
-            // btnMenuCustomer
-            // 
-            this.btnMenuCustomer.BackColor = System.Drawing.Color.Black;
-            this.btnMenuCustomer.FlatAppearance.BorderSize = 0;
-            this.btnMenuCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuCustomer.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenuCustomer.Location = new System.Drawing.Point(325, 54);
-            this.btnMenuCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuCustomer.Name = "btnMenuCustomer";
-            this.btnMenuCustomer.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuCustomer.TabIndex = 2;
-            this.btnMenuCustomer.Text = "ຂໍ້ມູນລູກຄ້າ";
-            this.btnMenuCustomer.UseVisualStyleBackColor = false;
-            this.btnMenuCustomer.Click += new System.EventHandler(this.btnMenuCustomer_Click);
-            // 
-            // btnMenuAddNewPawn
-            // 
-            this.btnMenuAddNewPawn.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMenuAddNewPawn.FlatAppearance.BorderSize = 0;
-            this.btnMenuAddNewPawn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAddNewPawn.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuAddNewPawn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenuAddNewPawn.Location = new System.Drawing.Point(92, 54);
-            this.btnMenuAddNewPawn.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuAddNewPawn.Name = "btnMenuAddNewPawn";
-            this.btnMenuAddNewPawn.Size = new System.Drawing.Size(229, 36);
-            this.btnMenuAddNewPawn.TabIndex = 2;
-            this.btnMenuAddNewPawn.Text = "ເພີ່ມການຈຳນຳ";
-            this.btnMenuAddNewPawn.UseVisualStyleBackColor = false;
-            this.btnMenuAddNewPawn.Click += new System.EventHandler(this.btnMenuAddNewPawn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ຮ້ານຄູນທະວີ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::KhounthavyV2.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panLogin
             // 
@@ -350,11 +228,192 @@
             this.txtUserName.TabIndex = 57;
             this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1350, 90);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // print_panel
+            // 
+            this.print_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.print_panel.BackColor = System.Drawing.Color.DarkCyan;
+            this.print_panel.Controls.Add(this.txtHomeId);
+            this.print_panel.Controls.Add(this.button2);
+            this.print_panel.Location = new System.Drawing.Point(0, 667);
+            this.print_panel.Name = "print_panel";
+            this.print_panel.Size = new System.Drawing.Size(1352, 51);
+            this.print_panel.TabIndex = 5;
+            this.print_panel.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(1123, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(229, 50);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "ພິມບິນ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.AutoSize = false;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip2.Location = new System.Drawing.Point(0, 682);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1350, 35);
+            this.menuStrip2.TabIndex = 6;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KhounthavyV2.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(107, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ຮ້ານຄູນທະວີ";
+            // 
+            // btnMenuAddNewPawn
+            // 
+            this.btnMenuAddNewPawn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMenuAddNewPawn.FlatAppearance.BorderSize = 0;
+            this.btnMenuAddNewPawn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAddNewPawn.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuAddNewPawn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMenuAddNewPawn.Location = new System.Drawing.Point(92, 54);
+            this.btnMenuAddNewPawn.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuAddNewPawn.Name = "btnMenuAddNewPawn";
+            this.btnMenuAddNewPawn.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuAddNewPawn.TabIndex = 2;
+            this.btnMenuAddNewPawn.Text = "ເພີ່ມການຈຳນຳ";
+            this.btnMenuAddNewPawn.UseVisualStyleBackColor = false;
+            this.btnMenuAddNewPawn.Click += new System.EventHandler(this.btnMenuAddNewPawn_Click);
+            // 
+            // btnMenuCustomer
+            // 
+            this.btnMenuCustomer.BackColor = System.Drawing.Color.Black;
+            this.btnMenuCustomer.FlatAppearance.BorderSize = 0;
+            this.btnMenuCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuCustomer.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuCustomer.Location = new System.Drawing.Point(325, 54);
+            this.btnMenuCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuCustomer.Name = "btnMenuCustomer";
+            this.btnMenuCustomer.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuCustomer.TabIndex = 2;
+            this.btnMenuCustomer.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnMenuCustomer.UseVisualStyleBackColor = false;
+            this.btnMenuCustomer.Click += new System.EventHandler(this.btnMenuCustomer_Click);
+            // 
+            // btnMenuPawnDetail
+            // 
+            this.btnMenuPawnDetail.BackColor = System.Drawing.Color.Black;
+            this.btnMenuPawnDetail.FlatAppearance.BorderSize = 0;
+            this.btnMenuPawnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPawnDetail.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuPawnDetail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuPawnDetail.Location = new System.Drawing.Point(558, 54);
+            this.btnMenuPawnDetail.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuPawnDetail.Name = "btnMenuPawnDetail";
+            this.btnMenuPawnDetail.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuPawnDetail.TabIndex = 2;
+            this.btnMenuPawnDetail.Text = "ຂໍ້ມູນການຈຳນຳ";
+            this.btnMenuPawnDetail.UseVisualStyleBackColor = false;
+            this.btnMenuPawnDetail.Click += new System.EventHandler(this.btnMenuPawnDetail_Click);
+            // 
+            // btnMenuSetting
+            // 
+            this.btnMenuSetting.BackColor = System.Drawing.Color.Black;
+            this.btnMenuSetting.FlatAppearance.BorderSize = 0;
+            this.btnMenuSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuSetting.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuSetting.Location = new System.Drawing.Point(1024, 54);
+            this.btnMenuSetting.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuSetting.Name = "btnMenuSetting";
+            this.btnMenuSetting.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuSetting.TabIndex = 2;
+            this.btnMenuSetting.Text = "ຕັ້ງຄ່າ";
+            this.btnMenuSetting.UseVisualStyleBackColor = false;
+            this.btnMenuSetting.Click += new System.EventHandler(this.btnMenuSetting_Click);
+            // 
+            // btnMenuTurnBack
+            // 
+            this.btnMenuTurnBack.BackColor = System.Drawing.Color.Black;
+            this.btnMenuTurnBack.FlatAppearance.BorderSize = 0;
+            this.btnMenuTurnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuTurnBack.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuTurnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuTurnBack.Location = new System.Drawing.Point(791, 54);
+            this.btnMenuTurnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenuTurnBack.Name = "btnMenuTurnBack";
+            this.btnMenuTurnBack.Size = new System.Drawing.Size(229, 36);
+            this.btnMenuTurnBack.TabIndex = 3;
+            this.btnMenuTurnBack.Text = "ສົ່ງເຄື່ອງຄືນ";
+            this.btnMenuTurnBack.UseVisualStyleBackColor = false;
+            this.btnMenuTurnBack.Click += new System.EventHandler(this.btnMenuTurnBack_Click);
+            // 
+            // MenuPanel
+            // 
+            this.MenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MenuPanel.BackColor = System.Drawing.Color.DarkCyan;
+            this.MenuPanel.Controls.Add(this.btnMenuTurnBack);
+            this.MenuPanel.Controls.Add(this.btnMenuSetting);
+            this.MenuPanel.Controls.Add(this.btnMenuPawnDetail);
+            this.MenuPanel.Controls.Add(this.btnMenuCustomer);
+            this.MenuPanel.Controls.Add(this.btnMenuAddNewPawn);
+            this.MenuPanel.Controls.Add(this.label1);
+            this.MenuPanel.Controls.Add(this.pictureBox1);
+            this.MenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(1352, 90);
+            this.MenuPanel.TabIndex = 0;
+            this.MenuPanel.Visible = false;
+            // 
+            // txtHomeId
+            // 
+            this.txtHomeId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHomeId.BackColor = System.Drawing.Color.White;
+            this.txtHomeId.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold);
+            this.txtHomeId.ForeColor = System.Drawing.Color.Green;
+            this.txtHomeId.Location = new System.Drawing.Point(786, 10);
+            this.txtHomeId.Margin = new System.Windows.Forms.Padding(0);
+            this.txtHomeId.Name = "txtHomeId";
+            this.txtHomeId.Size = new System.Drawing.Size(307, 31);
+            this.txtHomeId.TabIndex = 65;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 717);
+            this.Controls.Add(this.print_panel);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.panLogin);
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.menuStrip1);
@@ -366,25 +425,18 @@
             this.Text = "Khounthavy";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddNewPawn_Load);
-            this.MenuPanel.ResumeLayout(false);
-            this.MenuPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panLogin.ResumeLayout(false);
             this.panLogin.PerformLayout();
+            this.print_panel.ResumeLayout(false);
+            this.print_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MenuPanel.ResumeLayout(false);
+            this.MenuPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        public System.Windows.Forms.Panel MenuPanel;
-        internal System.Windows.Forms.Button btnMenuSetting;
-        internal System.Windows.Forms.Button btnMenuPawnDetail;
-        internal System.Windows.Forms.Button btnMenuCustomer;
-        internal System.Windows.Forms.Button btnMenuAddNewPawn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panLogin;
         internal System.Windows.Forms.Label lblServername;
         internal System.Windows.Forms.TextBox txtServerName;
@@ -396,7 +448,19 @@
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.TextBox txtPass;
         internal System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.Panel print_panel;
+        internal System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Button btnMenuAddNewPawn;
+        internal System.Windows.Forms.Button btnMenuCustomer;
+        internal System.Windows.Forms.Button btnMenuPawnDetail;
+        internal System.Windows.Forms.Button btnMenuSetting;
         internal System.Windows.Forms.Button btnMenuTurnBack;
+        public System.Windows.Forms.Panel MenuPanel;
+        public System.Windows.Forms.TextBox txtHomeId;
     }
 }
 

@@ -40,7 +40,7 @@ namespace KhounthavyV2
             else if(Table == "Pawn")
             {
                 queryStr = "SELECT TOP 70 Pawn_id, Pawn_date, Pawn_exp, Prod_no, Prod_name, Prod_color"+
-                    ", Pawn_amount_kip, Pawn_amount_bath, Pawn_status, Pawn_turnBa_date, Password, Cust_id, khon_ma_ao"+
+                    ", Pawn_amount_kip, Pawn_amount_bath, Pawn_status, Pawn_turnBa_date, Password , Cust_id, khon_ma_ao, type" +
                     " FROM Pawn_View ORDER BY Pawn_id DESC";
             }
             sqlConnection = new SqlConnection();
@@ -251,6 +251,19 @@ namespace KhounthavyV2
             sqlConnection.Close();
         }
 
+        public void DeletePawn(String id)
+        {
+            String sqlQueryString = "DELETE FROM Pawn WHERE Pawn_id='" + id + "'";
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(sqlQueryString, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+
         public void UpdateCustomer
             (
                 String id, String name, String lastname, String tel, String Vill, String Dist, String Prov, String Img, byte[] ImageData
@@ -270,6 +283,25 @@ namespace KhounthavyV2
 
             sqlConnection.Close();
         }
+
+        public void UpdatePawn
+    (
+        String id, String name, String color, String no, String pass, String kip, String bath, DateTimePicker date, DateTimePicker dateExp, String type   )
+        {
+            String sqlQueryString = "UPDATE Pawn SET Prod_name=N'" + name + "', Prod_no=N'" + no+
+                "', Password=N'" + pass+ "', Pawn_amount_kip=N'" + kip+ "', Pawn_amount_bath=N'" + bath+ "', Pawn_date='" + date.Value +
+                "',Pawn_exp='" + dateExp.Value + "', type=N'"+ type + "', Prod_color=N'" + color + "' WHERE Pawn_id='" + id + "' ";
+
+            sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = conStr;
+            sqlConnection.Open();
+
+            sqlCommand = new SqlCommand(sqlQueryString, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+        }
+
 
         public DataTable LoadPawn(String searchKeyWord)
         {
