@@ -20,13 +20,6 @@ namespace KhounthavyV2
             InitializeComponent();
         }
 
-        PrintFrm print = new PrintFrm();
-        AddPawnFrm addPawnFrm = new AddPawnFrm();
-        SettingFrm settingFrm = new SettingFrm();
-        AddCustomerFrm addCustomerFrm = new AddCustomerFrm();
-        PawnDetailFrm pawnDetailFrm = new PawnDetailFrm();
-        TurnBackFrm turnBackFrm = new TurnBackFrm();
-
 
         private void AddNewPawn_Load(object sender, EventArgs e)
         {
@@ -35,17 +28,17 @@ namespace KhounthavyV2
 
         public void ClearOldFrm()
         {
-            foreach(Form form in this.MdiChildren)
+            foreach (Form form in this.MdiChildren)
             {
                 try
                 {
-                        form.Hide();
+                    form.Close();
                 }
                 catch
                 {
 
                 }
-            }  
+            }
         }
 
         public void ShowNewFrm(Form newFrm)
@@ -106,6 +99,7 @@ namespace KhounthavyV2
 
         private void btnMenuAddNewPawn_Click(object sender, EventArgs e)
         {
+            AddPawnFrm addPawnFrm = new AddPawnFrm();
             ClearOldFrm();
             ShowNewFrm(addPawnFrm);
             ClearActiveMenu();
@@ -117,6 +111,7 @@ namespace KhounthavyV2
 
         private void btnMenuCustomer_Click(object sender, EventArgs e)
         {
+            AddCustomerFrm addCustomerFrm = new AddCustomerFrm();
             ClearOldFrm();
             ShowNewFrm(addCustomerFrm);
             ClearActiveMenu();
@@ -128,6 +123,7 @@ namespace KhounthavyV2
 
         private void btnMenuPawnDetail_Click(object sender, EventArgs e)
         {
+            PawnDetailFrm pawnDetailFrm = new PawnDetailFrm();
             ClearOldFrm();
             ShowNewFrm(pawnDetailFrm);
             ClearActiveMenu();
@@ -139,6 +135,7 @@ namespace KhounthavyV2
 
         private void btnMenuTurnBack_Click(object sender, EventArgs e)
         {
+            TurnBackFrm turnBackFrm = new TurnBackFrm();
             ClearOldFrm();
             ShowNewFrm(turnBackFrm);
             ClearActiveMenu();
@@ -150,6 +147,7 @@ namespace KhounthavyV2
 
         private void btnMenuSetting_Click(object sender, EventArgs e)
         {
+            SettingFrm settingFrm = new SettingFrm();
             ClearOldFrm();
             ShowNewFrm(settingFrm);
             ClearActiveMenu();
@@ -195,12 +193,13 @@ namespace KhounthavyV2
                 String NewConnStr = String.Format("Data Source={0};Initial Catalog=Khounthavy;Integrated Security=True", txtServerName.Text);
                 appSetting.SaveConnStr("KhounthavyV2.Properties.Settings.KhounthavyConnectionString", NewConnStr);
                 appSetting.SaveConnStr("KhounthavyV2.Properties.Settings.KhounthavyConnectionString1", NewConnStr);
-                MessageBox.Show("Success");            }
+                MessageBox.Show("Success");
+            }
             catch
             {
                 MessageBox.Show("Please Run in Administrator to setting Server Name and restart Program");
             }
-            
+
         }
 
 
@@ -211,9 +210,10 @@ namespace KhounthavyV2
             {
                 MessageBox.Show("ກະລຸນາເລືອກການຈຳກ່ອນ");
             }
-            else {
+            else
+            {
 
-
+                PrintFrm print = new PrintFrm();
                 DataTable dtb = new DataTable();
                 API api = new API();
                 dtb = api.LoadPawn(Program.Pawn_id);
