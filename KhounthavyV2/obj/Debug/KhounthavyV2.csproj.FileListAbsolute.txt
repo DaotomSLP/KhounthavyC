@@ -452,3 +452,4 @@ D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.pdb
 F:\Tom\V2\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
 F:\Tom\V2\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.printFrm2.resources
 D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.printFrm2.resources
+D:\work\tomdev\toturial\KhounthavyC\KhounthavyV2\obj\Debug\KhounthavyV2.csprojAssemblyReference.cache
